@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="/dashboard/"><span>BrandMeister</span></a>
+                <a class="brand" href="<?php echo $config['baseurl']; ?>"><span>BrandMeister</span></a>
                                 
                 <!-- start: Header Menu -->
                 <div class="nav-no-collapse header-nav">

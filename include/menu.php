@@ -2,7 +2,7 @@
             <div id="sidebar-left" class="span2">
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
-                        <li><a href="/dashboard/"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>   
+                        <li><a href="<?php echo $config['baseurl']; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>   
                     </ul>
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=lh"><i class="icon-bullhorn"></i><span class="hidden-tablet"> LastHeard</span></a></li>   
