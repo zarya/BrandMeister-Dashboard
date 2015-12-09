@@ -9,7 +9,7 @@ function updateRepeaterList()
       {
         var device = {};
         device['Number'] = CountryImage(getCountry(number))+" "+getCountry(number).toUpperCase();
-        device['Version'] = data['version']);
+        device['Version'] = data['version'];
         table.push(device);
         document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
         $('#jsonTable').dataTable({
