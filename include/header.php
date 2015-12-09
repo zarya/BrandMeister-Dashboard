@@ -5,7 +5,7 @@
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>BrandMeister Dashboard</title>
-    <meta name="author" content="Dennis Ji">
+    <meta name="author" content="PD0ZRY (Rudy)">
     <!-- end: Meta -->
     
     <!-- start: Mobile Specific -->
