@@ -1,0 +1,14 @@
+<?php
+
+$config['baseurl'] = "/dashboard/";
+$config['things'] = "";
+
+$config['custom_menu'] = array();
+//$config['custom_menu'][] = {'Name': 'Test','url': 'http://google.com','icon':'bullhor'};
+
+$config['LHServers'] = array();
+
+//LH Servers first one is the default
+$config['LHServers'][] = {'Name': 'Global','url': "http://home.gigafreak.net:5001"};
+$config['LHServers'][] = {'Name': '204 NL','url': "http://home.gigafreak.net:5004"};
+$config['LHServers'][] = {'Name': '235 UK','url': "http://81.174.156.160:5001"};

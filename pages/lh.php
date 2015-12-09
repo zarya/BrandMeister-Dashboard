@@ -8,9 +8,11 @@
             </ul>
 
 <Select id="source_url" name="source_url" onchange="javascript:SourceChange()">
-<option value="http://home.gigafreak.net:5001">Global</option>
-<option value="http://home.gigafreak.net:5004">204 NL</option>
-<option value="http://81.174.156.160:5001">235 UK</option>
+<?php
+while (list($key, $value) = each($config['LHServers'])) {
+?>
+<option value="<?php echo $value['url']; ?>"><?php echo $value['Name']; ?></option>
+<?php } ?>
 </select>
 <div id="json"></div>
 </div>

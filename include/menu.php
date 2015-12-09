@@ -10,6 +10,15 @@
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
                     </ul>
+<?php
+while (list($key, $value) = each($config['custom_menu'])) {
+?>
+                    <ul class="nav nav-tabs nav-stacked main-menu">
+                        <li><a href="<?php echo $value['url']; ?>"><i class="icon-<?php echo $value['icon']; ?>"></i><span class="hidden-tablet"> <?php echo $value['Name']; ?></span></a></li>
+                    </ul>
+<?php
+}
+?>
                 </div>
             </div>
             <!-- end: Main Menu -->

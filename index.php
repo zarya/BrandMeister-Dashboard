@@ -21,6 +21,7 @@ if ($_GET['page']) {
   if ($_GET['page'] == "repeaters") include("pages/repeaters.php");
   if ($_GET['page'] == "dongles") include("pages/dongles.php");
   if ($_GET['page'] == "reflector") include("pages/reflector.php");
+  if ($_GET['page'] == "masters") include("pages/masters.php");
 }else
   include("pages/dashboard.php");
 ?>    
@@ -47,7 +48,7 @@ if ($_GET['page']) {
     <footer>
 
         <p>
-            <span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
+            Application writen by PD0ZRY Template: <span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
             
         </p>
 
