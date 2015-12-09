@@ -19,7 +19,8 @@ function updateRepeaterList()
             "sLengthMenu": "_MENU_ records per page"
             }
         } );
-   ); 
+      }
+    ); 
   }
 }
 function getCountry(number)
