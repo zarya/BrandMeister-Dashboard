@@ -32,8 +32,8 @@
                 <div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
                     <div class="number" id="count_master"></div>
                     <div class="title">Masters</div>
-                      <a href="index.php?page=masters">Full report</a>
                     <div class="footer">
+                      <a href="index.php?page=masters">Full report</a>
                     </div>
                 </div>
             </div>      
