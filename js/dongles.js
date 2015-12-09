@@ -21,7 +21,7 @@ function updateRepeaterList()
           if (value['link'] == 4) {
             var device = {};
             device['Number'] = CountryImage(getCountry(value['number']))+" "+value['number'];
-            device['Name'] = '<a href="/dashboard/index.php?page=lh&country=null&repeater='+value['number']+'">' + value['name'] + '</a>';
+            device['Name'] = '<a href="'+baseurl+'index.php?page=lh&country=null&repeater='+value['number']+'">' + value['name'] + '</a>';
             device['Hardware'] = getRepeaterModel(value['hardware']);
             device['Firmware'] = value['firmware'];
             device['Tx'] = getFrequency(value['frequency1']);

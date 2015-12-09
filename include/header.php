@@ -44,6 +44,7 @@
        }
        console.log(servers);
      }
+    var baseurl = "<?php echo $config['baseurl']; ?>";
     </script>
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery-migrate-1.0.0.min.js"></script>
