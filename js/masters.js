@@ -8,7 +8,7 @@ function updateRepeaterList()
       function(data)
       {
         var device = {};
-        device['Number'] = CountryImage(getCountry(number))+" "+getCountry(number).toUpperCase();
+        device['Number'] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
         device['Version'] = data['version'];
         table.push(device);
         document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
