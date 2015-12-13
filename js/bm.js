@@ -75,8 +75,6 @@ function updateRepeaterCount()
         $("#repeater_tx_input").val(slots_tx).trigger('change');
         $("#repeater_rx_input").val(slots_rx).trigger('change');
         $("#external_input").val(external_count).trigger('change');
-        console.log(slots_rx);
-        console.log(slots_tx);
         draw_country_plot(country_cnt);
       }
    ); 
