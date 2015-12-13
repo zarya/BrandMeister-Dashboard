@@ -275,7 +275,7 @@ socket.on('connect', function () {
     if (lastraw['SourceName'] == undefined || lastraw['SourceName'] == null || lastraw['SourceName'] == "") {
       var Source = CountryImage(scountry) +' ' + lastraw['SourceCall'] + ' (' + lastraw['SourceID'] + ')';
     } else {
-      var Source = CountryImage(scountry) +' '+lastraw['SourceName'] + ' [' + lastraw['SourceCall'] + '] (' + lastraw['SourceID'] + ')' 
+      var Source = CountryImage(scountry) +' '+lastraw['SourceCall'] + ' [' + lastraw['SourceName'] + '] (' + lastraw['SourceID'] + ')' 
     }
 
     if (lastraw['ReflectorID'] != undefined)
