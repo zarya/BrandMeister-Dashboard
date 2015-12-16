@@ -36,6 +36,11 @@
     <!-- end: Favicon -->
     
     <!-- start: JavaScript-->
+<?php
+if ($config['XmasMode']) {
+?>
+    <script src="js/snowstorm.js"></script>
+<?php } ?>
     <script>
      var servers = {};
      function setServerList(_servers) {
