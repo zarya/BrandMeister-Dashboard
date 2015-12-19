@@ -132,6 +132,8 @@ var groups =
   
   "5059742" : "XRF740 C",
 
+  "505" : "Australia",
+
 //List made from reflector.db
   "2621" : "Berlin-Brandenburg", 
   "4001" : "Berlin-Brandenburg", 
