@@ -97,7 +97,10 @@ function draw_country_plot(data) {
     for (i in data[type]) {
       if (countries[i]) {
         _categories[countries[i]] = countries[i].toUpperCase();
-        plot_data[countries[i]] = data[type][i];
+        if (plot_data[countries[i]])
+          plot_data[countries[i]] = plot_data[countries[i]] + data[type][i];
+        else
+          plot_data[countries[i]] = data[type][i];
       }
     }
 
