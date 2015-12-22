@@ -134,7 +134,7 @@ var groups =
 
   "505" : "Australia",
 
-  "2029732" : "XRF073 B"
+  "2029732" : "XRF073 B",
 
 //List made from reflector.db
   "2621" : "Berlin-Brandenburg", 
