@@ -27,7 +27,7 @@ function updateRepeaterCount()
           var value = data[key];
           var country = value['number'].toString().substring(0,3);
           if (value['type'] == 1) {
-            if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect") {
+            if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect" || value['name'] == "MMDVM Host") {
               repeater_count++
               country_cnt = country_count(country_cnt,'repeater',country);
             }
