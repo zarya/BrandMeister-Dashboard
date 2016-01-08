@@ -16,7 +16,8 @@ $('#dongle-list').live('change', function(e) {
 $('#group-list').live('change', function(e) {
   group = e.target.options[e.target.selectedIndex].value;
   $('#group').val(group);
-  link();
+  var data = $('#dongle-list').val().split('-')
+  if (data.length == 2) link();
 });
 
 function loadDonglesCallback(master) {
@@ -41,7 +42,7 @@ function loadGroups() {
     //doe dingen
     if (number <= 5000 && number >= 4000) continue;
 
-    grouplist.append( new Option(number,groups[number]) )
+    grouplist.append( new Option(groups[number],number) )
   }
 }
 
