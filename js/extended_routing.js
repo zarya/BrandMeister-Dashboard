@@ -42,7 +42,7 @@ function loadGroups() {
     //doe dingen
     if (number <= 5000 && number >= 4000) continue;
 
-    grouplist.append( new Option(groups[number],number) )
+    grouplist.append( new Option(groups[number] + ' ('+number+')',number) )
   }
 }
 
