@@ -203,3 +203,8 @@ function getFrequency(value)
   try           { return value.toFixed(4).replace(/0$/g, '') + ' MHz'; }
   catch (error) { return '-';                                          }
 }
+
+function newAlert (type, message) {
+    $("#alert-area").append($("<div class='alert alert-" + type + " fade in' data-alert><p> " + message + " </p></div>"));
+    $(".alert").delay(2000).fadeOut("slow", function () { $(this).remove(); });
+}
