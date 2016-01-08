@@ -40,7 +40,7 @@ function loadGroups() {
   var grouplist = $('#group-list'); 
   for (var number in groups) {
     //doe dingen
-    if (number <= 5000 && number >= 4000) continue;
+    if (number <= 5000 && number >= 4000 || number < 10) continue;
 
     grouplist.append( new Option(groups[number] + ' ('+number+')',number) )
   }
