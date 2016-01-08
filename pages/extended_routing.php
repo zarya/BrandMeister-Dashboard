@@ -4,7 +4,7 @@
                     <a href="index.php">Home</a> 
                     <i class="icon-angle-right"></i>
                 </li>
-                <li><a href="#">Extened routing</a></li>
+                <li><a href="#">Extended routing</a></li>
             </ul>
 
 <div class="row-fluid">
