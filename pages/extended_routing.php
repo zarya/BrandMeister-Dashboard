@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
           <label for="group">Mapped group</label>
-          <input id="group" type="text" class="form-control">
+          <input id="group" type="text" class="form-control"> <select id="group-list" />
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">OK</button>

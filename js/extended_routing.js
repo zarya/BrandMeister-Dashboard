@@ -1,5 +1,6 @@
 var dongles = $('#dongle-list');
 loadDongles();
+loadGroups();
 
 $('#dongle-list').live('change', function(e) {
   data = e.target.options[e.target.selectedIndex].value.split('-');
@@ -10,6 +11,12 @@ $('#dongle-list').live('change', function(e) {
     $('#group').val(data['group']);
   });
 
+});
+
+$('#group-list').live('change', function(e) {
+  group = e.target.options[e.target.selectedIndex].value;
+  $('#group').val(group);
+  link();
 });
 
 function loadDonglesCallback(master) {
@@ -25,6 +32,16 @@ function loadDongles() {
   for (var number in servers) {
     var master = number;
     $.getJSON('http://' + servers[number] + '/status/link.php?callback=?', loadDonglesCallback(number));
+  }
+}
+
+function loadGroups() {
+  var grouplist = $('#group-list'); 
+  for (var number in groups) {
+    //doe dingen
+    if (number <= 5000 && number >= 4000) continue;
+
+    grouplist.append( new Option(number,groups[number]) )
   }
 }
 
@@ -58,6 +75,3 @@ function link()
     newAlert('error', 'Error!!')
   });
 };
-
-
-
