@@ -26,6 +26,7 @@
           <button type="submit" class="btn btn-primary">OK</button>
         </div>
       </form>
+For help about this please check the wiki: <a href="https://bm.pd0zry.nl/index.php/Extended_routing_for_DV4mini">Extended routing for DV4mini</a>
 </div>
     </div><!--/.fluid-container-->
     <script src="js/bm_common.js"></script>
