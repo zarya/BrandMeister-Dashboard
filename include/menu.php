@@ -10,6 +10,9 @@
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
                     </ul>
+                    <ul class="nav nav-tabs nav-stacked main-menu">
+                        <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> Extended routing</span></a></li>   
+                    </ul>
 <?php
 while (list($key, $value) = each($config['custom_menu'])) {
 ?>
