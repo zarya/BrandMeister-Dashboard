@@ -35,7 +35,7 @@ function updateRepeaterCount()
               dongle_count++;
               country_cnt = country_count(country_cnt,'dongle',country);
             }
-            if (value['name'] == "Homebrew Repeater") {
+            if (value['name'] == "Homebrew Repeater" || value['name'] == "MMDVM Host") {
               homebrew_count++;
               country_cnt = country_count(country_cnt,'homebrew',country);
             }
