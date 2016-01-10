@@ -22,11 +22,17 @@ $('#group-list').live('change', function(e) {
 
 function loadDonglesCallback(master) {
   return function(data) {
-    if (Object.keys(data).length > 0)
-    {   
-      dongles.append( new Option(master+' - ' + data['number'],master+'-'+data['number']) )
+    if ($.isArray(data))
+    {
+      var value = new String();
+      for (var index = 0; index < data.length; index ++)
+      {
+        dongles.append( new Option(master+' - ' + data[index]['number'],master+'-'+data[index]['number']) )
+      }
     }
-  };
+    if (!$.isEmptyObject(data))
+      dongles.append( new Option(master+' - ' + data['number'],master+'-'+data['number']) )
+    };
 }
 
 function loadDongles() {
