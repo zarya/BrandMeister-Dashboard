@@ -75,6 +75,7 @@ function link()
   master = data[0];
   var parameters =
   {
+    user: data[1],
     group: $('#group').val()
   };
   console.log(parameters['group']+' '+master);
