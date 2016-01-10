@@ -6,7 +6,7 @@ $('#dongle-list').live('change', function(e) {
   data = e.target.options[e.target.selectedIndex].value.split('-');
   dongle = data[1];
   master = data[0];
-  $.getJSON('http://' + servers[master] + '/status/link.php?callback=?',function(data)
+  $.getJSON('http://' + servers[master] + '/status/link.php?user='+dongle+'&callback=?',function(data)
   {
     $('#group').val(data['group']);
   });
