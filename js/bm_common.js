@@ -9,7 +9,7 @@ function interpretData(name, type, data)
     var reflector = data[data.length - 1];
     if ((reflector > 4000) &&
         (reflector < 5000))
-      messages.push('DCS' + reflector);
+      messages.push('DCS ' + reflector);
   }
 
   if (name == 'Motorola IP Site Connect')
@@ -40,6 +40,12 @@ function interpretData(name, type, data)
   {
     if (data[2] == 0)
       messages.push('RDAC is Off');
+  }
+
+  if (name == 'DV4mini')
+  {
+    if (data[data.length - 1] == 4999)
+      messages.push('TG ' + data[data.length - 2]);
   }
 
   // Networks
@@ -171,10 +177,12 @@ function getRepeaterModel(value)
   if (expression.test(value))
     return 'Radio Activity KAIROS';
 
-  // rpm:dmrrepeater-20150720-2_i386
-  var expression = /\:dmrrepeater-/;
-  if (expression.test(value))
-    return 'G4KLX DMR Repeater';
+  // linux:mmdvm-20151222
+  // Android:BlueSpot-v1.0.0-PA7LIM
+  var expression = /\:([A-Za-z]+)-/;
+  var matches = value.match(expression);
+  if (matches != null)
+    return matches[1];
 
   if ((value == '') ||
       (value == null) ||
