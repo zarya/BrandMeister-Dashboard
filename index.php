@@ -30,7 +30,7 @@ if ($_GET['page']) {
         </div><!--/#content.span10-->
         </div><!--/fluid-row-->
         
-    <div class="modal hide fade" id="model_config">
+    <div class="modal hide fade" id="modal_config">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">×</button>
             <h3>Settings</h3>
