@@ -13,7 +13,7 @@
                 <div class="nav-no-collapse header-nav">
                     <ul class="nav pull-right">
                         <li>
-                            <a class="btn" href="#">
+                            <a class="btn" href="#modal_config" data-toggle="modal">
                                 <i class="halflings-icon white wrench"></i>
                             </a>
                         </li>
