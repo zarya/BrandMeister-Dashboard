@@ -170,7 +170,7 @@ var groups =
   
   "5059742" : "XRF740 C",
 
-  "966386" : "MMDVM Testing"
+  "899" : "Repeater Testing"
 };
 
 function getGroupName(number)
