@@ -21,7 +21,6 @@ var max_queue = 30;
 var table = [];
 var last = [];
 //var socket = io.connect('http://home.gigafreak.net:5001');
-var config = {};
 var socket = io.connect($( "#source_url" ).val());
 
 function SourceChange() {

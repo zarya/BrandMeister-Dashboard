@@ -232,7 +232,6 @@ var max_queue = 5;
 var table = [];
 var last = [];
 var socket = io.connect('http://home.gigafreak.net:5001');
-var config = {};
 
 socket.on('connect', function () {
   var table = [];
