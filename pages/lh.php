@@ -277,31 +277,5 @@ function zoom(paramvar)
   document.body.style.zoom =  currentZoom + "%" 
 }
 
-function saveSettings(){
-  config['mobile'] = $('#mobilemode').is(':checked');
-  config['datetime'] = $('#datetime').is(':checked');
-  console.log(config['mobile']);
-  Cookies.set("bm-lh-data", JSON.stringify(config));
-  window.location.reload();
-}
-
-function loadSettings() {
-  var _config = Cookies.get("bm-lh-data")
-  try {
-    config = JSON.parse(_config);
-  } catch(err) {
-    config = {'mobile': false,'datetime': false}
-  }
-  if (config['mobile'] == undefined) 
-    config['mobile'] = false;
-  if (config['datetime'] == undefined) 
-    config['datetime'] = false;
-  if (config['mobile'])
-    zoom(+50);
-  $('#mobilemode').prop('checked', config['mobile']); 
-  $('#datetime').prop('checked', config['datetime']); 
-}
-
-
 </script>
 
