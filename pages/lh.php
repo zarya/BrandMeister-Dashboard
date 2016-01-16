@@ -33,10 +33,9 @@ function SourceChange() {
   startSocket($( "#source_url" ).val());
   socket.emit('subscribe',{topic:'filter/'+params['filter']+'/'+params['repeater']});
 }
-$( document ).ready(function() {
-  loadSettings();
-});
+
 startSocket($( "#source_url" ).val());
+
 function startSocket(url) {
   socket.on('connect', function () {
     if (params['amount'] != undefined) max_queue = params['amount'];

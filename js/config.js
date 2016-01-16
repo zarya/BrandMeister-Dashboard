@@ -1,15 +1,24 @@
 var config = {};
 
-
 function saveSettings(){
-  localStorage.setItem('datetime', $('#datetime').is(':checked'));
+  if ($('#datetime').is(':checked') == true)
+    localStorage.setItem('datetime', true);
+  else
+    localStorage.removeItem('datetime');
   window.location.reload();
 }
 
 function loadSettings() {
-    if (localStorage.getItem('todos') != undefined)
-        config['timedate'] = localStorage.getItem('todos');
+    console.log(localStorage.getItem('datetime'));
+    if (localStorage.getItem('datetime') != undefined)
+        config['datetime'] = localStorage.getItem('datetime');
     else
-        config['timedate'] = false;
-    $('#datetime').prop('checked', config['datetime']); 
+        config['datetime'] = false;
+    $('#datetime').prop('checked', config['datetime']);
+    console.log(config['datetime']);
+    console.log("Loaded config"); 
 }
+
+$( document ).ready(function() { 
+  loadSettings(); 
+});
