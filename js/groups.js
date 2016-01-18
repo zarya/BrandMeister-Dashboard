@@ -170,7 +170,11 @@ var groups =
   
   "5059742" : "XRF740 C",
 
+  "314700" : "Tennessee Statewide",
+
   "899" : "Repeater Testing"
+
+
 };
 
 function getGroupName(number)
