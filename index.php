@@ -43,7 +43,6 @@ if ($_GET['page']) {
     
     <!-- start: JavaScript-->
     <script src="js/counter.js"></script>
-    <script src="js/retina.js"></script>
     <script src="js/custom.js"></script>
     <!-- end: JavaScript-->
 </body>
