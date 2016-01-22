@@ -5,10 +5,12 @@ function saveSettings(){
     localStorage.setItem('datetime', true);
   else
     localStorage.removeItem('datetime');
+
   if ($('#alerts_enabled').is(':checked') == true)
     localStorage.setItem('alerts', true);
   else
     localStorage.removeItem('alerts');
+
   window.location.reload();
 }
 

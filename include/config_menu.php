@@ -7,12 +7,12 @@
             <div class="tabbable">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#config_tab_general" data-toggle="tab">General</a></li>
-                    <li><a href="#config_tab_lh" data-toggle="tab">LH</a></li>
+                    <li><a href="#config_tab_lh" data-toggle="tab">LastHeard</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="config_tab_general">
                         <div class="checkbox">
-                          <label><input type="checkbox" id="alert_enable"> Display alerts</label>
+                          <label><input type="checkbox" id="alerts_enable"> Display alerts</label>
                         </div>
                     </div>
                     <div class="tab-pane" id="config_tab_lh">
