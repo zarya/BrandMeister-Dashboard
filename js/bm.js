@@ -109,12 +109,14 @@ function fetchServer(number) {
       draw_country_plot(country_cnt);
     }
   ).fail(function(){
-    $.gritter.add({
-      title: 'Error!',
-      text: 'Master '+number+' not responding',
-      sticky: false,
-      time: ''
-    });
+    if (config['alert'] == true) {
+      $.gritter.add({
+        title: 'Error!',
+        text: 'Master '+number+' not responding',
+        sticky: false,
+        time: ''
+      });
+    }
   }); 
 }
 
