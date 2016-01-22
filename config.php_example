@@ -6,10 +6,6 @@ $config['things'] = "";
 $config['custom_menu'] = array();
 //$config['custom_menu'][] = array('Name' => 'Test', 'url' => 'http://google.com', 'icon' => 'bullhor');
 
-$config['custom_menu'][] = array('Name' => 'UK Repeaters', url => 'index.php?page=repeaters&search=gb', 'icon' => 'tag');
-$config['custom_menu'][] = array('Name' => 'DV4 QRG Correction Important !!.', url => 'dv4miniQRG.html', 'icon' => 'tag');
-$config['custom_menu'][] = array('Name' => 'BM Reflectors List.', url => 'bmreflector.html', 'icon' => 'tag');
-
 $config['LHServers'] = array();
 
 //Add extra text to navbar
