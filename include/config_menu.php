@@ -6,8 +6,8 @@
         <div class="modal-body">
             <div class="tabbable">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#config_tab_lh" data-toggle="tab">LH</a></li>
-                    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+                    <li class="active"><a href="#config_tab_general" data-toggle="tab">General</a></li>
+                    <li><a href="#config_tab_lh" data-toggle="tab">LH</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane" id="config_tab_general">
