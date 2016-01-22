@@ -32,7 +32,7 @@
 }
 
 .gritter-item {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(255,0,0,0.8);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-8 */
 	color:#fff;
 	padding:15px;
