@@ -112,7 +112,6 @@ function fetchServer(number) {
     $.gritter.add({
       title: 'Error!',
       text: 'Master '+number+' not responding',
-      image: 'img/avatar.jpg',
       sticky: false,
       time: ''
     });
