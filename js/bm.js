@@ -37,8 +37,8 @@ function updateRepeaterCount()
               dongle_count++;
               country_cnt = country_count(country_cnt,'dongle',country);
             }
-            if (value['name'] == "Homebrew Repeater" || value['name'] == "MMDVM Host") {
-              if (value['link'] == 4) {
+            if (value['name'] == "Homebrew Repeater") {
+              if (value['values'][1] == 0) {
                 homebrewDgl_count++;
                 country_cnt = country_count(country_cnt,'homebrewDgl',country);
               } 
@@ -47,6 +47,10 @@ function updateRepeaterCount()
                 homebrew_count++;
                 country_cnt = country_count(country_cnt,'homebrew',country);
               }
+            }
+            if (value['name'] == "MMDVM Host") {
+              homebrew_count++;
+              country_cnt = country_count(country_cnt,'homebrew',country);
             }
             // Link has an outgoing lock
             if ((value['state'] & 0x2a) != 0)
