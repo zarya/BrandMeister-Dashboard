@@ -9,11 +9,15 @@ var slots_rx = 0;
 var external_count = 0;
 var masters_count = 0;
 var country_cnt = {
-'dongle': {},
-'repeater': {},
-'homebrew': {},
-'homebrewDgl': {}
+  'dongle': {},
+  'repeater': {},
+  'homebrew': {},
+  'homebrewDgl': {}
 };
+
+$.ajaxSetup({
+  timeout: 5 * 1000 
+});
 
 function updateRepeaterCount()
 {
