@@ -25,8 +25,8 @@
                 </div>
                 <div class="span3 statbox red" onTablet="span6" onDesktop="span3">
                     <div class="number" id="count_homebrew"></div>
-                    <div class="title">Homebrew</div>
-                    <div class="footer">Repeater / Dongle
+                    <div class="title">Homebrew<br>Repeater / Dongle</div>
+                    <div class="footer">
                     </div>
                 </div>
                 <div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
