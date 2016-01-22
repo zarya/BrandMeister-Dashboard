@@ -117,7 +117,8 @@ function ConvertJsonToTable(parsedJson, tableId, tableClassName, linkText)
                     for (j = 0; j < headers.length; j++)
                     {
                         var value = parsedJson[i][headers[j]];
-                        var isUrl = urlRegExp.test(value) || javascriptRegExp.test(value);
+                        //var isUrl = urlRegExp.test(value) || javascriptRegExp.test(value);
+                        var isUrl = false 
 
                         if(isUrl)   // If value is URL we auto-create a link
                             tbCon += tdRow.format(link.format(value));
