@@ -45,7 +45,7 @@ function updateDongleList()
   };
   table = [];
   for (var number in servers) {
-    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateDongleListCallback(number));
+    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateDongleListCallback(number)).fail(newAlertPopup('Error!','Master '+number+' not responding'));
   }
 }
 

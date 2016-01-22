@@ -216,3 +216,14 @@ function newAlert (type, message) {
     $("#alert-area").append($("<div class='alert alert-" + type + " fade in' data-alert><p> " + message + " </p></div>"));
     $(".alert").delay(2000).fadeOut("slow", function () { $(this).remove(); });
 }
+
+function newAlertPopup(title,message) {
+  if (config['alert'] == true) {
+    $.gritter.add({
+      title: title,
+      text: message,
+      sticky: false,
+      time: ''
+    });
+  }
+}

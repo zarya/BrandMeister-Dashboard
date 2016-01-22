@@ -108,16 +108,7 @@ function fetchServer(number) {
       $("#external_input").val(external_count).trigger('change');
       draw_country_plot(country_cnt);
     }
-  ).fail(function(){
-    if (config['alert'] == true) {
-      $.gritter.add({
-        title: 'Error!',
-        text: 'Master '+number+' not responding',
-        sticky: false,
-        time: ''
-      });
-    }
-  }); 
+  ).fail(newAlertPopup('Error!','Master '+number+' not responding'));
 }
 
 function country_count(data,type,country) {

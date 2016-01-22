@@ -49,7 +49,7 @@ function updateRepeaterList()
   };
   table = [];
   for (var number in servers) {
-    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateRepeaterListCallback(number));
+    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateRepeaterListCallback(number)).fail(newAlertPopup('Error!','Master '+number+' not responding'));
   }
 }
 

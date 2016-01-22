@@ -11,5 +11,4 @@
                         <div id="json"></div>
 </div>
     </div><!--/.fluid-container-->
-    <script src="js/bm_common.js"></script>
     <script src="js/dongles.js"></script>
