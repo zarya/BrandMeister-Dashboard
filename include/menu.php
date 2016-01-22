@@ -7,11 +7,10 @@
                         <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
                         <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> Extended routing</span></a></li>   
                         <li>
-                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Reports</span></a>
                             <ul>
-                                <li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
-                                <li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-                                <li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+                                <li><a class="submenu" href="index.php?page=repeaters"><i class="icon-file-alt"></i><span class="hidden-tablet"> Repeaters</span></a></li>
+                                <li><a class="submenu" href="index.php?page=dongles"><i class="icon-file-alt"></i><span class="hidden-tablet"> Dongles</span></a></li>
                             </ul>   
                         </li>
 <?php
