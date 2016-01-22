@@ -3,22 +3,21 @@
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="<?php echo $config['baseurl']; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>   
-                    </ul>
-                    <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=lh"><i class="icon-bullhorn"></i><span class="hidden-tablet"> LastHeard</span></a></li>   
-                    </ul>
-                    <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
-                    </ul>
-                    <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> Extended routing</span></a></li>   
-                    </ul>
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
+                            <ul>
+                                <li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
+                                <li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
+                                <li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+                            </ul>   
+                        </li>
 <?php
 while (list($key, $value) = each($config['custom_menu'])) {
 ?>
-                    <ul class="nav nav-tabs nav-stacked main-menu">
                         <li><a href="<?php echo $value['url']; ?>"><i class="icon-<?php echo $value['icon']; ?>"></i><span class="hidden-tablet"> <?php echo $value['Name']; ?></span></a></li>
-                    </ul>
 <?php
 }
 ?>
