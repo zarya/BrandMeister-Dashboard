@@ -11,14 +11,14 @@
                 
                 <div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
                     <div class="number" id="count_rptr"></div>
-                    <div class="title">Repeaters</div>
+                    <div class="title">Professional Repeaters</div>
                     <div class="footer">
                       <a href="index.php?page=repeaters">Full report</a>
                     </div>  
                 </div>
                 <div class="span3 statbox blue" onTablet="span6" onDesktop="span3">
                     <div class="number" id="count_dongle"></div>
-                    <div class="title">Dongles</div>
+                    <div class="title">DV4mini Dongles</div>
                     <div class="footer">
                       <a href="index.php?page=dongles">Full report</a>
                     </div>
