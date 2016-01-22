@@ -1,97 +1,122 @@
 var station_total = 0;
 var _series = ['','','',''];
+var repeater_count = 0;
+var dongle_count = 0;
+var homebrew_count = 0;
+var homebrewDgl_count = 0;
+var slots_tx = 0;
+var slots_rx = 0;
+var external_count = 0;
+var masters_count = 0;
+var country_cnt = {
+'dongle': {},
+'repeater': {},
+'homebrew': {},
+'homebrewDgl': {}
+};
 
 function updateRepeaterCount()
 {
   station_total = 0;
-  var repeater_count = 0;
-  var dongle_count = 0;
-  var homebrew_count = 0;
-  var homebrewDgl_count = 0;
-  var slots_tx = 0;
-  var slots_rx = 0;
-  var external_count = 0;
-  var masters_count = 0;
-  var country_cnt = {
+  repeater_count = 0;
+  dongle_count = 0;
+  homebrew_count = 0;
+  homebrewDgl_count = 0;
+  slots_tx = 0;
+  slots_rx = 0;
+  external_count = 0;
+  masters_count = 0;
+  country_cnt = {
     'dongle': {},
     'repeater': {},
     'homebrew': {},
     'homebrewDgl': {}
   };
   for (var number in servers) {
-    var location = 'http://' + servers[number] + '/status/';
-    $.getJSON(location + 'status.php?callback=?',
-      function(data)
+    fetchServer(number);
+  }
+}
+
+function fetchServer(number) {
+  $.getJSON('http://' + servers[number] + '/status/' + 'status.php?callback=?',
+    function(data)
+    {
+      masters_count++;
+      for (key in data)
       {
-        masters_count++;
-        for (key in data)
-        {
-          var value = data[key];
-          var country = value['number'].toString().substring(0,3);
-          if (value['type'] == 1) {
-            if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect") {
-              repeater_count++
-              country_cnt = country_count(country_cnt,'repeater',country);
-            }
-            if (value['name'] == "DV4mini") {
-              dongle_count++;
-              country_cnt = country_count(country_cnt,'dongle',country);
-            }
-            if (value['name'] == "Homebrew Repeater") {
-              if (value['values'][1] == 0) {
-                homebrewDgl_count++;
-                country_cnt = country_count(country_cnt,'homebrewDgl',country);
-              } 
-              else 
-              {
-                homebrew_count++;
-                country_cnt = country_count(country_cnt,'homebrew',country);
-              }
-            }
-            if (value['name'] == "MMDVM Host") {
+        var value = data[key];
+        var country = value['number'].toString().substring(0,3);
+        if (value['type'] == 1) {
+          if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect") {
+            repeater_count++
+            country_cnt = country_count(country_cnt,'repeater',country);
+          }
+          if (value['name'] == "DV4mini") {
+            dongle_count++;
+            country_cnt = country_count(country_cnt,'dongle',country);
+          }
+          if (value['name'] == "Homebrew Repeater") {
+            if (value['values'][1] == 0) {
+              homebrewDgl_count++;
+              country_cnt = country_count(country_cnt,'homebrewDgl',country);
+            } 
+            else 
+            {
               homebrew_count++;
               country_cnt = country_count(country_cnt,'homebrew',country);
             }
-            // Link has an outgoing lock
-            if ((value['state'] & 0x2a) != 0)
-              slots_tx++; 
-            // Link has an incoming lock
-            if ((value['state'] & 0x15) != 0)
-              slots_rx++;
-            station_total++; 
           }
-          if (value['name'] == 'CBridge CC-CC Link')
-          {
-            external_count = external_count + value['values'][1];
+          if (value['name'] == "MMDVM Host") {
+            homebrew_count++;
+            country_cnt = country_count(country_cnt,'homebrew',country);
           }
-
-          if (value['name'] == 'D-Extra Link') {
-            if ((value['state'] & 0x03) != 0)
-              external_count++;
-          }
-
-          if (value['name'] == 'DCS Link') {
-            if ((value['state'] & 0x03) != 0)
-              external_count++;
-          }
-          if (value['name'] == 'AutoPatch') {
-            if ((value['state'] & 0x03) != 0)
-              external_count++;
-          }
+          // Link has an outgoing lock
+          if ((value['state'] & 0x2a) != 0)
+            slots_tx++; 
+          // Link has an incoming lock
+          if ((value['state'] & 0x15) != 0)
+            slots_rx++;
+          station_total++; 
         }
-        $("#count_rptr").html(repeater_count);
-        $("#count_dongle").html(dongle_count);
-        $("#count_homebrew").html(homebrew_count + ' / ' + homebrewDgl_count);
-        $("#count_master").html(masters_count);
-        $(".RepeaterCircle").trigger('configure', {'max': station_total,'min':0});
-        $(".RepeaterCircle").trigger('change');
-        $("#repeater_tx_input").val(slots_tx).trigger('change');
-        $("#repeater_rx_input").val(slots_rx).trigger('change');
-        $("#external_input").val(external_count).trigger('change');
-        draw_country_plot(country_cnt);
+        if (value['name'] == 'CBridge CC-CC Link')
+        {
+          external_count = external_count + value['values'][1];
+        }
+
+        if (value['name'] == 'D-Extra Link') {
+          if ((value['state'] & 0x03) != 0)
+            external_count++;
+        }
+
+        if (value['name'] == 'DCS Link') {
+          if ((value['state'] & 0x03) != 0)
+            external_count++;
+        }
+        if (value['name'] == 'AutoPatch') {
+          if ((value['state'] & 0x03) != 0)
+            external_count++;
+        }
       }
-   ); 
-  }
+      $("#count_rptr").html(repeater_count);
+      $("#count_dongle").html(dongle_count);
+      $("#count_homebrew").html(homebrew_count + ' / ' + homebrewDgl_count);
+      $("#count_master").html(masters_count);
+      $(".RepeaterCircle").trigger('configure', {'max': station_total,'min':0});
+      $(".RepeaterCircle").trigger('change');
+      $("#repeater_tx_input").val(slots_tx).trigger('change');
+      $("#repeater_rx_input").val(slots_rx).trigger('change');
+      $("#external_input").val(external_count).trigger('change');
+      draw_country_plot(country_cnt);
+    }
+  ).fail(function(){
+    $.gritter.add({
+      title: 'Error!',
+      text: 'Master '+number+' not responding',
+      image: 'img/avatar.jpg',
+      sticky: false,
+      time: ''
+    });
+  }); 
 }
 
 function country_count(data,type,country) {
