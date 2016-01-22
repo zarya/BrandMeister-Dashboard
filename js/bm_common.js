@@ -218,7 +218,7 @@ function newAlert (type, message) {
 }
 
 function newAlertPopup(title,message) {
-  if (config['alert'] == true) {
+  if (config['alerts'] != false) {
     $.gritter.add({
       title: title,
       text: message,
