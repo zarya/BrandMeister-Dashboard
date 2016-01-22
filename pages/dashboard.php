@@ -29,6 +29,12 @@
                     <div class="footer">
                     </div>
                 </div>
+                <div class="span3 statbox red" onTablet="span6" onDesktop="span3">
+                    <div class="number" id="count_homebrewDgl"></div>
+                    <div class="title">Homebrew Dongle</div>
+                    <div class="footer">
+                    </div>
+                </div>
                 <div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
                     <div class="number" id="count_master"></div>
                     <div class="title">Masters</div>

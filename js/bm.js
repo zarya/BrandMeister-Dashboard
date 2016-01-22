@@ -1,5 +1,5 @@
 var station_total = 0;
-var _series = ['','',''];
+var _series = ['','','',''];
 
 function updateRepeaterCount()
 {
@@ -7,6 +7,7 @@ function updateRepeaterCount()
   var repeater_count = 0;
   var dongle_count = 0;
   var homebrew_count = 0;
+  var homebrewDgl_count = 0;
   var slots_tx = 0;
   var slots_rx = 0;
   var external_count = 0;
@@ -14,7 +15,8 @@ function updateRepeaterCount()
   var country_cnt = {
     'dongle': {},
     'repeater': {},
-    'homebrew': {}
+    'homebrew': {},
+    'homebrewDgl': {}
   };
   for (var number in servers) {
     var location = 'http://' + servers[number] + '/status/';
@@ -27,7 +29,7 @@ function updateRepeaterCount()
           var value = data[key];
           var country = value['number'].toString().substring(0,3);
           if (value['type'] == 1) {
-            if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect" || value['name'] == "MMDVM Host") {
+            if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect") {
               repeater_count++
               country_cnt = country_count(country_cnt,'repeater',country);
             }
@@ -36,8 +38,15 @@ function updateRepeaterCount()
               country_cnt = country_count(country_cnt,'dongle',country);
             }
             if (value['name'] == "Homebrew Repeater" || value['name'] == "MMDVM Host") {
-              homebrew_count++;
-              country_cnt = country_count(country_cnt,'homebrew',country);
+              if (value['link'] == 4) {
+                homebrewDgl_count++;
+                country_cnt = country_count(country_cnt,'homebrewDgl',country);
+              } 
+              else 
+              {
+                homebrew_count++;
+                country_cnt = country_count(country_cnt,'homebrew',country);
+              }
             }
             // Link has an outgoing lock
             if ((value['state'] & 0x2a) != 0)
@@ -69,6 +78,7 @@ function updateRepeaterCount()
         $("#count_rptr").html(repeater_count);
         $("#count_dongle").html(dongle_count);
         $("#count_homebrew").html(homebrew_count);
+        $("#count_homebrewDgl").html(homebrew_countDgl);
         $("#count_master").html(masters_count);
         $(".RepeaterCircle").trigger('configure', {'max': station_total,'min':0});
         $(".RepeaterCircle").trigger('change');
@@ -105,12 +115,15 @@ function draw_country_plot(data) {
     }
 
     if (type == "repeater") {
-      _series[2] = plot_data;
+      _series[3] = plot_data;
     }
     if (type == "dongle") {
       _series[1] = plot_data;
     }
     if (type == "homebrew") {
+      _series[2] = plot_data;
+    }
+    if (type == "homebrewDgl") {
       _series[0] = plot_data;
     }
   }
@@ -119,14 +132,17 @@ function draw_country_plot(data) {
   var repeaters = [];
   var dongles = [];
   var homebrew = [];
+  var homebrewDgl = [];
   for (i in _categories) {
     categories.push(_categories[i]);
     repeaters.push('');
     dongles.push('');
     homebrew.push('');
-    if (_series[2][i] != undefined) repeaters[categories.length-1] = _series[2][i];
+    homebrewDgl.push('');
+    if (_series[3][i] != undefined) repeaters[categories.length-1] = _series[3][i];
     if (_series[1][i] != undefined) dongles[categories.length-1] = _series[1][i];
-    if (_series[0][i] != undefined) homebrew[categories.length-1] = _series[0][i];
+    if (_series[2][i] != undefined) homebrew[categories.length-1] = _series[2][i];
+    if (_series[0][i] != undefined) homebrewDgl[categories.length-1] = _series[0][i];
   }
   $('#country_cnt').highcharts({
         chart: {
@@ -187,8 +203,9 @@ function draw_country_plot(data) {
             enabled: false
         },
         series: [
-          {'name':'Homebrew','data': homebrew},
+          {'name':'Homebrew Dongle','data': homebrewDgl},
           {'name':'Dongles','data': dongles},
+          {'name':'Homebrew','data': homebrew},
           {'name':'Repeaters','data': repeaters}]
     });
 }
