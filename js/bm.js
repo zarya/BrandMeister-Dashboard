@@ -77,7 +77,7 @@ function updateRepeaterCount()
         }
         $("#count_rptr").html(repeater_count);
         $("#count_dongle").html(dongle_count);
-        $("#count_homebrew").html(homebrew_count);
+        $("#count_homebrew").html(homebrew_count + ' / ' + homebrewDgl_count);
         $("#count_master").html(masters_count);
         $(".RepeaterCircle").trigger('configure', {'max': station_total,'min':0});
         $(".RepeaterCircle").trigger('change');
