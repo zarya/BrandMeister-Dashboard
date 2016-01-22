@@ -15,16 +15,16 @@
                   <a href="index.php?page=repeaters">Full report</a>
                 </div>  
               </div>
-              <div class="span3 statbox blue" onTablet="span6" onDesktop="span3">
-                <div class="number" id="count_dongle"></div>
-                <div class="title">DV4mini Hotspots</div>
-                <div class="footer">
-                  <a href="index.php?page=dongles">Full report</a>
-                </div>
-              </div>
               <div class="span3 statbox red" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_homebrew"></div>
                 <div class="title">Homebrew<br>Repeaters / Hotspots</div>
+              </div>
+              <div class="span3 statbox blue" onTablet="span6" onDesktop="span3">
+                <div class="number" id="count_dongle"></div>
+                <div class="title">DV4mini</div>
+                <div class="footer">
+                  <a href="index.php?page=dongles">Full report</a>
+                </div>
               </div>
               <div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_master"></div>
