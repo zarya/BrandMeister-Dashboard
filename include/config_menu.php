@@ -12,7 +12,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="config_tab_general">
                         <div class="checkbox">
-                          <label><input type="checkbox" id="alerts_enable"> Display alerts</label>
+                          <label><input type="checkbox" id="alerts_enabled"> Display alerts</label>
                         </div>
                     </div>
                     <div class="tab-pane" id="config_tab_lh">
