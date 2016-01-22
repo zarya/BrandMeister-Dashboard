@@ -6,7 +6,7 @@ function updateMasterListCallback(master,host) {
     device['Country'] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
     device['Number'] = data['network'];
     device['Version'] = data['version'];
-    device['Links'] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">Status</a>&nbsp;' + '<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">List</a>&nbsp;';
+    device['Links'] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">Status</a>&nbsp;<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">List</a>';
     table.push(device);
     document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
     $('#jsonTable').dataTable({
