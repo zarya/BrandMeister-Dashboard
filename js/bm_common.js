@@ -218,12 +218,14 @@ function newAlert (type, message) {
 }
 
 function newAlertPopup(title,message) {
-  if (config['alerts'] != false) {
-    $.gritter.add({
-      title: title,
-      text: message,
-      sticky: false,
-      time: ''
-    });
+  return function() {
+    if (config['alerts'] != false) {
+      $.gritter.add({
+        title: title,
+        text: message,
+        sticky: false,
+        time: ''
+      });
+    }
   }
 }
