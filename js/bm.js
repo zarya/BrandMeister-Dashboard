@@ -40,7 +40,7 @@ function updateRepeaterCount()
 
 function fetchServer(number) {
   $.ajaxSetup({
-    timeout: 5 * 1000 
+    timeout: 10 * 1000 
   });
   $.getJSON('http://' + servers[number] + '/status/' + 'status.php?callback=?',
     function(data)
