@@ -10,12 +10,12 @@
                     <li><a href="#config_tab_lh" data-toggle="tab">LH</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane" id="config_tab_general">
+                    <div class="tab-pane active" id="config_tab_general">
                         <div class="checkbox">
                           <label><input type="checkbox" id="alert_enable"> Display alerts</label>
                         </div>
                     </div>
-                    <div class="tab-pane active" id="config_tab_lh">
+                    <div class="tab-pane" id="config_tab_lh">
                         <div class="checkbox">
                           <label><input type="checkbox" id="datetime"> Display date/time per QSO</label>
                         </div>
