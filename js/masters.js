@@ -1,6 +1,6 @@
 var table = [];
 
-function updateRepeaterListCallback(master,host) {
+function updateMasterListCallback(master,host) {
   return function(data) {
     var device = {};
     device['Country'] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
@@ -17,12 +17,14 @@ function updateRepeaterListCallback(master,host) {
         },
         "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
     } );
+  }
+}
 
-function updateRepeaterList()
+function updateMasterList()
 {
   table = [];
   for (var number in servers) {
-    $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateRepeaterListCallback(number,servers[number]));
+    $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateMasterListCallback(number,servers[number]));
   }
 }
 
@@ -59,5 +61,5 @@ var params = function() {
     return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
 }();
 
-updateRepeaterList();
+updateMasterList();
 
