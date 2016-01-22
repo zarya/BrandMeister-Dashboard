@@ -15,9 +15,6 @@ var country_cnt = {
   'homebrewDgl': {}
 };
 
-$.ajaxSetup({
-  timeout: 5 * 1000 
-});
 
 function updateRepeaterCount()
 {
@@ -42,6 +39,9 @@ function updateRepeaterCount()
 }
 
 function fetchServer(number) {
+  $.ajaxSetup({
+    timeout: 5 * 1000 
+  });
   $.getJSON('http://' + servers[number] + '/status/' + 'status.php?callback=?',
     function(data)
     {
