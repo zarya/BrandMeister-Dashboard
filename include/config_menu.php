@@ -14,8 +14,12 @@
                         <div class="checkbox">
                           <label><input type="checkbox" id="alerts_enabled"> Display alerts</label>
                         </div>
-                        <div class="input">
-                          <label><input type="input" id="json_timeout"> json timeout (max 60s)</label>
+                        <div class="control-group">
+                          <label class="control-label" for="typeahead">JSON Timeout </label>
+                          <div class="controls">
+                            <input type="input" id="json_timeout">
+                            <p class="help-block">Maximum timeout is 60 seconds</p>
+                          </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="config_tab_lh">
