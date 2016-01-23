@@ -11,6 +11,10 @@ function saveSettings(){
   else
     localStorage.removeItem('alerts');
 
+  var timeout = $("#json_timeout").val();
+  if (timeout > 60) timeout = 60;
+  localStorage.setItem('timeout', timeout);
+
   window.location.reload();
 }
 
@@ -27,6 +31,12 @@ function loadSettings() {
     else
         config['alerts'] = false;
     $('#alerts_enabled').prop('checked', config['alerts']);
+
+    if (localStorage.getItem('timeout') != undefined)
+        config['timeout'] = localStorage.getItem('timeout');
+    else
+        config['timeout'] = 15;
+    $("#json_timeout").val(config['timeout']);
 }
 
 $( document ).ready(function() { 

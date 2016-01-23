@@ -14,6 +14,9 @@
                         <div class="checkbox">
                           <label><input type="checkbox" id="alerts_enabled"> Display alerts</label>
                         </div>
+                        <div class="input">
+                          <label><input type="input" id="json_timeout"> json timeout (max 60s)</label>
+                        </div>
                     </div>
                     <div class="tab-pane" id="config_tab_lh">
                         <div class="checkbox">
