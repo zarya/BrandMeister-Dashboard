@@ -10,9 +10,14 @@
                     <li><a href="#config_tab_lh" data-toggle="tab">LastHeard</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane active" id="config_tab_general">
-                        <div class="checkbox">
-                          <label><input type="checkbox" id="alerts_enabled"> Display alerts</label>
+                  <div class="tab-pane active" id="config_tab_general">
+                    <form class="form-horizontal">
+                      <fieldset>
+                        <div class="control-group">
+                          <label class="control-label" for="optionsCheckbox2"> Display alerts</label> 
+                          <div class="controls">
+                            <label class="checkbox"><input type="checkbox" id="alerts_enabled"></label>
+                          </div>
                         </div>
                         <div class="control-group">
                           <label class="control-label" for="typeahead">JSON Timeout </label>
@@ -21,12 +26,14 @@
                             <p class="help-block">Maximum timeout is 60 seconds</p>
                           </div>
                         </div>
+                      <fieldset>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="config_tab_lh">
+                    <div class="checkbox">
+                      <label><input type="checkbox" id="datetime"> Display date/time per QSO</label>
                     </div>
-                    <div class="tab-pane" id="config_tab_lh">
-                        <div class="checkbox">
-                          <label><input type="checkbox" id="datetime"> Display date/time per QSO</label>
-                        </div>
-                    </div>
+                  </div>
                 </div>
             </div>
         </div>
