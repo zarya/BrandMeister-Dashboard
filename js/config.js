@@ -41,4 +41,6 @@ function loadSettings() {
 
 $( document ).ready(function() { 
   loadSettings(); 
+  $("#alerts_enabled").bootstrapSwitch();
+  $("#datetime").bootstrapSwitch();
 });
