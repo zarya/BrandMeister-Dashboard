@@ -222,10 +222,10 @@ function draw_country_plot(data) {
             enabled: false
         },
         series: [
-          {'name':'Homebrew Dongles','data': homebrewDgl},
-          {'name':'DV4mini Dongles','data': dongles},
+          {'name':'Homebrew Hotspots','data': homebrewDgl},
+          {'name':'DV4mini','data': dongles},
           {'name':'Homebrew Repeaters','data': homebrew},
-          {'name':'Professional Repeaters','data': repeaters}]
+          {'name':'Commercial Repeaters','data': repeaters}]
     });
 }
 
