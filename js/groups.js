@@ -129,6 +129,7 @@ var groups =
   "4647" : "USA - Area 7",
   "4648" : "USA - Area 8",
   "4649" : "USA - Area 9",
+  "3106" : "USA - California",
   "3100" : "USA - Nationwide 4639",
   "31090" : "USA - Area 0 4639",
   "31091" : "USA - Area 1 4641",
