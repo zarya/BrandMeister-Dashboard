@@ -20,7 +20,7 @@
                           </div>
                         </div>
                         <div class="control-group">
-                          <label class="control-label" for="typeahead">JSON Timeout </label>
+                          <label class="control-label" for="typeahead">API Timeout </label>
                           <div class="controls">
                             <input type="input" id="json_timeout">
                             <p class="help-block">Maximum timeout is 60 seconds</p>
