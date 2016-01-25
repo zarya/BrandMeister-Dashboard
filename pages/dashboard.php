@@ -10,7 +10,7 @@
             <div class="row-fluid">
               <div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_rptr"></div>
-                <div class="title">Commercial Repeaters</div>
+                <div class="title">Industrial Repeaters</div>
                 <div class="footer">
                   <a href="index.php?page=repeaters">Full report</a>
                 </div>  

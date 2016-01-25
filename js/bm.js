@@ -225,7 +225,7 @@ function draw_country_plot(data) {
           {'name':'Homebrew Hotspots','data': homebrewDgl},
           {'name':'DV4mini','data': dongles},
           {'name':'Homebrew Repeaters','data': homebrew},
-          {'name':'Commercial Repeaters','data': repeaters}]
+          {'name':'Industrial Repeaters','data': repeaters}]
     });
 }
 
