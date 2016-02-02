@@ -1,10 +1,13 @@
 var groups =
 {
+  "250"  : "Russia",
   "2501" : "Russia Global",
   "2502" : "XRF250 Bridge",
   "2505" : "bridge to Radiocult",
   "9504" : "*RUSSIA* (EchoLink)",
   "9" : "DMR Reflector",
+
+  "255" : "Ukraine",
 
   "1" : "Local",
   "91" : "World-wide",
