@@ -30,6 +30,8 @@ var groups =
   "235" : "United Kingdom",
   "262" : "Deutschland",
   "240" : "Market Reef",
+
+  "228" : "Switzerland",
   
   "88" : "XRF088 B",
   "881": "XRF088 A",
