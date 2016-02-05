@@ -11,6 +11,9 @@ var groups =
 
   "655" : "South Africa",
 
+  "8001" : "DMRX 1",
+  "8002" : "DMRX 2",
+
   "1" : "Local",
   "91" : "World-wide",
   "92" : "Europe",
