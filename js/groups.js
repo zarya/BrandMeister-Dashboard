@@ -9,6 +9,8 @@ var groups =
 
   "255" : "Ukraine",
 
+  "655" : "South Africa",
+
   "1" : "Local",
   "91" : "World-wide",
   "92" : "Europe",
