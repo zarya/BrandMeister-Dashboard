@@ -71,6 +71,9 @@ var groups =
 
   "9107" : "XRF007 B",
 
+  "4860" : "Norway",
+  "242" : "Norway",
+
   "4016" : "Berlin-Brandenburg",
   "4242" : "Norway",
   "4400" : "United Kingdom",
