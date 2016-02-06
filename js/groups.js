@@ -34,7 +34,7 @@ var groups =
 
   "235" : "United Kingdom",
   "262" : "Deutschland",
-  "240" : "Market Reef",
+  "240" : "Sweden",
 
   "228" : "Switzerland",
   "734" : "Venezuela", 
