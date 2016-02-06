@@ -23,6 +23,7 @@ if ($_GET['page']) {
   if ($_GET['page'] == "reflector") include("pages/reflector.php");
   if ($_GET['page'] == "masters") include("pages/masters.php");
   if ($_GET['page'] == "erouting") include("pages/extended_routing.php");
+  if ($_GET['page'] == "display") include("pages/display.php");
 }else
   include("pages/dashboard.php");
 ?>    
