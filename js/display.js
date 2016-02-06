@@ -2,14 +2,19 @@ var max_queue = 5;
 var table = [];
 var last = [];
 var socket = io.connect('http://home.gigafreak.net:5001');
+var targetgroup = 0;
+loadGroups();
+
+$('#group-list').live('change', function(e) {
+  targetgroup = e.target.options[e.target.selectedIndex].value;
+});
 
 socket.on('connect', function () {
   var table = [];
   var last = [];
   socket.on('mqtt', function (msg) {
     var lastraw = JSON.parse(msg.payload);
-    if (lastraw['DestinationID'] == 3100) { 
-      if (lastraw['Master'].toString().substring(0,3) != params['filter'] )
+    if (lastraw['DestinationID'] != targetgroup) { 
         return;
     }
     
@@ -53,9 +58,55 @@ socket.on('connect', function () {
     //var entry = {
     //  'Time': datetime, 
     //  'Link name': lastraw['LinkName'],
+    document.getElementById("options").innerHTML = options;
+    document.getElementById("timeslot").innerHTML = lastraw['Slot'];
+    document.getElementById("time").innerHTML = datetime;
     document.getElementById("source").innerHTML = Source;
     document.getElementById("repeater").innerHTML = CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')';
-    document.getElementById("destination").innerHTML = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID']) +' (' + lastraw['DestinationID'] + ')',
+    document.getElementById("destination").innerHTML = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID']) +' (' + lastraw['DestinationID'] + ')';
   });
 });
+
+function getCountry(number)
+{
+  var value = String(number).substring(0,3);
+  if (countries.hasOwnProperty(value))
+    return countries[value];
+}
+function CountryImage(country){
+  if (country != null)
+    return '<img src="images/flags/png/' + country + '.png" \>';
+  else
+    return '';
+}
+function sMeter(rssi) {
+    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB';
+    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9';
+    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8';
+    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7';
+    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6';
+    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5';
+    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4';
+    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3';
+    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2';
+    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1';
+    return '<img src="images/indicator/0.png" \> S0';
+}
+function TSimage(ts) {
+  if (ts > 0)
+    return '<img src="images/avc/icon_TS' + ts + '.png" \>';
+  else
+    return '<img src="images/avc/icon_TS.png" \>';
+}
+
+function loadGroups() {
+  var grouplist = $('#group-list');
+  for (var number in groups) {
+    //doe dingen
+    if (number <= 5000 && number >= 4000 || number < 100) continue;
+
+    grouplist.append( new Option(groups[number] + ' ('+number+')',number) )
+  }
+}
+
 
