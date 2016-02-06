@@ -1,28 +1,33 @@
 var groups =
 {
+  "250"  : "Russia",
   "2501" : "Russia Global",
   "2502" : "XRF250 Bridge",
   "2505" : "bridge to Radiocult",
   "9504" : "*RUSSIA* (EchoLink)",
   "9" : "DMR Reflector",
 
-  "1" : "World-wide",
+  "255" : "Ukraine",
+
+  "655" : "South Africa",
+
+  "8001" : "DMRX 1",
+  "8002" : "DMRX 2",
+
+  "1" : "Local",
   "91" : "World-wide",
-  //"1" : "Local",
   "92" : "Europe",
-  "2" : "Europe",
-  "3" : "North America",
-  "5" : "Australia, New Zeland",
-  "10" : "German",
-  "11" : "French",
-  "13" : "English",
-  "14" : "Spanish",
-  "15" : "Portuguese",
-  "20" : "DL, OE, HB9",
-  "21" : "French",
-  "22" : "Dutch",
+  "93" : "North America",
+  "95" : "Australia, New Zeland",
+  "910" : "German",
+  "911" : "French",
+  "913" : "English",
+  "914" : "Spanish",
+  "915" : "Portuguese",
+  "920" : "DL, OE, HB9",
+  "921" : "French",
   "922" : "Dutch",
-  "23" : "European English",
+  "923" : "European English",
 
   "9107" : "XRF007 B",
   "214" : "Spain",
@@ -30,7 +35,9 @@ var groups =
   "235" : "United Kingdom",
   "262" : "Deutschland",
   "240" : "Market Reef",
-  
+
+  "228" : "Switzerland",
+  "734" : "Venezuela", 
   "88" : "XRF088 B",
   "881": "XRF088 A",
 
@@ -63,6 +70,9 @@ var groups =
   "8510" : "XRF003 D",
 
   "9107" : "XRF007 B",
+
+  "4860" : "Norway",
+  "242" : "Norway",
 
   "4016" : "Berlin-Brandenburg",
   "4242" : "Norway",
@@ -194,6 +204,11 @@ var groups =
   "314700" : "Tennessee Statewide",
 
   "8710" : "Crossroads Statewide",
+
+  "4326" : "Canada English",
+  "3026" : "Canada English (4326)",
+  "4327" : "Canada Francais",
+  "3027" : "Canada Francais (4327)",
 
   "899" : "Repeater Testing"
 
