@@ -58,8 +58,7 @@ socket.on('connect', function () {
     //var entry = {
     //  'Time': datetime, 
     //  'Link name': lastraw['LinkName'],
-    document.getElementById("options").innerHTML = options;
-    document.getElementById("timeslot").innerHTML = lastraw['Slot'];
+    document.getElementById("options").innerHTML = TSimage(lastraw['Slot']) + ' ' + options;
     document.getElementById("time").innerHTML = datetime;
     document.getElementById("source").innerHTML = Source;
     document.getElementById("repeater").innerHTML = CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')';
@@ -109,4 +108,10 @@ function loadGroups() {
   }
 }
 
+function TSimage(ts) {
+  if (ts > 0)
+    return '<img src="images/avc/icon_TS' + ts + '.png" \>';
+  else
+    return '<img src="images/avc/icon_TS.png" \>';
+}
 
