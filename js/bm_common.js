@@ -139,7 +139,7 @@ function getSuitableStyle(name, state, data)
   return '';
 }
 
-function getRepeaterModel(value)
+function getRepeaterModel(value,number)
 {
   var expression = /^T(3000|2003)/;
   if (expression.test(value))
