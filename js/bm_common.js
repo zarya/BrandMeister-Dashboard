@@ -148,7 +148,7 @@ function getRepeaterModel(value)
   // --------------- M27QNR9JA7AN
   var expression = /^M27QNR9JA7AN/;
   if (expression.test(value))
-    return 'Motorola DR3000
+    return 'Motorola DR3000';
 
   // --------------- M27QPR9JA7AN
   var expression = /^M27..R9JA7AN/;
