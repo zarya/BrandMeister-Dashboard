@@ -207,7 +207,7 @@ function getRepeaterModel(value)
         return 'Motorola SLR5500';
       
       default:
-        return 'Motorola SLR5000 Series'';
+        return 'Motorola SLR5000 Series';
     }
   }
 
