@@ -152,6 +152,8 @@ var groups =
   "31099" : "USA - Area 8 4648",
   "31098" : "USA - Area 9 4649",
 
+  "3136" : "SNARS 6968",
+
   "206"  : "Belgium",
   "2061" : "België Noord",
   "2062" : "België Zuid",
@@ -160,12 +162,12 @@ var groups =
   "4751" : "België Noord",
   "4752" : "België Zuid",
   "4753" : "België Oost",
-  "2064" : "België Ondemand 1",
-  "2065" : "België Ondemand 2",
-  "2066" : "België Ondemand 3",
-  "2067" : "België Ondemand 4",
-  "2068" : "België Ondemand 5",
-  "2069" : "België Ondemand 6",
+  "2064" : "België OnDemand 4",
+  "2065" : "België OnDemand 5",
+  "2066" : "België OnDemand 6",
+  "2067" : "België OnDemand 7",
+  "2068" : "België OnDemand 8",
+  "2069" : "België OnDemand 9",
 
   "4000" : "Disconnect",
   "5000" : "Ref info",
