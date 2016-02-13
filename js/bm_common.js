@@ -139,16 +139,53 @@ function getSuitableStyle(name, state, data)
   return '';
 }
 
-function getRepeaterModel(value)
+function getRepeaterModel(value,number)
 {
   var expression = /^T(3000|2003)/;
   if (expression.test(value))
     return 'Motorola MTR3000';
 
+  var region = number.toString().substr(0, 1);
+
+  var expression = /^M27..R9JA7AN/;
+  if (expression.test(value) && (region == '2'))
+    return 'Motorola DR3000';
+  if (expression.test(value) && (region == '3'))
+    return 'Motorola XPR8300';
+  if (expression.test(value) && (region == '7'))
+    return 'Motorola DGR6175';
+  if (expression.test(value) && (region == '4'))
+    return 'Motorola XiR R8200';
+
+  var expression = /^R10..GA.Q1AN/;
+  if (expression.test(value) && (region == '2'))
+    return 'Motorola SLR5500';
+  if (expression.test(value) && (region == '3'))
+    return 'Motorola SLR5700';
+
   // --------------- M27QPR9JA7AN
   var expression = /^M27..R9JA7AN/;
   if (expression.test(value))
-    return 'Motorola DR3000';
+  {
+    switch (region)
+    {
+      case '3':
+        // NA
+        return 'Motorola XPR8300';
+
+      case '7':
+        // LA
+        return 'Motorola DGR6175';
+
+      case '4':
+        // AS
+        return 'Motorola XiR R8200';
+
+      default:
+        // EMEA
+        return 'Motorola DR3000';
+    }
+  }
 
   // --------------- M27JNR9JA7BN
   var expression = /^M27..R9JA7[BC]N/;
@@ -158,7 +195,21 @@ function getRepeaterModel(value)
   // --------------- R10JCGAPQ1AN
   var expression = /^R10..GA.Q1AN/;
   if (expression.test(value))
-    return 'Motorola SLR5500';
+  {
+    switch (region)
+    {
+      case '3':
+        // NA
+        return 'Motorola XLR5700';
+
+      case '2':
+        // EMEA
+        return 'Motorola SLR5500';
+      
+      default:
+        return 'Motorola SLR5000 Series';
+    }
+  }
 
   // ---------------- RD985-00000000-001000-U1-0-F
   // ---------------- RD985-0000000S-001000-U1-0-F

@@ -20,8 +20,14 @@ while (list($key, $value) = each($config['LHServers'])) {
 var max_queue = 30;
 var table = [];
 var last = [];
-//var socket = io.connect('http://home.gigafreak.net:5001');
-var socket = io.connect($( "#source_url" ).val());
+var urlreg = /(.+:\/\/?[^\/]+)(\/.*)*/;
+var pathname = urlreg.exec( $( "#source_url" ).val() );
+var options = {};
+
+if (pathname[2]) options['path'] = pathname[2];
+if (pathname[0].charAt(4) == "s") options['secure'] = true;
+
+var socket = io.connect(pathname[1],options);
 
 function SourceChange() {
   table = [];
@@ -29,7 +35,14 @@ function SourceChange() {
   socket.disconnect();
   socket.io.close();
   socket = null;
-  socket = io.connect($( "#source_url" ).val(),{'forceNew':true });
+  var pathname = urlreg.exec( $( "#source_url" ).val() );
+  var options = {'forceNew':true};
+
+  if (pathname[0].charAt(4) == "s") options['secure'] = true;
+  if (pathname[2]) options['path'] = pathname[2];
+
+  socket = io.connect(pathname[1],options);
+
   startSocket($( "#source_url" ).val());
   socket.emit('subscribe',{topic:'filter/'+params['filter']+'/'+params['repeater']});
 }

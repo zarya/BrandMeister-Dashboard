@@ -14,7 +14,7 @@ function updateDongleListCallback(master) {
         var device = {};
         device['Number'] = CountryImage(getCountry(value['number']))+" "+value['number'];
         device['Name'] = '<a href="'+baseurl+'index.php?page=lh&country=null&repeater='+value['number']+'">' + value['name'] + '</a>';
-        device['Hardware'] = getRepeaterModel(value['hardware']);
+        device['Hardware'] = getRepeaterModel(value['hardware'],value['number']);
         device['Firmware'] = value['firmware'];
         device['Tx'] = getFrequency(value['frequency1']);
         device['Rx'] = getFrequency(value['frequency2']);

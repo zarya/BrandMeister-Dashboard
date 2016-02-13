@@ -14,7 +14,7 @@ function updateRepeaterListCallback(master) {
         var device = {};
         device['Number'] = CountryImage(getCountry(value['number']))+" "+value['number'];
         device['Name'] = '<a href="'+baseurl+'index.php?page=lh&country=null&repeater='+value['number']+'&unique=1">' + value['name'] + '</a>';
-        device['Hardware'] = getRepeaterModel(value['hardware']);
+        device['Hardware'] = getRepeaterModel(value['hardware'],value['number']);
         device['Firmware'] = value['firmware'];
         device['TX'] = getFrequency(value['frequency1']);
         device['RX'] = getFrequency(value['frequency2']);
