@@ -273,7 +273,15 @@ if (retina()) {
 var max_queue = 5;
 var table = [];
 var last = [];
-var socket = io.connect('http://home.gigafreak.net:5001');
+
+var urlreg = /(.+:\/\/?[^\/]+)(\/.*)*/;
+var pathname = urlreg.exec( php_config['LHServers'][0]['url'] );
+var options = {};
+
+if (pathname[2]) options['path'] = pathname[2];
+if (pathname[0].charAt(4) == "s") options['secure'] = true;
+
+var socket = io.connect(pathname[1],options);
 
 socket.on('connect', function () {
   var table = [];
