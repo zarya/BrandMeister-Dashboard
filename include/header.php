@@ -58,6 +58,12 @@ if ($config['XmasMode']) {
        console.log(servers);
      }
     var baseurl = "<?php echo $config['baseurl']; ?>";
+
+    <?php
+$js_array = json_encode($config);
+echo "var php_config = ". $js_array . ";\n";
+    ?>
+
     </script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-migrate-1.0.0.min.js"></script>
