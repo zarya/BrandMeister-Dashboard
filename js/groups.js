@@ -15,6 +15,7 @@ var groups =
   "8002" : "DMRX 2",
 
   "1" : "Local",
+  "2" : "Local",
   "91" : "World-wide",
   "92" : "Europe",
   "93" : "North America",
