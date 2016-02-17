@@ -163,6 +163,8 @@ var groups =
   "31099" : "USA - Area 8 4648",
   "31098" : "USA - Area 9 4649",
 
+  
+  "31089" : "Hytera USA",
   "3136" : "SNARS 6968",
 
   "206"  : "Belgium",
