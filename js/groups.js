@@ -239,6 +239,9 @@ var groups =
   "2687" : "Madeira Is.",
   "268"  : "Portugal",
 
+  "505"  : "Australia",
+  "4805" : "Australia (505)"
+
   "899" : "Repeater Testing"
 
 
