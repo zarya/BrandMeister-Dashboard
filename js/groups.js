@@ -29,12 +29,23 @@ var groups =
   "922" : "Dutch",
   "923" : "European English",
 
+  "927" : "Nordic",
+
   "9107" : "XRF007 B",
   "214" : "Spain",
 
   "235" : "United Kingdom",
   "262" : "Deutschland",
   "240" : "Sweden",
+  "2400" : "Regional SM0",
+  "2401" : "Regional SM1",
+  "2402" : "Regional SM2",
+  "2403" : "Regional SM3",
+  "2404" : "Regional SM4",
+  "2405" : "Regional SM5",
+  "2406" : "Regional SM6",
+  "2407" : "Regional SM7",
+
 
   "228" : "Switzerland",
   "734" : "Venezuela", 
@@ -211,6 +222,19 @@ var groups =
   "3026" : "Canada English (4326)",
   "4327" : "Canada Francais",
   "3027" : "Canada Francais (4327)",
+
+  "268940" : "XRF040 A",
+  "268941" : "XRF040 B",
+  "268942" : "XRF789 B",
+  "268943" : "XRF724 B",
+  "2681" : "Regional North",
+  "2682" : "Regional Center",
+  "2683" : "Capital",
+  "2684" : "South",
+  "2685" : "Algarve",
+  "2686" : "Azores",
+  "2687" : "Madeira Is.",
+  "268"  : "Portugal",
 
   "899" : "Repeater Testing"
 
