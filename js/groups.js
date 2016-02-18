@@ -151,7 +151,9 @@ var groups =
   "4647" : "USA - Area 7",
   "4648" : "USA - Area 8",
   "4649" : "USA - Area 9",
+  "3105" : "USA - Arkansas",
   "3106" : "USA - California",
+  "3148" : "USA - Texas",
   "3100" : "USA - Nationwide 4639",
   "31090" : "USA - Area 0 4639",
   "31091" : "USA - Area 1 4641",
@@ -167,6 +169,9 @@ var groups =
   
   "31089" : "Hytera USA",
   "3136" : "SNARS 6968",
+  "31210" : "XRF210 D",
+  "310997" : "Parrot",
+  "9990" : "Parrot",
 
   "206"  : "Belgium",
   "2061" : "België Noord",
@@ -217,7 +222,7 @@ var groups =
   
   "5059742" : "XRF740 C",
 
-  "314700" : "Tennessee Statewide",
+  "314700" : "USA - Tennessee",
 
   "8710" : "Crossroads Statewide",
 
@@ -241,6 +246,17 @@ var groups =
 
   "505"  : "Australia",
   "4805" : "Australia (505)"
+  "714" : "Panama",
+  "7141" : "Panama City",
+  "7142" : "Colon",
+
+  "4636" : "Mi5-STATEWIDE1 (31261)",
+  "4637" : "Mi5-STATEWIDE2 (31262)",
+  "4638" : "Mi5-EVENT (31263)",
+  "31261" : "Mi5-STATEWIDE1",
+  "31262" : "Mi5-STATEWIDE2",
+  "31263" : "Mi5-EVENT",
+
 
   "899" : "Repeater Testing"
 
