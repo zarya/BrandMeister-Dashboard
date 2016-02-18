@@ -169,7 +169,7 @@ var groups =
   
   "31089" : "Hytera USA",
   "3136" : "SNARS 6968",
-  "31210" : "XRF210 D"
+  "31210" : "XRF210 D",
 
   "206"  : "Belgium",
   "2061" : "België Noord",
