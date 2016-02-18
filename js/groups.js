@@ -244,6 +244,10 @@ var groups =
   "2687" : "Madeira Is.",
   "268"  : "Portugal",
 
+  "714" : "Panama",
+  "7141" : "Panama City",
+  "7142" : "Colon",
+
   "899" : "Repeater Testing"
 
 
