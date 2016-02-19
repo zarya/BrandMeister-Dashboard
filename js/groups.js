@@ -245,7 +245,7 @@ var groups =
   "268"  : "Portugal",
 
   "505"  : "Australia",
-  "4805" : "Australia (505)"
+  "4805" : "Australia (505)",
   "714" : "Panama",
   "7141" : "Panama City",
   "7142" : "Colon",
