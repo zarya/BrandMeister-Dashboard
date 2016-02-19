@@ -199,6 +199,8 @@ function getCountry(number)
   var value = String(number).substring(0,3);
   if (countries.hasOwnProperty(value))
     return countries[value];
+  else
+    return "";
 }
 function CountryImage(country){
   if (country != null)
