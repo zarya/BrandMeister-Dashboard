@@ -203,7 +203,7 @@ function getCountry(number)
     return "";
 }
 function CountryImage(country){
-  if (country != null)
+  if (country != null && country != "")
     return '<img src="images/flags/png/' + country + '.png" \>';
   else
     return '';
