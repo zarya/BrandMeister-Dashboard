@@ -12,7 +12,7 @@ function updateAlertListCallback(master) {
       _alert['Alarm'] = value['name'];
       _alert['Master'] = value['network'];
     
-      table.push(_alert);
+      table.unshift(_alert);
     }
     document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
     $('#jsonTable').dataTable({
