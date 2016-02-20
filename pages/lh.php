@@ -38,13 +38,13 @@ function SourceChange() {
   var pathname = urlreg.exec( $( "#source_url" ).val() );
   var options = {'forceNew':true};
 
-  if (pathname[0].charAt(4) == "s") options['secure'] = true;
   if (pathname[2]) options['path'] = pathname[2];
+  if (pathname[0].charAt(4) == "s") options['secure'] = true;
 
   socket = io.connect(pathname[1],options);
 
   startSocket($( "#source_url" ).val());
-  socket.emit('subscribe',{topic:'filter/'+params['filter']+'/'+params['repeater']});
+  socket.emit('subscribe',{topic:'{"country":"'+params['filter']+'","repeater":"'+params['repeater']+'","unique":"'+params['unique']+'","amount":'+max_queue+'}'});
 }
 
 startSocket($( "#source_url" ).val());
