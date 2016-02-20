@@ -12,7 +12,7 @@ function updateAlertListCallback(master) {
       _alert['Repeater'] = CountryImage(getCountry(value['repeater']))+" "+value['repeater'];
       _alert['Master'] = value['master'];
     
-      table.push(device);
+      table.push(_alert);
     }
     document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
     $('#jsonTable').dataTable({
