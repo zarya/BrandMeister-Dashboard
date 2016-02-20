@@ -259,6 +259,8 @@ var groups =
 
   "244" : "Finland",
 
+  "260" : "Poland",
+
   "899" : "Repeater Testing"
 
 
