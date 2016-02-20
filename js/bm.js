@@ -49,7 +49,10 @@ function fetchServer(number) {
       for (key in data)
       {
         var value = data[key];
-        var country = value['number'].toString().substring(0,3);
+        if (value['number'].toString().substring(0,4) == "2440")
+          var country = "2440";
+        else
+          var country = value['number'].toString().substring(0,3);
         if (value['type'] == 1) {
           if (value['name'] == "Hytera Multi-Site Connect" || value['name'] == "Motorola IP Site Connect") {
             repeater_count++
