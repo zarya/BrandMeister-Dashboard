@@ -1,6 +1,6 @@
 var table = [];
 
-function updateRepeaterListCallback(master) {
+function updateAlertListCallback(master) {
   return function(data) {
     for (key in data)
     {
