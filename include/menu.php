@@ -12,6 +12,7 @@
             <li><a class="submenu" href="index.php?page=repeaters"><i class="icon-file-alt"></i><span class="hidden-tablet"> Repeaters</span></a></li>
             <li><a class="submenu" href="index.php?page=dongles"><i class="icon-file-alt"></i><span class="hidden-tablet"> Hotspots</span></a></li>
             <li><a class="submenu" href="index.php?page=masters"><i class="icon-file-alt"></i><span class="hidden-tablet"> Masters</span></a></li>
+            <li><a class="submenu" href="index.php?page=alerts"><i class="icon-file-alt"></i><span class="hidden-tablet"> Alerts</span></a></li>
          </ul>   
       </li>
 <?php
