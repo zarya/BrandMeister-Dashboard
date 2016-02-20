@@ -8,9 +8,9 @@ function updateAlertListCallback(master) {
       //{"name":"Voltage Alarm","repeater":206901,"network":2062,"date":"2016-02-14 21:31:40","time":1455485500,"stamp":1455485500000}
       var _alert = {};
       _alert['Time'] = value['date'];
-      _alert['Repeater'] = CountryImage(getCountry(value['repeater']))+" "+value['repeater'];
+      _alert['Repeater'] = CountryImage(getCountry(value['repeater'])) + " " + value['repeater'];
       _alert['Alarm'] = value['name'];
-      _alert['Master'] = value['network'];
+      _alert['Master'] = CountryImage(getCountry(value['network'])) + " " + value['network'];
     
       table.unshift(_alert);
     }
