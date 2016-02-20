@@ -58,19 +58,6 @@ function updateReflectors() {
   }
 }
 
-function getCountry(number)
-{
-  var value = String(number).substring(0,3);
-  if (countries.hasOwnProperty(value))
-    return countries[value];
-}
-function CountryImage(country){
-  if (country != null)
-    return '<img src="images/flags/png/' + country + '.png" \>';
-  else
-    return '';
-}
-
 var params = function() {
     function urldecode(str) {
         return decodeURIComponent((str+'').replace(/\+/g, '%20'));

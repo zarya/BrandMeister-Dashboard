@@ -66,38 +66,6 @@ socket.on('connect', function () {
   });
 });
 
-function getCountry(number)
-{
-  var value = String(number).substring(0,3);
-  if (countries.hasOwnProperty(value))
-    return countries[value];
-}
-function CountryImage(country){
-  if (country != null)
-    return '<img src="images/flags/png/' + country + '.png" \>';
-  else
-    return '';
-}
-function sMeter(rssi) {
-    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB';
-    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9';
-    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8';
-    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7';
-    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6';
-    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5';
-    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4';
-    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3';
-    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2';
-    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1';
-    return '<img src="images/indicator/0.png" \> S0';
-}
-function TSimage(ts) {
-  if (ts > 0)
-    return '<img src="images/avc/icon_TS' + ts + '.png" \>';
-  else
-    return '<img src="images/avc/icon_TS.png" \>';
-}
-
 function loadGroups() {
   var grouplist = $('#group-list');
   for (var number in groups) {
@@ -107,11 +75,3 @@ function loadGroups() {
     grouplist.append( new Option(groups[number] + ' ('+number+')',number) )
   }
 }
-
-function TSimage(ts) {
-  if (ts > 0)
-    return '<img src="images/avc/icon_TS' + ts + '.png" \>';
-  else
-    return '<img src="images/avc/icon_TS.png" \>';
-}
-

@@ -106,5 +106,6 @@ echo "var php_config = ". $js_array . ";\n";
     <script src="js/bootstrap-switch.js"></script>
     <script src="js/config.js"></script>
     <script src="js/bm_common.js"></script>
+    <script src="js/lh.js"></script>
     <!-- end Javascript -->    
 </head>
