@@ -257,6 +257,7 @@ var groups =
   "31262" : "Mi5-STATEWIDE2",
   "31263" : "Mi5-EVENT",
 
+  "244" : "Finland",
 
   "899" : "Repeater Testing"
 
