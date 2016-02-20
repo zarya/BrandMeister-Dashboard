@@ -24,6 +24,7 @@ if ($_GET['page']) {
   if ($_GET['page'] == "masters") include("pages/masters.php");
   if ($_GET['page'] == "erouting") include("pages/extended_routing.php");
   if ($_GET['page'] == "display") include("pages/display.php");
+  if ($_GET['page'] == "alerts") include("pages/alerts.php");
 }else
   include("pages/dashboard.php");
 ?>    
