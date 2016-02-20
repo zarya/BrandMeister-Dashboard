@@ -27,7 +27,7 @@ function updateRepeaterListCallback(master) {
 }
 
 
-$.getJSON('http://tracker.dstar.su/api/alerts.php', updateAlertListCallback());
+$.getJSON('http://tracker.dstar.su/api/alerts.php?callback=?', updateAlertListCallback());
 
 var params = function() {
     function urldecode(str) {
