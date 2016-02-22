@@ -45,9 +45,10 @@ function fetchServer(number) {
   $.getJSON('http://' + servers[number] + '/status/' + 'status.php?callback=?',
     function(data)
     {
-      masters_count++;
+      var status_link_count = 0
       for (key in data)
       {
+        status_link_count++;
         var value = data[key];
         if (value['number'].toString().substring(0,4) == "2440")
           var country = "2440";
@@ -104,6 +105,8 @@ function fetchServer(number) {
             external_count++;
         }
       }
+      if (status_link_count > 0)
+        masters_count++;
       $("#count_rptr").html(repeater_count);
       $("#count_dongle").html(dongle_count);
       $("#count_homebrew").html(homebrew_count + ' / ' + homebrewDgl_count);
