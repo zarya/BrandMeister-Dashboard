@@ -18,6 +18,9 @@ function getCountry(number)
   if (String(number).substring(0,4) == "2440") {
     return "ax";
   }
+
+  if (number >= 4000 && <= 5000) return "";
+
   var value = String(number).substring(0,3);
   if (countries.hasOwnProperty(value))
     return countries[value];
