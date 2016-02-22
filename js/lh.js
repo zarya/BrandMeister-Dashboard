@@ -19,7 +19,7 @@ function getCountry(number)
     return "ax";
   }
 
-  if (number >= 4000 && <= 5000) return "";
+  if (number >= 4000 && number <= 5000) return "";
 
   var value = String(number).substring(0,3);
   if (countries.hasOwnProperty(value))
