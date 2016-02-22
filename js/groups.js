@@ -168,8 +168,7 @@ var groups =
 
   
   "31089" : "Hytera USA",
-  "3136" : "SNARS 6968",
-  "31204" : "XRF004 A",
+  "31268" : "SNARS 6968",
   "31210" : "XRF210 D",
   "310997" : "Parrot",
   "9990" : "Parrot",
