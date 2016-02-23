@@ -4,7 +4,7 @@ function getGroupName(number,master)
   if (group_mappings.hasOwnProperty(master)) {
     if (group_mappings[master].hasOwnProperty(number)) {
       number = group_mappings[master][number];
-      mapped_id = " Map " + number
+      mapped_id = " (" + number +") <->"
     }
   }
   var value = String(number);
