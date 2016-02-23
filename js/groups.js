@@ -260,6 +260,9 @@ var groups =
   "244" : "Finland",
 
   "260" : "Poland",
+  "4280": "Poland (260)",
+  "26040" : "Poland Tech",
+  "4281": "Poland Tech (26040)",
 
   "899" : "Repeater Testing"
 
