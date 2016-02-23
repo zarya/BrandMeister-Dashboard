@@ -268,18 +268,3 @@ var groups =
 
 
 };
-
-function getGroupName(number)
-{
-  var value = String(number);
-  if (groups.hasOwnProperty(value))
-    return groups[value];
-
-  if ((value.length == 3) &&
-      (countries != undefined))
-    for (key in countries)
-      if (countries[key].hasOwnProperty('MCC') &&
-         (countries[key]['MCC'] == number))
-        return countries[key]['name'];
-  return "";
-}
