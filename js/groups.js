@@ -165,7 +165,7 @@ var groups =
   "31097" : "USA - Area 7 4647",
   "31099" : "USA - Area 8 4648",
   "31098" : "USA - Area 9 4649",
-
+  "3115" : "Hawaii Statewide",
   
   "31089" : "Hytera USA",
   "31268" : "SNARS 6968",
