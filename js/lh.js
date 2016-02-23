@@ -1,4 +1,4 @@
-function getGroupName(number)
+function getGroupName(number,master)
 {
   var value = String(number);
   if (groups.hasOwnProperty(value))
