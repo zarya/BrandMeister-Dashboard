@@ -1,8 +1,15 @@
 function getGroupName(number,master)
 {
+  var mapped_id = "";
+  if (group_mappings.hasOwnProperty(master)) {
+    if (group_mappings[master].hasOwnProperty(number)) {
+      number = group_mappings[master][number];
+      mapped_id = " Map " + number
+    }
+  }
   var value = String(number);
   if (groups.hasOwnProperty(value))
-    return groups[value];
+    return groups[value] + mapped_id;
 
   if ((value.length == 3) &&
       (countries != undefined))

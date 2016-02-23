@@ -95,9 +95,10 @@ echo "var php_config = ". $js_array . ";\n";
     <script src="js/jquery.knob.min.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
     <script src="http://registry.dstar.su/api/node.php?callback=setServerList"></script>
-    <script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
+    <script src="js/socket.io-1.3.7.js"></script>
     <script src="js/json-to-table.js"></script>
     <script src="js/groups.js"></script>
+    <script src="js/group_mapping.js"></script>
     <script src="js/country.js"></script>
     <script src="js/date.format.js" type="text/javascript"></script>        
     <script src="js/highcharts/highcharts.js"></script>
