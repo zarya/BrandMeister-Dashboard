@@ -3,7 +3,6 @@ include("config.php");
 include("include/header.php");
 ?>
 <body>
-            <div id="content" class="span10">
 <?php
 if ($_GET['page']) {
   if ($_GET['page'] == "lh") include("pages/lh.php");
@@ -17,9 +16,6 @@ if ($_GET['page']) {
 }else
   include("pages/dashboard.php");
 ?>    
-            <!-- end: Content -->
-        </div><!--/#content.span10-->
-    
     <!-- start: JavaScript-->
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
