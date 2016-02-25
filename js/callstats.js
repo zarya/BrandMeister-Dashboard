@@ -57,10 +57,12 @@ function RenderGraph()
   if (params['talkgroup']) filters = filters + '&talkgroup='+params['talkgroup'];
   if (params['repeater']) filters = filters + '&repeater='+params['repeater'];
   if (params['totalcount']) filters = filters + '&totalcount='+params['totalcount'];
+  var days = 2;
+  if (params['repeater']) days = 15;
   if (params['destination'])
-    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupdst=1&days=2&totalcount=5'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupdst=1&days='+days+'&totalcount=5'+filters+'&callback=?'
   else if (params['reflectors'])
-    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupref=1&days=2&totalcount=5'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupref=1&days='+days+'&totalcount=5'+filters+'&callback=?'
   else
     var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30'+filters+'&callback=?'
      
