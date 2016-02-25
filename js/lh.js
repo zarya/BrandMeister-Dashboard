@@ -14,7 +14,7 @@ function getGroupName(number)
 {
   var value = String(number);
   if (groups.hasOwnProperty(value))
-    return groups[value] + mapped_id;
+    return groups[value];
 
   if ((value.length == 3) &&
       (countries != undefined))
