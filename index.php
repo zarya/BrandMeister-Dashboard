@@ -25,6 +25,7 @@ if ($_GET['page']) {
   if ($_GET['page'] == "erouting") include("pages/extended_routing.php");
   if ($_GET['page'] == "display") include("pages/display.php");
   if ($_GET['page'] == "alerts") include("pages/alerts.php");
+  if ($_GET['page'] == "callstats") include("pages/callstats.php");
 }else
   include("pages/dashboard.php");
 ?>    
