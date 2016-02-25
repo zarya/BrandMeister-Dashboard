@@ -13,7 +13,7 @@
             <li><a class="submenu" href="index.php?page=dongles"><i class="icon-file-alt"></i><span class="hidden-tablet"> Hotspots</span></a></li>
             <li><a class="submenu" href="index.php?page=masters"><i class="icon-file-alt"></i><span class="hidden-tablet"> Masters</span></a></li>
             <li><a class="submenu" href="index.php?page=alerts"><i class="icon-file-alt"></i><span class="hidden-tablet"> Alerts</span></a></li>
-            <li><a class="submenu" href="index.php?page=callstats"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Call stats</span></a></li>
+            <li><a class="submenu" href="index.php?page=callstats"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Calls</span></a></li>
          </ul>   
       </li>
 <?php
