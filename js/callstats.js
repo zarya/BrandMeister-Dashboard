@@ -29,12 +29,12 @@ function RenderGraph()
         }
       }
     }
-    if (source.lengt > 0)
+    if (source.length > 0)
     {
       data = [];
       for(index in source)
       {
-        data.push{name: 'TG '+index,data: source[index]};
+        data.push({name: 'TG '+index,data: source[index]});
       }
     } 
     else
@@ -91,4 +91,4 @@ function RenderGraph()
       series: data
     });
   });
-});
+}
