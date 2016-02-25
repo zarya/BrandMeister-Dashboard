@@ -2,7 +2,8 @@ $(function () {
   RenderGraph();
 });
 
-function RenderGraph();
+function RenderGraph()
+{
   if (params['source'])
     var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?source=1&days=30&callback=?'
   else
