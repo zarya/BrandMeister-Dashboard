@@ -1,12 +1,17 @@
-function getGroupName(number,master)
+function getGroupFormatting(number,master)
 {
   var mapped_id = "";
   if (group_mappings.hasOwnProperty(master)) {
     if (group_mappings[master].hasOwnProperty(number)) {
-      number = group_mappings[master][number];
-      mapped_id = " (" + number +") <->"
+      mapped_number = group_mappings[master][number];
+      return number + " <-> " + mapped_number; 
     }
   }
+  return number;
+}
+
+function getGroupName(number)
+{
   var value = String(number);
   if (groups.hasOwnProperty(value))
     return groups[value] + mapped_id;
