@@ -26,6 +26,7 @@ $('#group-by-tg').on('switchChange.bootstrapSwitch', function() {
     delete params['reflectors'];
     params['destination'] = 1;
     $("#group-by-ref").bootstrapSwitch('state', false);
+    $("#group-list").selectedIndex = 0;
   }
   else
   {
@@ -41,6 +42,7 @@ $('#group-by-ref').on('switchChange.bootstrapSwitch', function() {
     delete params['destination'];
     params['reflectors'] = 1;
     $("#group-by-tg").bootstrapSwitch('state', false);
+    $("#group-list").selectedIndex = 0;
   }
   else
   {
