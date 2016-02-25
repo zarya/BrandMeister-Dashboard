@@ -58,13 +58,13 @@ function RenderGraph()
   if (params['repeater']) filters = filters + '&repeater='+params['repeater'];
   if (params['totalcount']) filters = filters + '&totalcount='+params['totalcount'];
   if (params['destination'])
-    var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupdst=1&days=2&totalcount=5'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupdst=1&days=2&totalcount=5'+filters+'&callback=?'
   else if (params['reflectors'])
-    var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupref=1&days=2&totalcount=5'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupref=1&days=2&totalcount=5'+filters+'&callback=?'
   else
-    var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30'+filters+'&callback=?'
      
-  $.getJSON(url, function (jsondata) {
+  $.getJSON(data_url, function (jsondata) {
     data = [{type: 'area', name: 'Total'}];
 
     //Generate total
