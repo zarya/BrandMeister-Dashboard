@@ -4,7 +4,7 @@
                     <a href="index.php">Home</a> 
                     <i class="icon-angle-right"></i>
                 </li>
-                <li><a href="#">Repeaters</a></li>
+                <li><a href="#">Call statistics</a></li>
             </ul>
 
 <div class="row-fluid">
