@@ -64,7 +64,7 @@ function RenderGraph()
   else if (params['reflectors'])
     var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?groupref=1&days='+days+'&totalcount=5'+filters+'&callback=?'
   else
-    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30'+filters+'&callback=?'
+    var data_url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30'+filters+'&totalcount=5&callback=?'
      
   $.getJSON(data_url, function (jsondata) {
     data = [{type: 'area', name: 'Total'}];
