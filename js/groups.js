@@ -107,6 +107,12 @@ var groups =
   "2356" : "Wales",
   "2357" : "UK - 7",
   "2358" : "UK Test",
+  
+  "23550": "Scotland",
+  "23560": "UK - North East",
+  "23562": "UK - M62 Corridor",
+  "23520": "UK - North West",
+
 
   "7551" : "Belgium Vlaams",
   "4770" : "Hungary",
