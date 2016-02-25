@@ -22,7 +22,7 @@ function getGroupName(number)
       if (countries[key].hasOwnProperty('MCC') &&
          (countries[key]['MCC'] == number))
         return countries[key]['name'];
-  return "" + mapped_id;
+  return "";
 }
 
 function getCellDuration(value)
