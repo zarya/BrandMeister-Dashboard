@@ -1,14 +1,43 @@
 $(function () {
-  $.getJSON('https://bm-lastheard.pi9noz.ampr.org/stats/?days=30&callback=?', function (jsondata) {
+  RenderGraph();
+});
 
+function RenderGraph();
+  if (params['source'])
+    var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?source=1&days=30&callback=?'
+  else
+    var url = 'https://bm-lastheard.pi9noz.ampr.org/stats/?days=30&callback=?'
+     
+  $.getJSON(url, function (jsondata) {
     data = [{type: 'area', name: 'Total'}];
 
     //Generate total
     qso = [];
-    for (index in jsondata) {
-      qso.push([parseInt(index), jsondata[index]['qso']]);
+    source = [];
+    for (index in jsondata)
+    {
+      if (jsondata[index]['qso'])
+      {
+        qso.push([parseInt(index), jsondata[index]['qso']]);
+      }
+      if (jsondata[index][0]['source'])
+      {
+        for(tgindex in jsondata[index])
+        {
+          source[tgindex].push([parseInt(index), jsondata[index][tgindex]['qso']])
+        }
+      }
     }
-    data[0]['data'] = qso;
+    if (source.lengt > 0)
+    {
+      data = [];
+      for(index in source)
+      {
+        data.push{name: 'TG '+index,data: source[index]};
+      }
+    } 
+    else
+      data[0]['data'] = qso;
 
     $('#container1').highcharts({
       chart: {
