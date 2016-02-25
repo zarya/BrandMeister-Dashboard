@@ -10,8 +10,13 @@ function getGroupFormatting(number,master)
   return number;
 }
 
-function getGroupName(number)
+function getGroupName(number,master)
 {
+  if (group_mappings.hasOwnProperty(master)) {
+    if (group_mappings[master].hasOwnProperty(number)) {
+      number = group_mappings[master][number];
+    }
+  }
   var value = String(number);
   if (groups.hasOwnProperty(value))
     return groups[value];
