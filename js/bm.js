@@ -320,7 +320,7 @@ socket.on('connect', function () {
     }
 
     if (lastraw['SourceCall'] == '')
-      lastraw['SourceCall'] = getGroupName(lastraw['SourceID']);
+      lastraw['SourceCall'] = getGroupName(lastraw['SourceID'],lastraw['Master']);
 
     var scountry = getCountry(lastraw['SourceID']);
     var rcountry = getCountry(lastraw['ContextID']);
@@ -334,7 +334,7 @@ socket.on('connect', function () {
     }
 
     if (lastraw['ReflectorID'] != undefined)
-      ref = getGroupName(lastraw['ReflectorID']) + ' (' + lastraw['ReflectorID'] + ')';
+      ref = getGroupName(lastraw['ReflectorID'],lastraw['Master']) + ' (' + lastraw['ReflectorID'] + ')';
     if (config['datetime']) {
       var timestamp = lastraw['Start'];
       var date = new Date(timestamp * 1000);
@@ -353,7 +353,7 @@ socket.on('connect', function () {
       'Link name': lastraw['LinkName'],
       'My call': Source,
       'Source':CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')',
-      'Destination': group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')',
+      'Destination': group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')',
       'Reflector': ref
     };
     var index = functiontofindIndexByKeyValue(last,'SessionID', lastraw['SessionID']);

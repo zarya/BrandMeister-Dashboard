@@ -85,7 +85,7 @@ function startSocket(url) {
       }
 
       if (lastraw['SourceCall'] == '')
-        lastraw['SourceCall'] = getGroupName(lastraw['SourceID']);
+        lastraw['SourceCall'] = getGroupName(lastraw['SourceID'],lastraw['Master']);
 
       var scountry = getCountry(lastraw['SourceID']);
       var rcountry = getCountry(lastraw['ContextID']);
@@ -106,7 +106,7 @@ function startSocket(url) {
 
       var ref = "";
       if (lastraw['ReflectorID'] != undefined)
-        ref = getGroupName(lastraw['ReflectorID']) + ' (' + lastraw['ReflectorID'] + ')';
+        ref = getGroupName(lastraw['ReflectorID'],lastraw['Master']) + ' (' + lastraw['ReflectorID'] + ')';
       if (config['datetime']) {
         var timestamp = lastraw['Start'];
         var date = new Date(timestamp * 1000);
@@ -128,7 +128,7 @@ function startSocket(url) {
       entry['Link name'] = lastraw['LinkName'];
       entry['My call'] = Source;
       entry['Source'] = Link; 
-      entry['Destination'] = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
+      entry['Destination'] = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
       entry['Reflector'] = ref;
       entry['Options'] = "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options + "</nobr>";
       entry['RSSI'] = lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):'';

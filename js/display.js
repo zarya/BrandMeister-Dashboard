@@ -33,7 +33,7 @@ socket.on('connect', function () {
     }
 
     if (lastraw['SourceCall'] == '')
-      lastraw['SourceCall'] = getGroupName(lastraw['SourceID']);
+      lastraw['SourceCall'] = getGroupName(lastraw['SourceID'],lastraw['Master']);
 
     var scountry = getCountry(lastraw['SourceID']);
     var rcountry = getCountry(lastraw['ContextID']);
@@ -62,7 +62,7 @@ socket.on('connect', function () {
     document.getElementById("time").innerHTML = datetime;
     document.getElementById("source").innerHTML = Source;
     document.getElementById("repeater").innerHTML = CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')';
-    document.getElementById("destination").innerHTML = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID']) +' (' + lastraw['DestinationID'] + ')';
+    document.getElementById("destination").innerHTML = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + lastraw['DestinationID'] + ')';
   });
 });
 
