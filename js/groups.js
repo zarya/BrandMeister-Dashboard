@@ -240,7 +240,10 @@ var groups =
   "268940" : "XRF040 A",
   "268941" : "XRF040 B",
   "268942" : "XRF789 B",
-  "268943" : "XRF724 B",
+  "724942" : "XRF724 B",
+  "724943" : "XRF724 C",
+  "724"    : "Brazil",
+
   "2681" : "Regional North",
   "2682" : "Regional Center",
   "2683" : "Capital",
