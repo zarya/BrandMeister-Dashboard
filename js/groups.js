@@ -156,6 +156,7 @@ var groups =
   "4649" : "USA - Area 9",
   "3105" : "USA - Arkansas",
   "3106" : "USA - California",
+  "3107" : "USA - California*",
   "3148" : "USA - Texas",
   "3100" : "USA - Nationwide 4639",
   "31090" : "USA - Area 0 4639",
