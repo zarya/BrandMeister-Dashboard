@@ -11,9 +11,6 @@ var groups =
 
   "655" : "South Africa",
 
-  "8001" : "DMRX 1",
-  "8002" : "DMRX 2",
-
   "1" : "Local",
   "2" : "Local",
   "91" : "World-wide",
@@ -159,6 +156,7 @@ var groups =
   "4649" : "USA - Area 9",
   "3105" : "USA - Arkansas",
   "3106" : "USA - California",
+  "3107" : "USA - California*",
   "3148" : "USA - Texas",
   "3100" : "USA - Nationwide 4639",
   "31090" : "USA - Area 0 4639",
@@ -177,6 +175,9 @@ var groups =
   "31268" : "SNARS 6968",
   "31210" : "XRF210 D",
   "310997" : "Parrot",
+  "5150"  : "NorCal 5150*",
+  "2251"   : "CAL 1*",
+  "621"   : "NorCal 1*",
   "9990" : "Parrot",
 
   "206"  : "Belgium",
