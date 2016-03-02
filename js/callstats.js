@@ -238,7 +238,6 @@ function RenderGraph()
       },
       tooltip: {
         pointFormatter: function() {
-          console.log(this);
           return  "<span style=\"color:"+this.color+"\">\u25CF</span> "+this.series.name+": <b>"+Highcharts.dateFormat('%H:%M:%S', new Date(this.y))+"</b><br/>";
         }
       },
