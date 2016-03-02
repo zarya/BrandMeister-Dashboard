@@ -92,7 +92,7 @@ function RenderGraph()
       data = [];
       for(index in destination)
       { 
-        if (params['repeater'] == undefined && params['reflectors'] == undefined&& ( index == 0 || index > 999 ) ) continue
+        if (params['repeater'] == undefined && params['reflectors'] == undefined && ( index == 0 || index > 999 ) ) continue
         if (params['reflectors'] && (index < 4000 || index > 5000 || index=="null")) continue
         talkgroup = getGroupName(index,0)
         if (talkgroup == "") talkgroup = index;
