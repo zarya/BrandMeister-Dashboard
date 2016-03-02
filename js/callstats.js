@@ -208,7 +208,7 @@ function RenderGraph()
         type: 'area'
       },
       title: {
-        text: 'Seconds per Hour'
+        text: 'Time per Hour'
       },
       subtitle: {
         text: document.ontouchstart === undefined ?
