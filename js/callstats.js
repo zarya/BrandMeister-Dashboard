@@ -111,8 +111,6 @@ function RenderGraph()
     else
       data[0]['data'] = qso;
 
-    console.log(data);
-
     $('#container1').highcharts({
       chart: {
         zoomType: 'x',
@@ -166,6 +164,8 @@ function RenderGraph()
       series: data
     });
   });
+
+  //Generate Seconds chart
   $.getJSON(data_url_sec, function (jsondata) {
     data = [{type: 'area', name: 'Total'}];
 
@@ -176,14 +176,14 @@ function RenderGraph()
     {
       if (jsondata[index]['qso'])
       {
-        qso.push([parseInt(index), jsondata[index]['qso']]);
+        qso.push([parseInt(index), jsondata[index]['qso']*1000]);
       }
-      else if (jsondata[index][0]['destination'])
+      else if ($.isArray(jsondata[index]))
       {
         for(tgindex in jsondata[index])
         {
           if (destination[jsondata[index][tgindex]['destination']] == undefined) destination[jsondata[index][tgindex]['destination']] = [];
-          destination[jsondata[index][tgindex]['destination']].push([parseInt(index), jsondata[index][tgindex]['qso']]);
+          destination[jsondata[index][tgindex]['destination']].push([parseInt(index), jsondata[index][tgindex]['qso']*1000]);
         }
       }
     }
@@ -202,8 +202,6 @@ function RenderGraph()
     else
       data[0]['data'] = qso;
 
-    console.log(data);
-
     $('#container2').highcharts({
       chart: {
         zoomType: 'x',
@@ -220,6 +218,16 @@ function RenderGraph()
         type: 'datetime'
       },
       yAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: { //force all formats to be hour:minute:second
+            second: '%H:%M:%S',
+            minute: '%H:%M:%S',
+            hour: '%H:%M:%S',
+            day: '%H:%M:%S',
+            week: '%H:%M:%S',
+            month: '%H:%M:%S',
+            year: '%H:%M:%S'
+        },
         title: {
           text: 'Seconds'
         },
@@ -227,6 +235,12 @@ function RenderGraph()
       },
       legend: {
         enabled: true 
+      },
+      tooltip: {
+        pointFormatter: function() {
+          console.log(this);
+          return  "<span style=\"color:"+this.color+"\">\u25CF</span> "+this.series.name+": <b>"+Highcharts.dateFormat('%H:%M:%S', new Date(this.y))+"</b><br/>";
+        }
       },
       plotOptions: {
         area: {
