@@ -121,6 +121,7 @@ var groups =
   "2044" : "Oost Nederland",
   "2049881" : "XRF088 A",
   "2049882" : "XRF088 B",
+  "2049125" : "PI2NOS",
   "4500" : "Nederland",
   "4501" : "Noord Nederland",
   "4502" : "Midden Nederland",
