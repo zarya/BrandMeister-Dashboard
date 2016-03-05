@@ -68,17 +68,17 @@ function CountryImage(country){
 }
 
 function sMeter(rssi) {
-    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB';
-    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9';
-    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8';
-    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7';
-    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6';
-    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5';
-    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4';
-    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3';
-    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2';
-    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1';
-    return '<img src="images/indicator/0.png" \> S0';
+    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB (' + rssi + 'dBm)';
+    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9 (' + rssi + 'dBm)';
+    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8 ('+ rssi + 'dBm)';
+    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7 ('+ rssi + 'dBm)';
+    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6 ('+ rssi + 'dBm)';
+    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5 ('+ rssi + 'dBm)';
+    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4 ('+ rssi + 'dBm)';
+    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3 ('+ rssi + 'dBm)';
+    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2 ('+ rssi + 'dBm)';
+    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1 ('+ rssi + 'dBm)';
+    return '<img src="images/indicator/0.png" \> S0 ('+ rssi + 'dBm)';
 }
 
 function TSimage(ts) {
