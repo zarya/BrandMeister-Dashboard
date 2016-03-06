@@ -348,14 +348,13 @@ socket.on('connect', function () {
       var _percent = Math.round(lastraw['LossCount'] / lastraw['TotalCount'] * 10000)/100;
       LossCount = _percent + "% (" + lastraw['LossCount'] + "/" + lastraw['TotalCount'] + ")";
     }
-    var entry = {
-      php_lang['LH']['Time']: datetime, 
-      php_lang['LH']['Link name']: lastraw['LinkName'],
-      php_lang['LH']['My call']: Source,
-      php_lang['LH']['Source']:CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')',
-      php_lang['LH']['Destination']: group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')',
-      php_lang['LH']['Reflector']: ref
-    };
+    var entry = {}
+    entry[php_lang['LH']['Time']] = datetime;
+    entry[php_lang['LH']['Link name']] = lastraw['LinkName'];
+    entry[php_lang['LH']['My call']] = Source;
+    entry[php_lang['LH']['Source']] = CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')';
+    entry[php_lang['LH']['Destination']] =  group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
+    entry[php_lang['LH']['Reflector']] = ref;
     var index = functiontofindIndexByKeyValue(last,'SessionID', lastraw['SessionID']);
     if (index != null) {
       table[index] = entry;
