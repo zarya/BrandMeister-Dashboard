@@ -14,6 +14,9 @@ switch ($lang){
     case "de":
         $string = file_get_contents("lang/de.json");
         break;        
+    case "se":
+        $string = file_get_contents("lang/se.json");
+        break;        
     default:
         $string = file_get_contents("lang/en.json");
         break;

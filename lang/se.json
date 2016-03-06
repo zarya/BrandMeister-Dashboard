@@ -1,0 +1,134 @@
+{
+  "Home": "Hem",
+  "Reports": "Rapporter",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Fabriksbyggda Repeaters",
+    "Homebrew" : "Hembyggda",
+    "Hotspot" : "Hotspot",
+    "Repeaters" : "Repeaters",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Full rapport",
+    "Masters" : "Masters",
+    "Repeater in RX": "Repeater i RX",
+    "Repeater in TX": "Repeater i TX",
+    "External calls" : "Externa anrop",
+    "Per country": "Per land",
+    "Online per country": "Online per land",
+    "GraphYaxis" : "Hembyggda/Hotspot/Repeaters",
+    "Homebrew Hotspots" : "Hembyggda Hotspots",
+    "DV4minis" : "DV4minis",
+    "Homebrew Repeaters": "Hembyggda Repeaters",
+    "Industrial Repeaters":"Fabriksbyggda Repeaters"
+  },
+  "LH" : {
+    "LastHeard" : "Senast HÃ¶rd",
+    "Time": "Tid",
+    "Master": "Master",
+    "SessionID": "Sessions ID",
+    "Link name" : "LÃ¤nk namn",
+    "My call" : "Min anropssignal",
+    "Source" : "KÃ¤lla",
+    "Destination" : "Destination",
+    "Reflector" : "Reflektor",
+    "Options" : "Alternativ",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "LÃ¤ngd",
+    "Loss rate" : "Bortfall"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Anslutna reflektorer",
+    "Reflectors": "Reflektorer",
+    "Name" : "Namn",
+    "Reflector" : "Reflektor"
+  },
+  "Extended routing": {
+    "Extended routing": "UtÃ¶kad routing",
+    "Extended Routing for DV4mini" : "UtÃ¶kad Routing fÃ¶r DV4mini",
+    "User ID" : "AnvÃ¤ndar ID",
+    "Choose dongle" : "VÃ¤lj dongle",
+    "Mapped group" : "LÃ¤nkad grupp",
+    "Talkgroup" : "Talgrupp",
+    "OK": "OK",
+    "help" : "FÃ¶r utÃ¶kad hjÃ¤lp se mer info pÃ¥ wiki",
+    "not responding" : "ingen respons",
+    "Master" : "Master",
+    "Error" : "Fel!",
+    "missing dongle" : "Fel: Saknar dongle",
+    "error reflector" : "Fel: Kan inte ansluta till reflektor anvÃ¤nd Talgrupp!"
+  },
+  "Repeaters" : {
+    "Repeaters": "Repeaters",
+    "Number" : "ID",
+    "Name":"Nammn",
+    "Hardware":"HÃ¥rdvara",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "ID",
+    "Name":"Namn",
+    "Hardware":"HÃ¥rdvara",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"FÃ¤rgkod",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Land",
+    "Number":"ID",
+    "Version":"Version",
+    "Links":"LÃ¤nkar",
+    "Status": "Status",
+    "List": "Lista"
+  }, 
+  "Alerts" : {
+    "Alerts": "Varningar",
+    "Time":"Tid",
+    "Repeater":"Repeater",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Anrop",
+    "Call statistics":"Anrops statistik",
+    "Filters": "Filter",
+    "Talkgroup" : "Talgrupp",
+    "Display Per TG" : "Visa Per Talgrupp",
+    "Display Per reflector": "Visa Per reflektor",
+    "Total":"Total",
+    "QSOs per Hour":"QSOs per Timma",
+    "ClickZoom": "Peka & Klicka dra i kurvan fÃ¶r att zomma",
+    "PinchZoom": "Nyp i diagrammet fÃ¶r att zomma",
+    "QSOs":"QSOs",
+    "Time per Hour": "Tid per Timma",
+    "Seconds": "Sekunder"
+  },
+  "Table" : {
+    "records per page" : "poster per sida",
+    "All": "Alla"
+  },
+  "Monitoring" : {
+    "Error": "Fel!",
+    "Master": "Master",
+    "not responding": "svarar ej"
+  },
+  "ConfigDialog" : {
+    "General": "AllmÃ¤nt",
+    "LastHeard": "Senast hÃ¶rd",
+    "Display alerts":"Visa varningar",
+    "API Timeout":"API Paus",
+    "API Timeout Max":"Maximal paus Ã¤r 60 sekunder",
+    "TimeQSO": "Visa datum/tid per QSO",
+    "Close": "StÃ¤ng",
+    "Save": "Spara Ã¤ndringar"
+  }
+}
