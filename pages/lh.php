@@ -62,6 +62,7 @@ function startSocket(url) {
     //Handle incomming message
     socket.on('mqtt', function (msg) {
       var lastraw = JSON.parse(msg.payload);
+      console.log(JSON.stringify(msg.payload, null, "  "));
       try{
       if (params['filter'] && params['filter'] != "null") { 
         if (lastraw['Master'].toString().substring(0,3) != params['filter'] )
@@ -179,7 +180,6 @@ function startSocket(url) {
       }
       table = table.slice(0,parseInt(max_queue));
       last = last.slice(0,parseInt(max_queue));
-      console.log(table);
       document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-condensed", 'Bla');
     });
   });
