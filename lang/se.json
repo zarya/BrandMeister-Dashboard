@@ -10,8 +10,8 @@
     "DV4mini" : "DV4mini",
     "Full report" : "Full rapport",
     "Masters" : "Masters",
-    "Repeater in RX": "Repeater i RX",
-    "Repeater in TX": "Repeater i TX",
+    "Repeater in RX": "Repeatrar i RX",
+    "Repeater in TX": "Repeatrar i TX",
     "External calls" : "Externa anrop",
     "Per country": "Per land",
     "Online per country": "Online per land",
@@ -22,18 +22,18 @@
     "Industrial Repeaters":"Fabriksbyggda Repeaters"
   },
   "LH" : {
-    "LastHeard" : "Senast HÃ¶rd",
+    "LastHeard" : "Senast H&ouml;rd",
     "Time": "Tid",
     "Master": "Master",
     "SessionID": "Sessions ID",
-    "Link name" : "LÃ¤nk namn",
-    "My call" : "Min anropssignal",
-    "Source" : "KÃ¤lla",
+    "Link name" : "L&auml;nk namn",
+    "My call" : "Anropssignal",
+    "Source" : "K&auml;lla",
     "Destination" : "Destination",
     "Reflector" : "Reflektor",
     "Options" : "Alternativ",
     "RSSI" : "RSSI (dBm)",
-    "Duration" : "LÃ¤ngd",
+    "Duration" : "L&auml;ngd",
     "Loss rate" : "Bortfall"
   },
   "Connected reflectors" : {
@@ -43,25 +43,25 @@
     "Reflector" : "Reflektor"
   },
   "Extended routing": {
-    "Extended routing": "UtÃ¶kad routing",
-    "Extended Routing for DV4mini" : "UtÃ¶kad Routing fÃ¶r DV4mini",
-    "User ID" : "AnvÃ¤ndar ID",
-    "Choose dongle" : "VÃ¤lj dongle",
-    "Mapped group" : "LÃ¤nkad grupp",
+    "Extended routing": "Ut&ouml;kad routing",
+    "Extended Routing for DV4mini" : "Ut&ouml;kad Routing f&ouml;r DV4mini",
+    "User ID" : "Anv&auml;ndar ID",
+    "Choose dongle" : "V&auml;lj dongle",
+    "Mapped group" : "L&auml;nkad grupp",
     "Talkgroup" : "Talgrupp",
     "OK": "OK",
-    "help" : "FÃ¶r utÃ¶kad hjÃ¤lp se mer info pÃ¥ wiki",
+    "help" : "F&ouml;r ut&ouml;kad hj&auml;lp se mer info p&aring; wiki",
     "not responding" : "ingen respons",
     "Master" : "Master",
     "Error" : "Fel!",
     "missing dongle" : "Fel: Saknar dongle",
-    "error reflector" : "Fel: Kan inte ansluta till reflektor anvÃ¤nd Talgrupp!"
+    "error reflector" : "Fel: Kan inte ansluta till reflektor anv&auml;nd Talgrupp!"
   },
   "Repeaters" : {
     "Repeaters": "Repeaters",
     "Number" : "ID",
     "Name":"Nammn",
-    "Hardware":"HÃ¥rdvara",
+    "Hardware":"H&aring;rdvara",
     "Firmware":"Firmware",
     "TX":"TX",
     "RX":"RX",
@@ -73,11 +73,11 @@
     "Hotspots": "Hotspots",
     "Number" : "ID",
     "Name":"Namn",
-    "Hardware":"HÃ¥rdvara",
+    "Hardware":"H&aring;rdvara",
     "Firmware":"Firmware",
     "TX":"TX",
     "RX":"RX",
-    "CC":"FÃ¤rgkod",
+    "CC":"F&auml;rgkod",
     "Status":"Status",
     "Master":"Master"
   }, 
@@ -86,7 +86,7 @@
     "Country":"Land",
     "Number":"ID",
     "Version":"Version",
-    "Links":"LÃ¤nkar",
+    "Links":"L&auml;nkar",
     "Status": "Status",
     "List": "Lista"
   }, 
@@ -106,8 +106,8 @@
     "Display Per reflector": "Visa Per reflektor",
     "Total":"Total",
     "QSOs per Hour":"QSOs per Timma",
-    "ClickZoom": "Peka & Klicka dra i kurvan fÃ¶r att zomma",
-    "PinchZoom": "Nyp i diagrammet fÃ¶r att zomma",
+    "ClickZoom": "Peka & Klicka dra i kurvan f&ouml;r att zomma",
+    "PinchZoom": "Nyp i diagrammet f&ouml;r att zomma",
     "QSOs":"QSOs",
     "Time per Hour": "Tid per Timma",
     "Seconds": "Sekunder"
@@ -122,13 +122,13 @@
     "not responding": "svarar ej"
   },
   "ConfigDialog" : {
-    "General": "AllmÃ¤nt",
-    "LastHeard": "Senast hÃ¶rd",
+    "General": "Allm&auml;nt",
+    "LastHeard": "Senast h&ouml;rd",
     "Display alerts":"Visa varningar",
     "API Timeout":"API Paus",
-    "API Timeout Max":"Maximal paus Ã¤r 60 sekunder",
+    "API Timeout Max":"Maximal paus &auml;r 60 sekunder",
     "TimeQSO": "Visa datum/tid per QSO",
-    "Close": "StÃ¤ng",
-    "Save": "Spara Ã¤ndringar"
+    "Close": "St&auml;ng",
+    "Save": "Spara &auml;ndringar"
   }
 }
