@@ -118,7 +118,7 @@ function fetchServer(number) {
       $("#external_input").val(external_count).trigger('change');
       draw_country_plot(country_cnt);
     }
-  ).fail(newAlertPopup(php_lang['Monitoring']['Error'],php_lang['Monitoring']['Master']' '+number+' '+php_lang['Monitoring']['not responding']));
+  ).fail(newAlertPopup(php_lang['Monitoring']['Error'],php_lang['Monitoring']['Master']+' '+number+' '+php_lang['Monitoring']['not responding']));
 }
 
 function country_count(data,type,country) {
