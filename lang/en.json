@@ -115,5 +115,20 @@
   "Table" : {
     "records per page" : "records per page",
     "All": "All"
-  } 
+  },
+  "Monitoring" : {
+    "Error": "Error!",
+    "Master": "Master",
+    "not responding": "not responding"
+  },
+  "ConfigDialog" : {
+    "General": "General",
+    "LastHeard": "LastHeard",
+    "Display alerts":"Display alerts",
+    "API Timeout":"API Timeout",
+    "API Timeout Max":"Maximum timeout is 60 seconds",
+    "TimeQSO": "Display date/time per QSO",
+    "Close": "Close",
+    "Save": "Save changes"
+  }
 }
