@@ -11,8 +11,7 @@ function updateRepeaterNames()
   };
   for (var number in servers) {
     var location = 'http://' + servers[number] + '/status/';
-    $.getJSON(location + 'list.php?callback=?',{format:'json'}, updateRepeaterNamesCallback(number))
-   ); 
+    $.getJSON(location + 'list.php?callback=?',{format:'json'}, updateRepeaterNamesCallback(number)); 
   }
 }
 
