@@ -126,20 +126,20 @@ function startSocket(url) {
       }
       //Build table
       var entry = {};
-      entry['Time'] = datetime;
+      entry[php_lang['LH']['Time']] = datetime;
       if (params['master'])
-        entry['Master'] = lastraw['Master'];
+        entry[php_lang['LH']['Master']] = lastraw['Master'];
       if (params['SessionID'])
-        entry['SessionID'] = lastraw['SessionID']; 
-      entry['Link name'] = lastraw['LinkName'];
-      entry['My call'] = Source;
-      entry['Source'] = Link; 
-      entry['Destination'] = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
-      entry['Reflector'] = ref;
-      entry['Options'] = "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options + "</nobr>";
-      entry['RSSI (dBm)'] = lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):'';
-      entry['Duration'] = lastraw['Stop']!=0?getCellDuration(lastraw['Stop'] - lastraw['Start']):'';
-      entry['Loss rate'] = LossCount;
+        entry[php_lang['LH']['SessionID']] = lastraw['SessionID']; 
+      entry[php_lang['LH']['Link name']] = lastraw['LinkName'];
+      entry[php_lang['LH']['My call']] = Source;
+      entry[php_lang['LH']['Source']] = Link; 
+      entry[php_lang['LH']['Destination']] = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
+      entry[php_lang['LH']['Reflector']] = ref;
+      entry[php_lang['LH']['Options']] = "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options + "</nobr>";
+      entry[php_lang['LH']['RSSI']] = lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):'';
+      entry[php_lang['LH']['Duration']] = lastraw['Stop']!=0?getCellDuration(lastraw['Stop'] - lastraw['Start']):'';
+      entry[php_lang['LH']['Loss rate']] = LossCount;
       if (params['unique'] != "undefined" && params['unique'] != undefined)
         var oindex = functiontofindIndexByKeyValue(last,'SourceID', lastraw['SourceID']);
       else
