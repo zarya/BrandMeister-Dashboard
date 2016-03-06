@@ -11,8 +11,8 @@ function updateDongleListCallback(master) {
         device[php_lang['Hotspots']['Name']] = '<a href="'+baseurl+'index.php?page=lh&country=null&repeater='+value['number']+'">' + value['name'] + '</a>';
         device[php_lang['Hotspots']['Hardware']] = getRepeaterModel(value['hardware'],value['number']);
         device[php_lang['Hotspots']['Firmware']] = value['firmware'];
-        device[php_lang['Hotspots']['Tx']] = getFrequency(value['frequency1']);
-        device[php_lang['Hotspots']['Rx']] = getFrequency(value['frequency2']);
+        device[php_lang['Hotspots']['TX']] = getFrequency(value['frequency1']);
+        device[php_lang['Hotspots']['RX']] = getFrequency(value['frequency2']);
         device[php_lang['Hotspots']['CC']] = value['color'];
         device[php_lang['Hotspots']['Status']] = getLinkDescription(value['link']);
         device[php_lang['Hotspots']['Master']] = master; 
