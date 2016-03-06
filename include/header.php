@@ -62,6 +62,7 @@ if ($config['XmasMode']) {
     <?php
 $js_array = json_encode($config);
 echo "var php_config = ". $js_array . ";\n";
+echo "var php_lang = ".json_encode($language).";\n";
     ?>
 
     </script>

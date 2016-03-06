@@ -1,0 +1,17 @@
+{
+  "LH" : {
+    "LastHeard" : "LastHeard",
+    "Time": "Time",
+    "Master": "Master",
+    "SessionID": "Session ID",
+    "Link name" : "Link name",
+    "My call" : "My call",
+    "Source" : "Source",
+    "Destination" : "Destination",
+    "Reflector" : "Reflector",
+    "Options" : "Options",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "Duration",
+    "Loss rate" : "Loss rate"
+  }
+}
