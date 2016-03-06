@@ -17,7 +17,7 @@
               </div>
               <div class="span3 statbox red" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_homebrew"></div>
-                <div class="title"><?php echo $language['Dashboard']['Homebrew'];?><br><?php echo $language['Dashboard']['Repeaters'];?> / <?php echo $language['Dashboard']['Hotspots'];?></div>
+                <div class="title"><?php echo $language['Dashboard']['Homebrew'];?><br><?php echo $language['Dashboard']['Repeaters'];?> / <?php echo $language['Dashboard']['Hotspot'];?></div>
               </div>
               <div class="span3 statbox blue" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_dongle"></div>
