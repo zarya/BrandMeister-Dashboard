@@ -1,0 +1,134 @@
+{
+  "Home": "Home",
+  "Reports": "Reports",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Fabrieksrepeaters",
+    "Homebrew" : "Zelfbouw",
+    "Hotspot" : "Hotspot",
+    "Repeaters" : "Repeaters",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Uitgebreid rapport",
+    "Masters" : "Masters",
+    "Repeater in RX": "Repeater in RX",
+    "Repeater in TX": "Repeater in TX",
+    "External calls" : "Externe oproepen",
+    "Per country": "Per land",
+    "Online per country": "Online per land",
+    "GraphYaxis" : "Zelfbouw/Hotspot/Repeaters",
+    "Homebrew Hotspots" : "Zelfbouw Hotspots",
+    "DV4minis" : "DV4mini's",
+    "Homebrew Repeaters": "Zelfbouw Repeaters",
+    "Industrial Repeaters":"Fabrieksrepeaters"
+  },
+  "LH" : {
+    "LastHeard" : "Recent ontvangen",
+    "Time": "Tijd",
+    "Master": "Master",
+    "SessionID": "Sessie ID",
+    "Link name" : "Linknaam",
+    "My call" : "Mijn roepletters",
+    "Source" : "Bron",
+    "Destination" : "Bestemming",
+    "Reflector" : "Reflector",
+    "Options" : "Opties",
+    "RSSI" : "Signaalsterkte (dBm)",
+    "Duration" : "Tijdsduur",
+    "Loss rate" : "Verliespercentage"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Verbonden reflectors",
+    "Reflectors": "Reflectors",
+    "Name" : "Naam",
+    "Reflector" : "Reflector"
+  },
+  "Extended routing": {
+    "Extended routing": "Uitgebreide routering",
+    "Extended Routing for DV4mini" : "Uitgebreide Routering voor DV4mini",
+    "User ID" : "Gebruikers ID",
+    "Choose dongle" : "Kies dongle",
+    "Mapped group" : "Mapped group",
+    "Talkgroup" : "Talkgroup",
+    "OK": "OK",
+    "help" : "Raadpleeg de wiki voor hulp",
+    "not responding" : "geen reactie ontvangen",
+    "Master" : "Master",
+    "Error" : "Fout!",
+    "missing dongle" : "Fout: Geen dongle gevonden",
+    "error reflector" : "Fout: kan niet met een reflector verbinden; Gebruik een Talkgroup"
+  },
+  "Repeaters" : {
+    "Repeaters": "Repeaters",
+    "Number" : "Nummers",
+    "Name":"Naam",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "Nummer",
+    "Name":"Naam",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Land",
+    "Number":"Nummer",
+    "Version":"Versie",
+    "Links":"Verbindingen",
+    "Status": "Status",
+    "List": "Lijst"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alarmen",
+    "Time":"Tijd",
+    "Repeater":"Repeater",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Oproepen",
+    "Call statistics":"Oproep statistieken",
+    "Filters": "Filters",
+    "Talkgroup" : "Talkgroup",
+    "Display Per TG" : "Weergeven per talkgroup",
+    "Display Per reflector": "Weergeven per reflector",
+    "Total":"Totaal",
+    "QSOs per Hour":"QSOs per uur",
+    "ClickZoom": "Klik en sleep in het weergavegebied om in te zoomen",
+    "PinchZoom": "klik op de tabel om in te zoomen",
+    "QSOs":"QSOs",
+    "Time per Hour": "Tijd per uur",
+    "Seconds": "Seconden"
+  },
+  "Table" : {
+    "records per page" : "weergaves per vagina",
+    "All": "Alles"
+  },
+  "Monitoring" : {
+    "Error": "Fout!",
+    "Master": "Master",
+    "not responding": "Geen reactie ontvangen"
+  },
+  "ConfigDialog" : {
+    "General": "Algemeen",
+    "LastHeard": "Recent ontvangen",
+    "Display alerts":"Alarmweergave",
+    "API Timeout":"API Timeout",
+    "API Timeout Max":"Maximale timeout is 60 seconden",
+    "TimeQSO": "Datumweergave/tijd per QSO",
+    "Close": "Sluiten",
+    "Save": "Wijzigingen opslaan"
+  }
+}
