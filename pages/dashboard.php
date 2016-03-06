@@ -21,7 +21,7 @@
               </div>
               <div class="span3 statbox blue" onTablet="span6" onDesktop="span3">
                 <div class="number" id="count_dongle"></div>
-                <div class="title"><?php echo $language['Dashboard']['DV4mini'];</div>
+                <div class="title"><?php echo $language['Dashboard']['DV4mini'];?></div>
                 <div class="footer">
                   <a href="index.php?page=dongles"><?php echo $language['Dashboard']['Full report'];?></a>
                 </div>
