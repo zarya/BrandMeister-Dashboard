@@ -4,7 +4,7 @@
   "Dashboard" : {
     "Dashboard": "Dashboard",
     "Industrial Repeaters": "Repetidores comerciales",
-    "Homebrew" : "Autoconstruido",
+    "Homebrew" : "Autoconstruidos",
     "Hotspot" : "Hotspots",
     "Repeaters" : "Repetidores",
     "DV4mini" : "DV4mini",
@@ -15,7 +15,7 @@
     "External calls" : "Llamadas externas",
     "Per country": "Por país",
     "Online per country": "En línea por país",
-    "GraphYaxis" : "Autoconstruido/Hotspot/Repetidores",
+    "GraphYaxis" : "Autoconstruidos/Hotspots/Repetidores",
     "Homebrew Hotspots" : "Hotspots autoconstruidos",
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Repetidores autoconstruidos",
@@ -28,10 +28,10 @@
     "SessionID": "ID de sesión",
     "Link name" : "Tipo de acceso",
     "My call" : "Mi indicativo",
-    "Source" : "Fuente",
+    "Source" : "Origen",
     "Destination" : "Destino",
     "Reflector" : "Reflector",
-    "Options" : "Opciones",
+    "Options" : "Detalles",
     "RSSI" : "RSSI (dBm)",
     "Duration" : "Duración",
     "Loss rate" : "Tasa de pérdida"
@@ -113,31 +113,8 @@
     "Seconds": "Segundos"
   },
   "Table" : {
-    "All": "Todos",
-    "DataTables": {
-      "processing":     "Procesando...",
-      "lengthMenu":     "Mostrar _MENU_ registros",
-      "zeroRecords":    "No se encontraron resultados",
-      "emptyTable":     "Ningún dato disponible en esta tabla",
-      "info":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-      "infoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-      "infoFiltered":   "(filtrado de un total de _MAX_ registros)",
-      "infoPostFix":    "",
-      "search":         "Buscar:",
-      "url":            "",
-      "infoThousands":  ",",
-      "loadingRecords": "Cargando...",
-      "paginate": {
-          "first":    "Primero",
-          "last":     "Último",
-          "next":     "Siguiente",
-          "previous": "Anterior"
-      },
-      "aria": {
-          "sortAscending":  ": Activar para ordenar la columna de manera ascendente",
-          "sortDescending": ": Activar para ordenar la columna de manera descendente"
-      }
-    }
+    "records per page" : "registros por página",
+    "All": "Todos"
   },
   "Monitoring" : {
     "Error": "Error!",
@@ -145,12 +122,11 @@
     "not responding": "no responde"
   },
   "ConfigDialog" : {
-    "Settings": "Ajustes",
     "General": "General",
     "LastHeard": "LastHeard",
     "Display alerts":"Presentar alertas",
     "API Timeout":"Tiempo de conexión al API expirado",
-    "API Timeout Max":"Máximo tiempo de expiración es 60 segundos",
+    "API Timeout Max":"Tiempo máximo de expiración es 60 segundos",
     "TimeQSO": "Presentar fecha/hora por QSO",
     "Close": "Cerrar",
     "Save": "Guardar cambios"
