@@ -5,7 +5,7 @@
       <li><a href="<?php echo $config['baseurl']; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> <?php echo $language['Dashboard']['Dashboard'];?></span></a></li>   
       <li><a href="index.php?page=lh"><i class="icon-bullhorn"></i><span class="hidden-tablet"> <?php echo $language['LH']['LastHeard'];?></span></a></li>   
       <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
-      <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> Extended routing</span></a></li>   
+      <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> <?php echo $language['Extended routing']['Extended routing'];?></span></a></li>   
       <li>
          <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Reports</span></a>
          <ul>

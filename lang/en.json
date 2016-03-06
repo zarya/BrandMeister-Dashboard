@@ -34,5 +34,24 @@
     "RSSI" : "RSSI (dBm)",
     "Duration" : "Duration",
     "Loss rate" : "Loss rate"
+  },
+  "ConReflectors" : {
+    "" : ""
+  },
+  "Extended routing": {
+    "Extended routing": "Extended routing",
+    "Extended Routing for DV4mini" : "Extended Routing for DV4mini",
+    "User ID" : "User ID",
+    "Choose dongle" : "Choose dongle",
+    "Mapped group" : "Mapped group",
+    "Talkgroup" : "Talkgroup",
+    "OK": "OK",
+    "help" : "For help about this please check the wiki",
+    "not responding" : "not responding",
+    "Master" : "Master",
+    "Error" : "Error!",
+    "missing dongle" : "Error: Missing dongle",
+    "error reflector" : "Error: Cant connect to a reflector please use a talkgroup"
   }
+  
 }

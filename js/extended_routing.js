@@ -9,7 +9,7 @@ $('#dongle-list').live('change', function(e) {
   $.getJSON('http://' + servers[master] + '/status/link.php?user='+dongle+'&callback=?',function(data)
   {
     $('#group').val(data['group']);
-  }).fail(newAlertPopup('Error!','Master '+number+' not responding'));
+  }).fail(newAlertPopup(php_lang['Extended routing']['Error'],php_lang['Extended routing']['Master']+' '+number+' '+php_lang['Extended routing']['not responding']));
 
 });
 
@@ -63,12 +63,12 @@ function link()
   var data = $('#dongle-list').val().split('-')
   if (data.length != 2)
   {
-    newAlert('error', 'Error: Missing dongle');
+    newAlert('error', php_lang['Extended routing']['missing dongle']);
     return;
   }
   if ($('#group').val() >= 4000 && $('#group').val() <= 5000)
   {
-    newAlert('error', 'Error: Cant connect to a reflector please use a talkgroup');
+    newAlert('error', php_lang['Extended routing']['error reflector']);
     return;
   }
   dongle = data[1];
@@ -80,6 +80,6 @@ function link()
   };
   console.log(parameters['group']+' '+master);
   $.getJSON('http://' + servers[master] + '/status/link.php?callback=?', parameters, linkCallback()).fail(function(d) {
-    newAlert('error', 'Error!!')
+    newAlert('error', php_lang['Extended routing']['Error'])
   });
 };
