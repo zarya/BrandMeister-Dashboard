@@ -1,0 +1,157 @@
+{
+  "Home": "BrandMeister",
+  "Reports": "Raporty",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Przemienniki fabryczne",
+    "Homebrew" : "Przemienniki amatorskie",
+    "Hotspot" : "Hotspoty",
+    "Repeaters" : "Przemienniki",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Więcej",
+    "Masters" : "Master serwery",
+    "Repeater in RX": "Przemienniki RX",
+    "Repeater in TX": "Przemienniki TX",
+    "External calls" : "Połączenia zewnętrzne",
+    "Per country": "Według kraju",
+    "Online per country": "Online według kraju",
+    "GraphYaxis" : "Amatorskie/Hotspoty/Przemienniki",
+    "Homebrew Hotspots" : "Amatorskie Hotspoty",
+    "DV4minis" : "DV4mini",
+    "Homebrew Repeaters": "Przemienniki amatorskie",
+    "Industrial Repeaters":"Przemienniki fabryczne"
+  },
+  "LH" : {
+    "LastHeard" : "Ostatnio słyszane",
+    "Time": "Czas",
+    "Master": "Master",
+    "SessionID": "ID Sesji",
+    "Link name" : "Nazwa linku",
+    "My call" : "Mój znak",
+    "Source" : "Źródło",
+    "Destination" : "Destynacja",
+    "Reflector" : "Reflektor",
+    "Options" : "Opcje",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "Długość",
+    "Loss rate" : "Wsp. strat"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Połączone do reflektora",
+    "Reflectors": "Reflektory",
+    "Name" : "Nazwa",
+    "Reflector" : "Reflektor"
+  },
+  "Extended routing": {
+    "Extended routing": "Trasowanie rozszerzone",
+    "Extended Routing for DV4mini" : "Trasowanie rozszerzone dla DV4mini",
+    "User ID" : "ID Użytkownika",
+    "Choose dongle" : "Wybierz dongle'a",
+    "Mapped group" : "Mapowana grupa",
+    "Talkgroup" : "Grupa rozmowna",
+    "OK": "OK",
+    "help" : "Aby uzyskać pomoc o tej stronie, sprawdź na Wiki",
+    "not responding" : "nie odpowiada",
+    "Master" : "Master",
+    "Error" : "Błąd!",
+    "missing dongle" : "Błąd: wybierz dongla",
+    "error reflector" : "Błąd: Nie można podłączyć reflektora. Wybierz grupę rozmowną"
+  },
+  "Repeaters" : {
+    "Repeaters": "Przemienniki",
+    "Number" : "Numer",
+    "Name":"Nazwa",
+    "Hardware":"Sprzęt",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspoty",
+    "Number" : "Numer",
+    "Name":"Nazwa",
+    "Hardware":"Sprzęt",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Master serwery",
+    "Country":"Kraj",
+    "Number":"Numer",
+    "Version":"Wersja",
+    "Links":"Linki",
+    "Status": "Status",
+    "List": "Lista"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alerty",
+    "Time":"Czas",
+    "Repeater":"Przemiennik",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Połączenia",
+    "Call statistics":"Statystyki połączeń",
+    "Filters": "Filtry",
+    "Talkgroup" : "Grupa",
+    "Display Per TG" : "Wyświetl per grupa",
+    "Display Per reflector": "Wyświetl per reflektor",
+    "Total":"Wszystkie",
+    "QSOs per Hour":"QSO / godziny",
+    "ClickZoom": "Kliknij i przeciągnij na wykresie aby powiększyć",
+    "PinchZoom": "Chwyć wykres by powiększyć",
+    "QSOs":"QSO",
+    "Time per Hour": "Czas połączenia / godziny",
+    "Seconds": "Sekund"
+  },
+  "Table" : {
+    "All": "Wszystkie",
+    "DataTables": {
+      "emptyTable":     "Brak danych dla tej tabeli",
+      "info":           "Wyświetlono _START_ do _END_ z _TOTAL_ wpisów",
+      "infoEmpty":      "Wyświetlono 0 wpisów",
+      "infoFiltered":   "(przefiltrowanych z _MAX_ wszystkich)",
+      "infoPostFix":    "",
+      "infoThousands":  " ",
+      "lengthMenu":     "Pokaż _MENU_ wpisów",
+      "loadingRecords": "Ładowanie...",
+      "processing":     "Przetwarzanie...",
+      "search":         "Szukaj:",
+      "zeroRecords":    "Nie znaleziono pasujących wpisów",
+      "paginate": {
+          "first":    "Pierwsza",
+          "last":     "Ostatnia",
+          "next":     "Następna",
+          "previous": "Poprzednia"
+      },
+      "aria": {
+          "sortAscending":  ": aktywuj aby sortować tą kolumnę rosnąco",
+          "sortDescending": ": aktywuj aby sortować tą kolumnę malejąco"
+      }
+    }
+  },
+  "Monitoring" : {
+    "Error": "Error!",
+    "Master": "Master",
+    "not responding": "not responding"
+  },
+  "ConfigDialog" : {
+    "Settings": "Settings",
+    "General": "General",
+    "LastHeard": "LastHeard",
+    "Display alerts":"Display alerts",
+    "API Timeout":"API Timeout",
+    "API Timeout Max":"Maximum timeout is 60 seconds",
+    "TimeQSO": "Display date/time per QSO",
+    "Close": "Close",
+    "Save": "Save changes"
+  }
+}
