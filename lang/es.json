@@ -1,0 +1,134 @@
+{
+  "Home": "Inicio",
+  "Reports": "Informes",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Repetidores comerciales",
+    "Homebrew" : "Autoconstruido",
+    "Hotspot" : "Hotspot",
+    "Repeaters" : "Repetidores",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Informe completo",
+    "Masters" : "Masters",
+    "Repeater in RX": "Repetidor en RX",
+    "Repeater in TX": "Repetidor en TX",
+    "External calls" : "Llamadas externas",
+    "Per country": "Por país",
+    "Online per country": "En línea por país",
+    "GraphYaxis" : "Autoconstruido/Hotspot/Repetidores",
+    "Homebrew Hotspots" : "Hotspots autoconstruidos",
+    "DV4minis" : "DV4minis",
+    "Homebrew Repeaters": "Repetidores autoconstruidos",
+    "Industrial Repeaters":"Repetidores comerciales"
+  },
+  "LH" : {
+    "LastHeard" : "LastHeard",
+    "Time": "Hora",
+    "Master": "Master",
+    "SessionID": "ID de sesión",
+    "Link name" : "Tipo de acceso",
+    "My call" : "Mi indicativo",
+    "Source" : "Fuente",
+    "Destination" : "Destino",
+    "Reflector" : "Reflector",
+    "Options" : "Opciones",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "Duración",
+    "Loss rate" : "Tasa de pérdida"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Reflectores conectados",
+    "Reflectors": "Reflectores",
+    "Name" : "Nombre",
+    "Reflector" : "Reflector"
+  },
+  "Extended routing": {
+    "Extended routing": "Enrutamiento extendido",
+    "Extended Routing for DV4mini" : "Enrutamiento extendido para DV4mini",
+    "User ID" : "ID de usuario",
+    "Choose dongle" : "Seleccione dongle",
+    "Mapped group" : "Group mapeado",
+    "Talkgroup" : "Talkgroup",
+    "OK": "OK",
+    "help" : "Para ayuda, por favor, diríjase al wiki",
+    "not responding" : "No responde",
+    "Master" : "Master",
+    "Error" : "Error!",
+    "missing dongle" : "Error: Dongle no conectado",
+    "error reflector" : "Error: No se puede conectar al reflector. Por favor, use un TalkGroup"
+  },
+  "Repeaters" : {
+    "Repeaters": "Repetidores",
+    "Number" : "Número",
+    "Name":"Nombre",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Estado",
+    "Master":"Master"
+  },
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "Número",
+    "Name":"Nombre",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Estado",
+    "Master":"Master"
+  },
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"País",
+    "Number":"Número",
+    "Version":"Versión",
+    "Links":"Enlaces",
+    "Status": "Estado",
+    "List": "Lista"
+  },
+  "Alerts" : {
+    "Alerts": "Alertas",
+    "Time":"Hora",
+    "Repeater":"Repetidor",
+    "Alarm": "Alarma",
+    "Master": "Master"
+  },
+  "Calls" : {
+    "Calls": "Indicativos",
+    "Call statistics":"Estadística de indicaivo",
+    "Filters": "Filtros",
+    "Talkgroup" : "Talkgroup",
+    "Display Per TG" : "Presentación por TG",
+    "Display Per reflector": "Presentación por reflector",
+    "Total":"Total",
+    "QSOs per Hour":"QSOs por hora",
+    "ClickZoom": "Haga click y arrastre sobre el area para aumentar/reducir",
+    "PinchZoom": "Pinche sobre el gráfico para aumentar/reducir",
+    "QSOs":"QSOs",
+    "Time per Hour": "Veces por hora",
+    "Seconds": "Segundos"
+  },
+  "Table" : {
+    "records per page" : "registros por página",
+    "All": "Todos"
+  },
+  "Monitoring" : {
+    "Error": "Error!",
+    "Master": "Master",
+    "not responding": "no responde"
+  },
+  "ConfigDialog" : {
+    "General": "General",
+    "LastHeard": "LastHeard",
+    "Display alerts":"Presentar alertas",
+    "API Timeout":"Tiempo de conexión al API expirado",
+    "API Timeout Max":"Máximo tiempo de expiración es 60 segundos",
+    "TimeQSO": "Presentar fecha/hora por QSO",
+    "Close": "Cerrar",
+    "Save": "Guardar cambios"
+  }
+}
