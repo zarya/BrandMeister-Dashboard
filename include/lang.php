@@ -20,6 +20,9 @@ switch ($lang){
     case "pl":
         $string = file_get_contents("lang/pl.json");
         break;        
+    case "ru":
+        $string = file_get_contents("lang/ru.json");
+        break;        
     default:
         $string = file_get_contents("lang/en.json");
         break;

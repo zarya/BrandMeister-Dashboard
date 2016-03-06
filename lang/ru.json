@@ -1,0 +1,157 @@
+{
+  "Home" : "Домой",
+  "Reports" : "Отчеты",
+  "Dashboard" : {
+    "Dashboard" : "Приборная панель",
+    "Industrial Repeaters" : "Индустриальные репитеры",
+    "Homebrew" : "Самодельные репитеры",
+    "Hotspot" : "Точки доступа",
+    "Repeaters" : "Репитеры",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Подробный отчет",
+    "Masters" : "Серверы",
+    "Repeater in RX" : "Репитеры на приеме",
+    "Repeater in TX" : "Репитеры на передаче",
+    "External calls" : "Внешние вызовы",
+    "Per country" : "По странам",
+    "Online per country" : "Онлайн по странам",
+    "GraphYaxis" : "Самодельные/точки доступа/репитеры",
+    "Homebrew Hotspots" : "Точки доступа",
+    "DV4minis" : "DV4mini",
+    "Homebrew Repeaters" : "Самодельные репитеры",
+    "Industrial Repeaters" : "Индустриальные репитеры"
+  },
+  "LH" : {
+    "LastHeard" : "Журнал вызовов",
+    "Time" : "Время",
+    "Master" : "Сервер",
+    "SessionID" : "ID сессии",
+    "Link name" : "Наименование канала",
+    "My call" : "Мой позывной",
+    "Source" : "Источник",
+    "Destination" : "Получатель",
+    "Reflector" : "Рефлектор",
+    "Options" : "Опции",
+    "RSSI" : "Уровень сигнала (dBm)",
+    "Duration" : "Продолжительность",
+    "Loss rate" : "Потери"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Подключенные рефлекторы",
+    "Reflectors" : "Рефлекторы",
+    "Name" : "Название",
+    "Reflector" : "Рефлектор"
+  },
+  "Extended routing" : {
+    "Extended routing" : "Расширенная маршрутизация",
+    "Extended Routing for DV4mini" : "Расширенная маршрутизация для DV4mini",
+    "User ID" : "ID пользователя",
+    "Choose dongle" : "Выберите устройство",
+    "Mapped group" : "Связанная группа",
+    "Talkgroup" : "Разговорная группа",
+    "OK" : "OK",
+    "help" : "Для получения помощи пожалуйста ознакомьтесь со страницей wiki",
+    "not responding" : "не отвечает",
+    "Master" : "Сервер",
+    "Error" : "Ошибка!",
+    "missing dongle" : "Ошибка: устройство не найдено",
+    "error reflector" : "Ошибка: Не возможно подключиться к рефлектору, пожалуйста выберите группу"
+  },
+  "Repeaters" : {
+    "Repeaters" : "Репитеры",
+    "Number" : "Номер",
+    "Name" : "Название",
+    "Hardware" : "Аппаратура",
+    "Firmware" : "Прошивка",
+    "TX" : "Частота передачи",
+    "RX" : "Частота приема",
+    "CC" : "Код цвета",
+    "Status" : "Статус",
+    "Master" : "Сервер"
+  },
+  "Hotspots" : {
+    "Hotspots" : "Точки доступа",
+    "Number" : "Номер",
+    "Name" : "Название",
+    "Hardware" : "Аппаратура",
+    "Firmware" : "Прошивка",
+    "TX" : "Частота передачи",
+    "RX" : "Частота приема",
+    "CC" : "Код цвета",
+    "Status" : "Статус",
+    "Master" : "Сервер"
+  },
+  "Masters" : {
+    "Masters" : "Серверы",
+    "Country" : "Страна",
+    "Number" : "Номер",
+    "Version" : "Версия",
+    "Links" : "Ссылки",
+    "Status" : "Статус",
+    "List" : "Список"
+  },
+  "Alerts" : {
+    "Alerts" : "Оповещения",
+    "Time" : "Время",
+    "Repeater" : "Репитер",
+    "Alarm" : "Сообщение",
+    "Master" : "Сервер"
+  },
+  "Calls" : {
+    "Calls" : "Вызовы",
+    "Call statistics" : "Статистика вызовов",
+    "Filters" : "Фильтры",
+    "Talkgroup" : "Разговорная группа",
+    "Display Per TG" : "Отобразить по группам",
+    "Display Per reflector" : "Отобразить по рефлекторам",
+    "Total" : "Всего",
+    "QSOs per Hour" : "Вызовов в час",
+    "ClickZoom" : "Щелкните и перетащите курсор на изображении для увеличения",
+    "PinchZoom" : "Потяните за график для увеличения",
+    "QSOs" : "Вызовы",
+    "Time per Hour" : "Секунд в час",
+    "Seconds" : "Секунды"
+  },
+  "Table" : {
+    "All" : "All",
+    "DataTables" : {
+      "emptyTable" :     "Данные отсутствуют",
+      "info" :           "Отображено с _START_ по _END_ из _TOTAL_ элементов",
+      "infoEmpty" :      "Отображено 0 элементов",
+      "infoFiltered" :   "(отфильтровано мз _MAX_ элементов всего)",
+      "infoPostFix" :    "",
+      "infoThousands" :  "",
+      "lengthMenu" :     "Отобразить _MENU_ элементов",
+      "loadingRecords" : "Загрузка...",
+      "processing" :     "Обработка...",
+      "search" :         "Найти: ",
+      "zeroRecords" :    "Нет совпадающих записей",
+      "paginate" : {
+          "first" :    "первая",
+          "last" :     "последняя",
+          "next" :     "следующая",
+          "previous" : "предыдущая"
+      },
+      "aria" : {
+          "sortAscending" :  " : нажмите для сортировки по возрастанию",
+          "sortDescending" : " : нажмите для сортировки по убыванию"
+      }
+    }
+  },
+  "Monitoring" : {
+    "Error" : "Ошибка!",
+    "Master" : "Сервер",
+    "not responding" : "не отвечает"
+  },
+  "ConfigDialog" : {
+    "Settings" : "Настройки",
+    "General" : "Основные",
+    "LastHeard" : "Журнал вызовов",
+    "Display alerts" : "Показывать оповещения",
+    "API Timeout" : "Время ожидания API",
+    "API Timeout Max" : "Максимальное время ожидания - 60 секунд",
+    "TimeQSO" : "Показывать дату-время вызовов",
+    "Close" : "Закрыть",
+    "Save" : "Сохранить изменения"
+  }
+}
