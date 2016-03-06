@@ -144,6 +144,7 @@
     "not responding": "antwortet nicht"
   },
   "ConfigDialog" : {
+    "Settings": "Einstellungen",
     "General": "Allgemein",
     "LastHeard": "Zuletzt geh&ouml;rt",
     "Display alerts":"Zeige Alarme",

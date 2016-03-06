@@ -145,6 +145,7 @@
     "not responding": "no responde"
   },
   "ConfigDialog" : {
+    "Settings": "Ajustes",
     "General": "General",
     "LastHeard": "LastHeard",
     "Display alerts":"Presentar alertas",

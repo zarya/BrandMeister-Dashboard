@@ -1,7 +1,7 @@
     <div class="modal hide fade" id="modal_config">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">×</button>
-            <h3>Settings</h3>
+            <h3><?php echo $language['ConfigDialog']['Settings'];?></h3>
         </div>
         <div class="modal-body">
             <div class="tabbable">

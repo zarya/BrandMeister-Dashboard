@@ -140,6 +140,7 @@
     "not responding": "Geen reactie ontvangen"
   },
   "ConfigDialog" : {
+    "Settings": "Instellingen",
     "General": "Algemeen",
     "LastHeard": "Recent ontvangen",
     "Display alerts":"Alarmweergave",
