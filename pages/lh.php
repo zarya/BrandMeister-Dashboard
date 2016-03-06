@@ -55,7 +55,11 @@ function startSocket(url) {
     var table = [];
     var last = [];
     if (params['country']) params['filter'] = params['country'];
+
+    //Send registration and filters
     socket.emit('subscribe',{topic:'{"country":"'+params['filter']+'","repeater":"'+params['repeater']+'","unique":"'+params['unique']+'","amount":'+max_queue+'}'});
+
+    //Handle incomming message
     socket.on('mqtt', function (msg) {
       var lastraw = JSON.parse(msg.payload);
       try{
@@ -124,7 +128,9 @@ function startSocket(url) {
       var entry = {};
       entry['Time'] = datetime;
       if (params['master'])
-        entry['Master'] = lastraw['Master']; 
+        entry['Master'] = lastraw['Master'];
+      if (params['SessionID'])
+        entry['SessionID'] = lastraw['SessionID']; 
       entry['Link name'] = lastraw['LinkName'];
       entry['My call'] = Source;
       entry['Source'] = Link; 
