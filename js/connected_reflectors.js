@@ -41,7 +41,10 @@ function updateReflectors() {
           if (device[value['number']]) {
             device[value['number']]['ref'] = value['values'][19];
             if (device[value['number']]['ref'] > 0 && (params['search']==undefined || params['search']==device[value['number']]['country']))
-              table.push({'Name':device[value['number']]['name'],'Reflector':device[value['number']]['ref']});
+              entry  = {};
+              entry[php_lang['Connected reflectors']['Name']] = device[value['number']]['name'];
+              entry[php_lang['Connected reflectors']['Reflector']] = device[value['number']]['ref'];
+              table.push(entry);
           }
         }
         document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');

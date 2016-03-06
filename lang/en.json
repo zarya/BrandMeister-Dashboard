@@ -35,8 +35,11 @@
     "Duration" : "Duration",
     "Loss rate" : "Loss rate"
   },
-  "ConReflectors" : {
-    "" : ""
+  "Connected reflectors" : {
+    "Connected reflector" : "Connected reflectors",
+    "Reflectors": "Reflectors",
+    "Name" : "Name",
+    "Reflector" : "Reflector"
   },
   "Extended routing": {
     "Extended routing": "Extended routing",
