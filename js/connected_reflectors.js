@@ -17,15 +17,14 @@ function updateRepeaterNames()
 
 function updateRepeaterNamesCallback(master) {
   return function(data) {
-        for (key in data)
-        {
-          var value = data[key];
-          device[value['number']] = {'name': '','ref': ''};
-          device[value['number']]['name'] = CountryImage(getCountry(value['number']))+" " + value['name'];
-          device[value['number']]['country'] = getCountry(value['number']);
-        }
-        updateReflectors(master); 
-      }
+    for (key in data)
+    {
+      var value = data[key];
+      device[value['number']] = {'name': '','ref': ''};
+      device[value['number']]['name'] = CountryImage(getCountry(value['number']))+" " + value['name'];
+      device[value['number']]['country'] = getCountry(value['number']);
+    }
+    updateReflectors(master); 
   }
 }
 
