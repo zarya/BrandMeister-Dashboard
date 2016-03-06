@@ -8,8 +8,8 @@ switch ($lang){
     case "nl":
         $string = file_get_contents("lang/nl.json");
         break;        
-    case "es":
-        $string = file_get_contents("lang/es.json");
+    case "sv":
+        $string = file_get_contents("lang/sv.json");
         break;        
     case "de":
         $string = file_get_contents("lang/de.json");
