@@ -12,7 +12,7 @@
                 <div class="number" id="count_rptr"></div>
                 <div class="title"><?php echo $language['Dashboard']['Industrial Repeaters'];?></div>
                 <div class="footer">
-                  <a href="index.php?page=repeaters"><?php echo $language['Dashboard']['DV4mini'];?></a>
+                  <a href="index.php?page=repeaters"><?php echo $language['Dashboard']['Full report'];?></a>
                 </div>  
               </div>
               <div class="span3 statbox red" onTablet="span6" onDesktop="span3">
