@@ -62,7 +62,6 @@ function startSocket(url) {
     //Handle incomming message
     socket.on('mqtt', function (msg) {
       var lastraw = JSON.parse(msg.payload);
-      console.log(JSON.stringify(msg.payload, null, "  "));
       try{
       if (params['filter'] && params['filter'] != "null") { 
         if (lastraw['Master'].toString().substring(0,3) != params['filter'] )
