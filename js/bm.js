@@ -179,7 +179,7 @@ function draw_country_plot(data) {
             type: 'column'
         },
         title: {
-            text: 'Online per country'
+            text: php_lang['Dashboard']['Online per country'] 
         },
         xAxis: {
             categories: categories 
@@ -187,7 +187,7 @@ function draw_country_plot(data) {
         yAxis: {
             min: 0,
             title: {
-                text: 'Homebrew/Dongles/Repeaters'
+                text: php_lang['Dashboard']['GraphYaxis']
             },
             stackLabels: {
                 enabled: true,
@@ -228,10 +228,10 @@ function draw_country_plot(data) {
             enabled: false
         },
         series: [
-          {'name':'Homebrew Hotspots','data': homebrewDgl},
-          {'name':'DV4mini','data': dongles},
-          {'name':'Homebrew Repeaters','data': homebrew},
-          {'name':'Industrial Repeaters','data': repeaters}]
+          {'name':php_lang['Dashboard']['Homebrew Hotspots'],'data': homebrewDgl},
+          {'name':php_lang['Dashboard']['DV4minis'],'data': dongles},
+          {'name':php_lang['Dashboard']['Homebrew Repeaters'],'data': homebrew},
+          {'name':php_lang['Dashboard']['Industrial Repeaters'],'data': repeaters}]
     });
 }
 
@@ -349,12 +349,12 @@ socket.on('connect', function () {
       LossCount = _percent + "% (" + lastraw['LossCount'] + "/" + lastraw['TotalCount'] + ")";
     }
     var entry = {
-      'Time': datetime, 
-      'Link name': lastraw['LinkName'],
-      'My call': Source,
-      'Source':CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')',
-      'Destination': group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')',
-      'Reflector': ref
+      php_lang['LH']['Time']: datetime, 
+      php_lang['LH']['Link name']: lastraw['LinkName'],
+      php_lang['LH']['My call']: Source,
+      php_lang['LH']['Source']:CountryImage(rcountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')',
+      php_lang['LH']['Destination']: group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')',
+      php_lang['LH']['Reflector']: ref
     };
     var index = functiontofindIndexByKeyValue(last,'SessionID', lastraw['SessionID']);
     if (index != null) {

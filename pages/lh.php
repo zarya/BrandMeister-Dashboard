@@ -1,10 +1,10 @@
     <ul class="breadcrumb">
                 <li>
                     <i class="icon-home"></i>
-                    <a href="index.php">Home</a>
+                    <a href="index.php"><?php echo $language['Home'];?></a>
                     <i class="icon-angle-right"></i>
                 </li>
-                <li><a href="#">LastHeard</a></li>
+                <li><a href="#"><?php echo $language['LH']['LastHeard'];?></a></li>
             </ul>
 
 <Select id="source_url" name="source_url" onchange="javascript:SourceChange()">

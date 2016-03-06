@@ -2,8 +2,8 @@
 <div id="sidebar-left" class="span2">
   <div class="nav-collapse sidebar-nav">
     <ul class="nav nav-tabs nav-stacked main-menu">
-      <li><a href="<?php echo $config['baseurl']; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>   
-      <li><a href="index.php?page=lh"><i class="icon-bullhorn"></i><span class="hidden-tablet"> LastHeard</span></a></li>   
+      <li><a href="<?php echo $config['baseurl']; ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> <?php echo $language['Dashboard']['Dashboard'];?></span></a></li>   
+      <li><a href="index.php?page=lh"><i class="icon-bullhorn"></i><span class="hidden-tablet"> <?php echo $language['LH']['LastHeard'];?></span></a></li>   
       <li><a href="index.php?page=reflector"><i class="icon-tag"></i><span class="hidden-tablet"> Connected reflectors</span></a></li>   
       <li><a href="index.php?page=erouting"><i class="icon-magic"></i><span class="hidden-tablet"> Extended routing</span></a></li>   
       <li>

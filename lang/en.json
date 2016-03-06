@@ -1,4 +1,25 @@
 {
+  "Home": "Home",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Industrial Repeaters",
+    "Homebrew" : "Homebrew",
+    "Hotspot" : "Hotspot",
+    "Repeaters" : "Repeaters",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Full report",
+    "Masters" : "Masters",
+    "Repeater in RX": "Repeater in RX",
+    "Repeater in TX": "Repeater in TX",
+    "External calls" : "External calls",
+    "Per country": "Per country",
+    "Online per country": "Online per country",
+    "GraphYaxis" : "Homebrew/Hotspot/Repeaters",
+    "Homebrew Hotspots" : "Homebrew Hotspots",
+    "DV4minis" : "DV4minis",
+    "Homebrew Repeaters": "Homebrew Repeaters",
+    "Industrial Repeaters":"Industrial Repeaters"
+  },
   "LH" : {
     "LastHeard" : "LastHeard",
     "Time": "Time",
