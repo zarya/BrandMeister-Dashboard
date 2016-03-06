@@ -52,9 +52,9 @@ function updateReflectors() {
           "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
           "sPaginationType": "bootstrap",
           "oLanguage": {
-            "sLengthMenu": "_MENU_ records per page"
+            "sLengthMenu": "_MENU_ "+php_lang['Table']['records per page']
           },
-          "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+          "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ]
         });
       }
     );

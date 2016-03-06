@@ -1,5 +1,6 @@
 {
   "Home": "Home",
+  "Reports": "Reports",
   "Dashboard" : {
     "Dashboard": "Dashboard",
     "Industrial Repeaters": "Industrial Repeaters",
@@ -55,6 +56,64 @@
     "Error" : "Error!",
     "missing dongle" : "Error: Missing dongle",
     "error reflector" : "Error: Cant connect to a reflector please use a talkgroup"
-  }
-  
+  },
+  "Repeaters" : {
+    "Repeaters": "Repeaters",
+    "Number" : "Number",
+    "Name":"Name",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "Number",
+    "Name":"Name",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Country",
+    "Number":"Number",
+    "Version":"Version",
+    "Links":"Links",
+    "Status: "Status",
+    "List": "List"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alerts",
+    "Time":"Time",
+    "Repeater":"Repeater",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Calls",
+    "Call statistics":"Call statistics",
+    "Filters": "Filters",
+    "Talkgroup" : "Talkgroup",
+    "Display Per TG" : "Display Per TG",
+    "Display Per reflector": "Display Per reflector",
+    "Total":"Total",
+    "QSOs per Hour":"QSOs per Hour",
+    "ClickZoom": "Click and drag in the plot area to zoom in",
+    "PinchZoom": "Pinch the chart to zoom in",
+    "QSOs":"QSOs",
+    "Time per Hour": "Time per Hour",
+    "Seconds": "Seconds"
+  },
+  "Table" : {
+    "records per page" : "records per page",
+    "All": "All"
+  } 
 }

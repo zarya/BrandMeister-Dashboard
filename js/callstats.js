@@ -76,7 +76,7 @@ function RenderGraph()
   }
   
   $.getJSON(data_url, function (jsondata) {
-    data = [{type: 'area', name: 'Total'}];
+    data = [{type: 'area', name: php_lang['Calls']['Total']}];
 
     //Generate total
     qso = [];
@@ -117,18 +117,18 @@ function RenderGraph()
         type: 'area'
       },
       title: {
-        text: 'QSOs per Hour'
+        text: php_lang['Calls']['QSOs per Hour']
       },
       subtitle: {
         text: document.ontouchstart === undefined ?
-          'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+          php_lang['Calls']['ClickZoom'] : php_lang['Calls']['PinchZoom']
         },
       xAxis: {
         type: 'datetime'
       },
       yAxis: {
         title: {
-          text: 'QSOs'
+          text: php_lang['Calls']['QSOs']
         },
         min: 0
       },
@@ -167,7 +167,7 @@ function RenderGraph()
 
   //Generate Seconds chart
   $.getJSON(data_url_sec, function (jsondata) {
-    data = [{type: 'area', name: 'Total'}];
+    data = [{type: 'area', name: php_lang['Calls']['Total']}];
 
     //Generate total
     qso = [];
@@ -208,11 +208,11 @@ function RenderGraph()
         type: 'area'
       },
       title: {
-        text: 'Time per Hour'
+        text: php_lang['Calls']['Time per Hour']
       },
       subtitle: {
         text: document.ontouchstart === undefined ?
-          'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+          php_lang['Calls']['ClickZoom'] : php_lang['Calls']['PinchZoom']
         },
       xAxis: {
         type: 'datetime'
@@ -229,7 +229,7 @@ function RenderGraph()
             year: '%H:%M:%S'
         },
         title: {
-          text: 'Seconds'
+          text: php_lang['Calls']['Seconds']
         },
         min: 0
       },
