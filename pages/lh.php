@@ -137,7 +137,7 @@ function startSocket(url) {
       entry['Destination'] = group + ' ' + CountryImage(dcountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
       entry['Reflector'] = ref;
       entry['Options'] = "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options + "</nobr>";
-      entry['RSSI'] = lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):'';
+      entry['RSSI (dBm)'] = lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):'';
       entry['Duration'] = lastraw['Stop']!=0?getCellDuration(lastraw['Stop'] - lastraw['Start']):'';
       entry['Loss rate'] = LossCount;
       if (params['unique'] != "undefined" && params['unique'] != undefined)
