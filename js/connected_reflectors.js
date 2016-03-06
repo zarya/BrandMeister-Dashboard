@@ -60,5 +60,4 @@ function updateReflectors() {
 }
 
 updateRepeaterNames();
-setInterval(updateRepeaterNames, 100000);
 
