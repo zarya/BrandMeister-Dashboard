@@ -18,9 +18,7 @@ function updateAlertListCallback(master) {
     $('#jsonTable').dataTable({
         "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
         "sPaginationType": "bootstrap",
-        "oLanguage": {
-        "sLengthMenu": "_MENU_ "+php_lang['Table']['records per page']
-        },
+        "oLanguage": php_lang['Table']['DataTables'],
         "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ],
         "order": [[ 0, "desc" ]]
     } );

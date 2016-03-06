@@ -113,7 +113,6 @@
     "Seconds": "Sekunder"
   },
   "Table" : {
-    "records per page" : "poster per sida",
     "All": "Alla",
     "DataTables": {
       "sEmptyTable": "Tabellen innehåller ingen data",

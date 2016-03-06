@@ -113,7 +113,6 @@
     "Seconds": "Segundos"
   },
   "Table" : {
-    "records per page" : "registros por página",
     "All": "Todos",
     "DataTables": {
       "sProcessing":     "Procesando...",

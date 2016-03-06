@@ -113,7 +113,6 @@
     "Seconds": "Seconds"
   },
   "Table" : {
-    "records per page" : "Datens&auml;tze pro Seite",
     "All": "Alle",
     "DataTables": {
       "sEmptyTable":      "Keine Daten in der Tabelle vorhanden",

@@ -113,7 +113,6 @@
     "Seconds": "Seconden"
   },
   "Table" : {
-    "records per page" : "weergaves per pagina",
     "All": "Alles",
     "DataTables": {
       "sProcessing": "Bezig...",
