@@ -1,0 +1,156 @@
+{
+"Home": "Início",
+"Reports": "Relatórios",
+"Dashboard" : {
+"Dashboard": "Painel",
+"Homebrew" : "Não comerciais",
+"Hotspot" : "Hotspots",
+"Repeaters" : "Repetidoras",
+"DV4mini" : "DV4mini",
+"Full report" : "Relatorios completo",
+"Masters" : "Mestre",
+"Repeater in RX": "Repetidor em recepção",
+"Repeater in TX": "Repetidor em transmissão",
+"External calls" : "Chamadas Externas",
+"Per country": "Por país",
+"Online per country": "País ativo",
+"GraphYaxis" : "Caseiro/Hotspot/Repetidoras",
+"Homebrew Hotspots" : "Hotspots não comerciais",
+"DV4minis" : "DV4minis",
+"Homebrew Repeaters": "Repetidoras não comerciais",
+"Industrial Repeaters":"Repetidoras Industrial"
+},
+"LH" : {
+"LastHeard" : "Último Ouvido",
+"Time": "hora",
+"Master": "Mestre",
+"SessionID": "Sessão ID",
+"Link name" : "Link nome",
+"My call" : "Meu indicativo de chamada",
+"Source" : "Origem ",
+"Destination" : "Destino",
+"Reflector" : "Refletor",
+"Options" : "Opção",
+"RSSI" : "RSSI (dBm)",
+"Duration" : "Duração",
+"Loss rate" : "Taxa de erro"
+},
+"Connected reflectors" : {
+"Connected reflectors" : "Conectado ao refletor",
+"Reflectors": "Refletores",
+"Name" : "Nome",
+"Reflector" : "Refletor"
+},
+"Extended routing": {
+"Extended routing": "Roteamento Estendido",
+"Extended Routing for DV4mini" : "Roteamento Estendido para  DV4mini",
+"User ID" : "ID do usuário",
+"Choose dongle" : "Escolher o dongle",
+"Mapped group" : "Grupo Mapeado",
+"Talkgroup" : "Grupo de conversação",
+"OK": "OK",
+"help" : "Para obter ajuda por favor verifique o wiki",
+"not responding" : "não respondendo",
+"Master" : "Mestre",
+"Error" : "Erro!",
+"missing dongle" : "Falta de erro dongle",
+"error reflector" : "Erro: Não posso conectar ao refletor por favor use um grupo de conversação"
+},
+"Repeaters" : {
+"Repeaters": "Repetidoras",
+"Number" : "Número",
+"Name":"Nome",
+"Hardware":"Hardware",
+"Firmware":"Firmware",
+"TX":"TX",
+"RX":"RX",
+"CC":"CC",
+"Status":"Estatus",
+"Master":"Mestre"
+},
+"Hotspots" : {
+"Hotspots": "Hotspots",
+"Number" : "Número",
+"Name":"Nome",
+"Hardware":"Hardware",
+"Firmware":"Firmware",
+"TX":"TX",
+"RX":"RX",
+"CC":"CC",
+"Status":"Estatus",
+"Master":"Mestre"
+},
+"Masters" : {
+"Masters": "Mestre",
+"Country":"País",
+"Number":"Número",
+"Version":"Versão",
+"Links":"Links",
+"Status": "Estatus",
+"List": "Lista"
+},
+"Alerts" : {
+"Alerts": "Alertas",
+"Time":"Hora",
+"Repeater":"Repetidora",
+"Alarm": "Alarme",
+"Master": "Mestre"
+},
+"Calls" : {
+"Calls": "Chamadas",
+"Call statistics":"Estatísticas de chamadas",
+"Filters": "Filtros",
+"Talkgroup" : "Grupo de Conversação",
+"Display Per TG" : "Display Per TG",
+"Display Per reflector": "Display Per refletor",
+"Total":"Total",
+"QSOs per Hour":"QSOs por Hora",
+"ClickZoom": "Clique e arraste dentro da área do desenho para fazer o zoom",
+"PinchZoom": "Clique dentro do gráfico para aumentar o zoom",
+"QSOs":"QSOs",
+"Time per Hour": "Vez por hora",
+"Seconds": "Segundos"
+},
+"Table" : {
+"All": "Tudo",
+"DataTables": {
+"emptyTable": "Sem dados disponíveis na tabela",
+"info": "Mostrando o início ao fim do total de entradas",
+"infoEmpty": "Mostrando 0 a 0 de 0 entradas",
+"infoFiltered": "(filtrados a partir do_ MAX_totais de entradas)",
+"infoPostFix": "",
+"infoThousands": ",",
+"lengthMenu": "Mostrando MENU entradas",
+"loadingRecords": "Carregando...",
+"processing": "Em processamento...",
+"search": "Pesquisa:",
+"zeroRecords": "Não identificados os registros encontrados",
+"paginate": {
+"first": "Primeiro",
+"last": "Último",
+"next": "Próximo",
+"previous": "Anterior"
+},
+"aria": {
+"sortAscending": ": ativar para classificar a coluna ascendente",
+"sortDescending": ": ativar para classificar a coluna descendente"
+}
+}
+},
+"Monitoring" : {
+"Error": "Erro!",
+"Master": "Mestre",
+"not responding": "não respondendo"
+},
+"ConfigDialog" : {
+"Settings": "Configurações",
+"General": "Geral",
+"LastHeard": "Último Ouvido",
+"Display alerts":"Exibir alertas",
+"API Timeout":"API Tempo esgotado",
+"API Timeout Max":"Máximo para o limite de tempo é 60 segundos",
+"TimeQSO": "Display data/hora por QSO",
+"Close": "Fechar",
+"Save": "Salvar alterações"
+}
+}
