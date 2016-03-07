@@ -11,7 +11,7 @@
     "Full report" : "Подробный отчет",
     "Masters" : "Серверы",
     "Repeater in RX" : "Прием",
-    "Repeater in TX" : "Передач",
+    "Repeater in TX" : "Передача",
     "External calls" : "Внешние вызовы",
     "Per country" : "По странам",
     "Online per country" : "По странам",
@@ -116,12 +116,12 @@
     "All" : "All",
     "DataTables" : {
       "emptyTable" :     "Данные отсутствуют",
-      "info" :           "Отображено с _START_ по _END_ из _TOTAL_ строк",
-      "infoEmpty" :      "Отображено 0 строк",
-      "infoFiltered" :   "(отфильтровано мз _MAX_ строк всего)",
+      "info" :           "Строки с _START_ по _END_ из _TOTAL_",
+      "infoEmpty" :      "Нет данных",
+      "infoFiltered" :   "(отфильтровано из _MAX_ строк)",
       "infoPostFix" :    "",
       "infoThousands" :  "",
-      "lengthMenu" :     "Отобразить _MENU_ элементов",
+      "lengthMenu" :     "Показывать по _MENU_ строк",
       "loadingRecords" : "Загрузка...",
       "processing" :     "Обработка...",
       "search" :         "Найти: ",
@@ -133,8 +133,8 @@
           "previous" : "предыдущая"
       },
       "aria" : {
-          "sortAscending" :  " : нажмите для сортировки по возрастанию",
-          "sortDescending" : " : нажмите для сортировки по убыванию"
+          "sortAscending" :  " : отсортировать по возрастанию",
+          "sortDescending" : " : отсортировать по убыванию"
       }
     }
   },
