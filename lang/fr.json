@@ -1,0 +1,157 @@
+{
+  "Home": "Home",
+  "Reports": "Rapport",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Répéteurs commerciaux",
+    "Homebrew" : "Homebrew",
+    "Hotspot" : "Hotspots",
+    "Repeaters" : "Répéteurs",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Rapport complet",
+    "Masters" : "Masters",
+    "Repeater in RX": "Répéteurs en RX",
+    "Repeater in TX": "Répéteurs en TX",
+    "External calls" : "Indicatifs Exterieurs",
+    "Per country": "Par Pays",
+    "Online per country": "Online par Pays",
+    "GraphYaxis" : "Homebrews/Hotspots/Répéteurs",
+    "Homebrew Hotspots" : "Homebrews Hotspots",
+    "DV4minis" : "DV4minis",
+    "Homebrew Repeaters": "Homebrews Répéteurs",
+    "Industrial Repeaters":"Répéteurs commerciaux"
+  },
+  "LH" : {
+    "LastHeard" : "Stations Entendus",
+    "Time": "Temps",
+    "Master": "Master",
+    "SessionID": "Session ID",
+    "Link name" : "Nom link",
+    "My call" : "Indicatif ID",
+    "Source" : "Source",
+    "Destination" : "Destination",
+    "Reflector" : "Réflecteurs",
+    "Options" : "Options",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "Durée",
+    "Loss rate" : "Taux de perte"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Réflecteurs connectés",
+    "Reflectors": "Réflecteur",
+    "Name" : "Nom",
+    "Reflector" : "Réflecteur"
+  },
+  "Extended routing": {
+    "Extended routing": "Routage DV4mini",
+    "Extended Routing for DV4mini" : "Routage étendu pour DV4mini",
+    "User ID" : "ID utilisateur",
+    "Choose dongle" : "Choisir votre dongle",
+    "Mapped group" : "Mappage groupe",
+    "Talkgroup" : "Talkgroup",
+    "OK": "OK",
+    "help" : "Pour de l'aide consultez le wiki ou le site http://www.dmr-france.fr/dv4-extending-routing/ ",
+    "not responding" : "pas de réponse",
+    "Master" : "Master",
+    "Error" : "Erreur!",
+    "missing dongle" : "Erreur: Pas de dongle",
+    "error reflector" : "Erreur: Impossible de se connecter à un réflecteur veuiller utiliser un groupe de conversation"
+  },
+  "Repeaters" : {
+    "Repeaters": "Répéteurs",
+    "Number" : "ID",
+    "Name":"Indicatifs",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "ID",
+    "Name":"Indicatifs",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Pays",
+    "Number":"ID",
+    "Version":"Version",
+    "Links":"Links",
+    "Status": "Status",
+    "List": "Liste"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alertes",
+    "Time":"Date Heure",
+    "Repeater":"Répéteurs",
+    "Alarm": "Alarmes",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Indicatifs",
+    "Call statistics":"Statistiques",
+    "Filters": "Filtres",
+    "Talkgroup" : "Talkgroup",
+    "Display Per TG" : "Afficher par TG",
+    "Display Per reflector": "Afficher par réflecteur",
+    "Total":"Total",
+    "QSOs per Hour":"QSOs par Heure",
+    "ClickZoom": "Cliquez et faites glisser dans la zone de traçage pour zoomer",
+    "PinchZoom": "Glissez le graphique pour agrandir",
+    "QSOs":"QSOs",
+    "Time per Hour": "Heure par heure",
+    "Seconds": "Secondes"
+  },
+  "Table" : {
+    "All": "TOUS",
+    "DataTables": {
+      "emptyTable":     "Aucunes données possible",
+      "info":           "Du _START_e au _TOTAL_ eme résultat",
+      "infoEmpty":      "Montrer du 0 er 0 au 0  eme résultat",
+      "infoFiltered":   "(filtre de _MAX_ total résultats)",
+      "infoPostFix":    "",
+      "infoThousands":  ",",
+      "lengthMenu":     "Montrer _MENU_ résultats",
+      "loadingRecords": "Chargement...",
+      "processing":     "En cours de Traitement...",
+      "search":         "Recherche:",
+      "zeroRecords":    "Aucun enregistrements correspondants trouvés",
+      "paginate": {
+          "first":    "Premier",
+          "last":     "Dernier",
+          "next":     "Suivant",
+          "previous": "Précédent"
+      },
+      "aria": {
+          "sortAscending":  ": activer pour trier la colonne ascendante",
+          "sortDescending": ": activer pour trier la colonne descendante"
+      }
+    }
+  },
+  "Monitoring" : {
+    "Error": "Erreur!",
+    "Master": "Master",
+    "not responding": "Pas de réponse"
+  },
+  "ConfigDialog" : {
+    "Settings": "Réglages",
+    "General": "Général",
+    "LastHeard": "LastHeard",
+    "Display alerts":"Afficher les alertes",
+    "API Timeout":"API Timeout",
+    "API Timeout Max":"Maximum timeout est de 60 seconds",
+    "TimeQSO": "Affichage date/heure par QSO",
+    "Close": "fermé",
+    "Save": "Sauvegarde changements"
+  }
+}
