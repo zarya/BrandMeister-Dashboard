@@ -3,8 +3,8 @@
   "Reports" : "Отчеты",
   "Dashboard" : {
     "Dashboard" : "Приборная панель",
-    "Industrial Repeaters" : "Индустриальные репитеры",
-    "Homebrew" : "Самодельные репитеры",
+    "Industrial Repeaters" : "Индустриальные pепитеры",
+    "Homebrew" : "Самодельные",
     "Hotspot" : "Точки доступа",
     "Repeaters" : "Репитеры",
     "DV4mini" : "DV4mini",
@@ -18,8 +18,7 @@
     "GraphYaxis" : "Самодельные/точки доступа/репитеры",
     "Homebrew Hotspots" : "Точки доступа",
     "DV4minis" : "DV4mini",
-    "Homebrew Repeaters" : "Самодельные репитеры",
-    "Industrial Repeaters" : "Индустриальные репитеры"
+    "Homebrew Repeaters" : "Самодельные Pепитеры"
   },
   "LH" : {
     "LastHeard" : "Журнал вызовов",
