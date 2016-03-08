@@ -119,6 +119,7 @@ var groups =
   "2042" : "Midden Nederland",
   "2043" : "Zuid Nederland",
   "2044" : "Oost Nederland",
+  "20441" : "Regio IJsselmond",
   "2049881" : "XRF088 A",
   "2049882" : "XRF088 B",
   "2049125" : "PI2NOS",
