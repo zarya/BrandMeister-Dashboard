@@ -1,4 +1,5 @@
 <?php
+include("include/lang.php");
 include("config.php");
 include("include/header.php");
 ?>
