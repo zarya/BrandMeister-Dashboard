@@ -109,5 +109,6 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/config.js"></script>
     <script src="js/bm_common.js"></script>
     <script src="js/lh.js"></script>
+    <script src="js/alert.js"></script>
     <!-- end Javascript -->    
 </head>
