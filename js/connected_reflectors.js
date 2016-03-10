@@ -1,14 +1,10 @@
 var device = [];
 var reflectors = [];
 var t;
+var table = [];
 
 function updateRepeaterNames()
 {
-  var country_cnt = {
-    'dongle': {},
-    'repeater': {},
-    'homebrew': {}
-  };
   for (var number in servers) {
     var location = 'http://' + servers[number] + '/status/';
     $.getJSON(location + 'list.php?callback=?',{format:'json'}, updateRepeaterNamesCallback(number)); 
@@ -29,7 +25,6 @@ function updateRepeaterNamesCallback(master) {
 }
 
 function updateReflectors(number) {
-  var table = [];
   var location = 'http://' + servers[number] + '/status/';
   $.getJSON(location + 'status.php?callback=?',
     function(data)
