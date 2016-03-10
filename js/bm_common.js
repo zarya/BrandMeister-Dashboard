@@ -38,13 +38,16 @@ function interpretData(name, type, data)
 
   if (name == 'Hytera Multi-Site Connect')
   {
+    var modes = [ 'Digital Mode', 'Analog Mode', 'Mixed Mode' ];
+    messages.push(modes[data[7]]);
     if (data[2] == 0)
       messages.push('RDAC is Off');
   }
 
   if (name == 'DV4mini')
   {
-    if (data[data.length - 1] == 4999)
+    if ((data[data.length - 1] == 4999) &&
+        (data[data.length - 2] > 0))
       messages.push('TG ' + data[data.length - 2]);
   }
 
@@ -139,53 +142,17 @@ function getSuitableStyle(name, state, data)
   return '';
 }
 
-function getRepeaterModel(value,number)
+function getRepeaterModel(value)
 {
   var expression = /^T(3000|2003)/;
   if (expression.test(value))
     return 'Motorola MTR3000';
 
-  var region = number.toString().substr(0, 1);
-
-  var expression = /^M27..R9JA7AN/;
-  if (expression.test(value) && (region == '2'))
-    return 'Motorola DR3000';
-  if (expression.test(value) && (region == '3'))
-    return 'Motorola XPR8300';
-  if (expression.test(value) && (region == '7'))
-    return 'Motorola DGR6175';
-  if (expression.test(value) && (region == '4'))
-    return 'Motorola XiR R8200';
-
-  var expression = /^R10..GA.Q1AN/;
-  if (expression.test(value) && (region == '2'))
-    return 'Motorola SLR5500';
-  if (expression.test(value) && (region == '3'))
-    return 'Motorola SLR5700';
-
   // --------------- M27QPR9JA7AN
   var expression = /^M27..R9JA7AN/;
   if (expression.test(value))
-  {
-    switch (region)
-    {
-      case '3':
-        // NA
-        return 'Motorola XPR8300';
-
-      case '7':
-        // LA
-        return 'Motorola DGR6175';
-
-      case '4':
-        // AS
-        return 'Motorola XiR R8200';
-
-      default:
-        // EMEA
-        return 'Motorola DR3000';
-    }
-  }
+    // DR3000 (EMEA), XPR8300 (NA), DGR6175 (LA), XiR R8200 (AS)
+    return 'Motorola DR3000';
 
   // --------------- M27JNR9JA7BN
   var expression = /^M27..R9JA7[BC]N/;
@@ -195,21 +162,8 @@ function getRepeaterModel(value,number)
   // --------------- R10JCGAPQ1AN
   var expression = /^R10..GA.Q1AN/;
   if (expression.test(value))
-  {
-    switch (region)
-    {
-      case '3':
-        // NA
-        return 'Motorola XLR5700';
-
-      case '2':
-        // EMEA
-        return 'Motorola SLR5500';
-      
-      default:
-        return 'Motorola SLR5000 Series';
-    }
-  }
+    // SLR5500 (EMEA), SLR5700 (NA)
+    return 'Motorola SLR5500';
 
   // ---------------- RD985-00000000-001000-U1-0-F
   // ---------------- RD985-0000000S-001000-U1-0-F
@@ -230,10 +184,14 @@ function getRepeaterModel(value,number)
 
   // linux:mmdvm-20151222
   // Android:BlueSpot-v1.0.0-PA7LIM
-  var expression = /\:([A-Za-z]+)-/;
-  var matches = value.match(expression);
-  if (matches != null)
-    return matches[1];
+  var expression = /([A-Za-z]+)\:([A-Za-z_]+).*$/;
+  if (expression.test(value))
+    return value.replace(expression, '$2 ($1)');
+
+  // MMDVM_DVMega
+  var expression = /^MMDVM[-_](.+)$/;
+  if (expression.test(value))
+    return value.replace(expression, '$1 (MMDVM)');
 
   if ((value == '') ||
       (value == null) ||
@@ -261,22 +219,4 @@ function getFrequency(value)
 {
   try           { return value.toFixed(4).replace(/0$/g, '') + ' MHz'; }
   catch (error) { return '-';                                          }
-}
-
-function newAlert (type, message) {
-    $("#alert-area").append($("<div class='alert alert-" + type + " fade in' data-alert><p> " + message + " </p></div>"));
-    $(".alert").delay(2000).fadeOut("slow", function () { $(this).remove(); });
-}
-
-function newAlertPopup(title,message) {
-  return function() {
-    if (config['alerts'] != false) {
-      $.gritter.add({
-        title: title,
-        text: message,
-        sticky: false,
-        time: ''
-      });
-    }
-  }
 }
