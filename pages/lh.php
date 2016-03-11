@@ -18,6 +18,7 @@ while (list($key, $value) = each($config['LHServers'])) {
 </div>
 <script>
 var max_queue = 30;
+if (params['amount'] != undefined) max_queue = params['amount'];
 var table = [];
 var last = [];
 var urlreg = /(.+:\/\/?[^\/]+)(\/.*)*/;
@@ -51,7 +52,6 @@ startSocket($( "#source_url" ).val());
 
 function startSocket(url) {
   socket.on('connect', function () {
-    if (params['amount'] != undefined) max_queue = params['amount'];
     var table = [];
     var last = [];
     if (params['country']) params['filter'] = params['country'];
