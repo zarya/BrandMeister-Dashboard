@@ -31,11 +31,11 @@ function updateReflectors(number) {
     {
       for (index in data) {
         var value = data[index];
+        entry  = {};
         if (device[value['number']]) {
           device[value['number']]['ref'] = value['values'][19];
           if (device[value['number']]['ref'] > 0 && (params['search']==undefined || params['search']==device[value['number']]['country']))
           {
-            entry  = {};
             entry[php_lang['Connected reflectors']['Name']] = device[value['number']]['name'];
             entry[php_lang['Connected reflectors']['Reflector']] = device[value['number']]['ref'];
             table.push(entry);
