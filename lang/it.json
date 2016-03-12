@@ -18,7 +18,11 @@
     "Homebrew Hotspots" : "Autocostruiti Hotspots",
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Ripetitori Autocostruiti",
-    "Industrial Repeaters":"Ripetitori Professionali"
+    "Industrial Repeaters":"Ripetitori Professionali",
+    "Repeater models": "Repeater models",
+    "Repeater versions": "Repeater versions",
+    "PIchartDescr" : "Click the sharts of the pie to see more details",
+    "Device stats": "Device statistics"
   },
   "LH" : {
     "LastHeard" : "LastHeard",

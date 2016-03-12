@@ -19,7 +19,11 @@
     "Homebrew Hotspots" : "Hembyggda Hotspots",
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Hembyggda Repeaters",
-    "Industrial Repeaters":"Fabriksbyggda Repeaters"
+    "Industrial Repeaters":"Fabriksbyggda Repeaters",
+    "Repeater models": "Repeater modeller",
+    "Repeater versions": "Repeater versioner",
+    "PIchartDescr" : "Klicka på tårtdiagramet för mer detaljer",
+    "Device stats": "Enhets statistik"
   },
   "LH" : {
     "LastHeard" : "Senast H&ouml;rd",
