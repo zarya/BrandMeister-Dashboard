@@ -16,6 +16,7 @@ function updateRepeaterNamesCallback(master) {
     for (key in data)
     {
       var value = data[key];
+      if (value['name'] == "") value['name'] = value['number']
       device[value['number']] = {'name': '','ref': ''};
       device[value['number']]['name'] = CountryImage(getCountry(value['number']))+" " + value['name'];
       device[value['number']]['country'] = getCountry(value['number']);
