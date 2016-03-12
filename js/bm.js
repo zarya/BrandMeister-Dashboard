@@ -14,7 +14,8 @@ var country_cnt = {
   'homebrew': {},
   'homebrewDgl': {}
 };
-var modelCount = [];
+var modelCount;
+var masterDoneCount;
 
 function updateRepeaterCount()
 {
@@ -27,13 +28,16 @@ function updateRepeaterCount()
   slots_rx = 0;
   external_count = 0;
   masters_count = 0;
+  masterDoneCount = 0; 
   country_cnt = {
     'dongle': {},
     'repeater': {},
     'homebrew': {},
     'homebrewDgl': {}
   };
-  modelCount = [];
+  modelCount = {'vendor':[],'model':[]};
+  $('#modelChart').highcharts().showLoading();
+  $('#country_cnt').highcharts().showLoading();
   for (var number in servers) {
     fetchServer(number);
     fetchModels(number);
@@ -114,9 +118,14 @@ function fetchServer(number) {
       $("#repeater_tx_input").val(slots_tx).trigger('change');
       $("#repeater_rx_input").val(slots_rx).trigger('change');
       $("#external_input").val(external_count).trigger('change');
+      masterDoneCount++;
       draw_country_plot(country_cnt);
     }
-  ).fail(newAlertPopup(php_lang['Monitoring']['Error'],php_lang['Monitoring']['Master']+' '+number+' '+php_lang['Monitoring']['not responding']));
+  ).fail(function(){ 
+    newAlertPopup(php_lang['Monitoring']['Error'],php_lang['Monitoring']['Master']+' '+number+' '+php_lang['Monitoring']['not responding']);
+    masterDoneCount++;
+    draw_country_plot(country_cnt);
+  });
 }
 
 function findByProperty(objects, prop, value) {
@@ -139,14 +148,28 @@ function fetchModels(number) {
       {
         var value = data[key];
         var model = getRepeaterModel(value['hardware'],value['number']);
-        var key = findByProperty(modelCount,'name', model)
         if (model == "-") continue
-        if (key > -1)
-          modelCount[key]['y']++;
+        var vendor = model.split(" ")[0];
+
+        if (modelCount['model'][vendor] == undefined)
+          modelCount['model'][vendor]={'name':vendor,'data':[],'type': 'pie'};
+        var modelVendorKey = findByProperty(modelCount['model'][vendor]['data'],0, model)
+
+        if (modelVendorKey > -1)
+          modelCount['model'][vendor]['data'][modelVendorKey][1]++;
         else
-          modelCount.push({'name':model,'y':1});
+          modelCount['model'][vendor]['data'].push([model,1]);
+
+        //Build vendor table
+        var vendorKey = findByProperty(modelCount['vendor'],'name', vendor)
+        if (vendorKey > -1)
+          modelCount['vendor'][vendorKey]['y']++;
+        else
+          modelCount['vendor'].push({'name':vendor,'drilldown':vendor,'y':1});
+
       }
-      chart.series[0].setData(modelCount);
+      chart.series[0].setData(modelCount['vendor']);
+      chart.hideLoading();
     }
   );
 }
@@ -155,15 +178,25 @@ function draw_charts()
 {
   $('#modelChart').highcharts({
     chart: {
+      type: 'pie',
       plotBackgroundColor: null,
       plotBorderWidth: 0,
-      plotShadow: false
+      plotShadow: false,
+      events: {
+        drilldown: function (e) {
+          if (!e.seriesOptions) {
+            console.log(e);
+            var chart = this;
+            console.log(e.point.name);
+            series = modelCount['model'][e.point.name]
+            chart.addSeriesAsDrilldown(e.point, series);
+          }
+        }
+      }
     },
     title: {
-      text: 'Repeater<br>Models',
-      align: 'center',
-      verticalAlign: 'middle',
-      y: 40
+      text: 'Repeater models',
+      align: 'center'
     },
     tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -171,25 +204,20 @@ function draw_charts()
     plotOptions: {
       pie: {
         dataLabels: {
-          enabled: true,
-          distance: -50,
-          style: {
-            fontWeight: 'bold',
-            color: 'white',
-            textShadow: '0px 1px 2px black'
-          }
-        },
-        startAngle: -90,
-        endAngle: 90,
-        center: ['50%', '75%']
+          enabled: true
+        }
       }
     },
     series: [{
       type: 'pie',
       name: 'Repeater models',
-      innerSize: '50%',
+      drilldown: true,
       data: [] 
-    }]
+    }],
+    drilldown: {
+      series: []
+    }
+
   });
   $('#country_cnt').highcharts({
     chart: {
@@ -262,6 +290,8 @@ function country_count(data,type,country) {
 }
 
 function draw_country_plot(data) {
+  if (masterDoneCount < (Object.keys(servers).length - 4)) return;
+
   var _plot = [];
   var _categories = {};
   for (type in data) {
@@ -312,6 +342,7 @@ function draw_country_plot(data) {
   chart.series[1].setData(dongles);
   chart.series[2].setData(homebrew);
   chart.series[3].setData(repeaters);
+  chart.hideLoading();
 }
 
 draw_charts();

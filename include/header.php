@@ -105,6 +105,7 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/highcharts/highcharts.js"></script>
     <script src="js/highcharts/highcharts-3d.js"></script>
     <script src="js/highcharts/modules/exporting.js"></script>
+    <script src="js/highcharts/modules/drilldown.js"></script>
     <script src="js/bootstrap-switch.js"></script>
     <script src="js/config.js"></script>
     <script src="js/bm_common.js"></script>
