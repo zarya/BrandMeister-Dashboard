@@ -85,7 +85,10 @@
                   </div>
                 </div>
                 <div class="box-content">
-                  <div id="modelChart"></div>
+                  <div class="row-fluid">
+                    <div class="span6"><div id="modelChart"></div></div>
+                    <div class="span6"><div id="versionChart"></div></div>
+                  </div>
                 </div>
               </div>
             </div>

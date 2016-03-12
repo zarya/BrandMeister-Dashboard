@@ -16,6 +16,7 @@ var country_cnt = {
 };
 var modelCount;
 var masterDoneCount;
+var masterDoneCountList;
 
 function updateRepeaterCount()
 {
@@ -29,13 +30,14 @@ function updateRepeaterCount()
   external_count = 0;
   masters_count = 0;
   masterDoneCount = 0; 
+  masterDoneCountList = 0; 
   country_cnt = {
     'dongle': {},
     'repeater': {},
     'homebrew': {},
     'homebrewDgl': {}
   };
-  modelCount = {'vendor':[],'model':[]};
+  modelCount = {'vendor':[],'model':[],'modelVer':[]};
   $('#modelChart').highcharts().showLoading();
   $('#country_cnt').highcharts().showLoading();
   for (var number in servers) {
@@ -148,9 +150,12 @@ function fetchModels(number) {
       {
         var value = data[key];
         var model = getRepeaterModel(value['hardware'],value['number']);
+        if (value['hardware'] == "" && value['frequency1'] == 0 && value['frequency2'] == 0) model = "DV4mini";
+
         if (model == "-") continue
         var vendor = model.split(" ")[0];
 
+        //Build vendor/model table
         if (modelCount['model'][vendor] == undefined)
           modelCount['model'][vendor]={'name':vendor,'data':[],'type': 'pie'};
         var modelVendorKey = findByProperty(modelCount['model'][vendor]['data'],0, model)
@@ -167,11 +172,32 @@ function fetchModels(number) {
         else
           modelCount['vendor'].push({'name':vendor,'drilldown':vendor,'y':1});
 
+        //Build vendor/version table
+        var version = value['firmware'];
+        if (modelCount['modelVer'][vendor] == undefined)
+          modelCount['modelVer'][vendor]={'name':vendor,'data':[],'type': 'pie'};
+        var modelVendorKey = findByProperty(modelCount['modelVer'][vendor]['data'],0, version)
+
+        if (modelVendorKey > -1)
+          modelCount['modelVer'][vendor]['data'][modelVendorKey][1]++;
+        else
+          modelCount['modelVer'][vendor]['data'].push([version,1]);
       }
-      chart.series[0].setData(modelCount['vendor']);
-      chart.hideLoading();
+      masterDoneCountList++;
+      modelChartUpdate();
     }
-  );
+  ).fail(function(){ masterDoneCountList++; modelChartUpdate(); });
+}
+
+function modelChartUpdate()
+{
+  if (masterDoneCountList < (Object.keys(servers).length - 4)) return;
+  var chart = $('#modelChart').highcharts();
+  chart.series[0].setData(modelCount['vendor'],true);
+  chart.hideLoading();
+  var chart = $('#versionChart').highcharts();
+  chart.series[0].setData(modelCount['vendor'],true);
+  chart.hideLoading();
 }
 
 function draw_charts()
@@ -211,6 +237,49 @@ function draw_charts()
     series: [{
       type: 'pie',
       name: 'Repeater models',
+      drilldown: true,
+      data: [] 
+    }],
+    drilldown: {
+      series: []
+    }
+
+  });
+  $('#versionChart').highcharts({
+    chart: {
+      type: 'pie',
+      plotBackgroundColor: null,
+      plotBorderWidth: 0,
+      plotShadow: false,
+      events: {
+        drilldown: function (e) {
+          if (!e.seriesOptions) {
+            console.log(e);
+            var chart = this;
+            console.log(e.point.name);
+            series = modelCount['modelVer'][e.point.name]
+            chart.addSeriesAsDrilldown(e.point, series);
+          }
+        }
+      }
+    },
+    title: {
+      text: 'Repeater versions',
+      align: 'center'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: true
+        }
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Repeater versions',
       drilldown: true,
       data: [] 
     }],
