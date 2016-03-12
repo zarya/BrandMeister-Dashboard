@@ -19,13 +19,14 @@ function updateRepeaterListCallback(master) {
         if (params['search']) {
           if (params['search'] == getCountry(value['number']))
           {
-            dataTable.row.add(device).draw();
+            dataTable.row.add(device);
           }
         } 
         else
-          dataTable.row.add(device).draw();
+          dataTable.row.add(device);
       }
     }
+    dataTable.draw();
   }
 }
 

@@ -9,7 +9,7 @@
 
 <div class="row-fluid">
 <div id="json">
-<table id="jsonTable" class="">
+<table id="jsonTable" class="table table-striped table-bordered bootstrap-datatable">
   <thead>
     <tr>
       <th><?php echo $language['Hotspots']['Number'];?></th>
