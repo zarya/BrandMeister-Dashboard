@@ -1,4 +1,5 @@
 $(function () {
+  initCharts();  
   loadGroups();
   RenderGraph();
   $("#group-by-tg").bootstrapSwitch({'size': 'mini'});
