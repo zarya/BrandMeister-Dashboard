@@ -117,6 +117,7 @@ function RenderGraph()
       chart.series[0].setData(qso)
       chart.hideLoading();
     }
+  });
 
   //Generate Seconds chart
   $.getJSON(data_url_sec, function (jsondata) {
@@ -155,9 +156,10 @@ function RenderGraph()
     } 
     else
     {
-      chart.series[0].setData(qso)
+      chart.series[0].setData(qso);
       chart.hideLoading();
     }
+  });
 }
 
 function initCharts()
@@ -212,9 +214,8 @@ function initCharts()
           threshold: null
         }
       },
-      series: [['data':[]]] 
+      series: [ { 'data': [] } ] 
     });
-  });
     $('#container2').highcharts({
       chart: {
         zoomType: 'x',
@@ -280,9 +281,8 @@ function initCharts()
           threshold: null
         }
       },
-      series: [['data':[]]] 
+      series: [ { 'data': [] } ] 
     });
-  });
 }
 
 function loadGroups() {
