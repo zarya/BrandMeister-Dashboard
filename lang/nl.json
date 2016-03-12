@@ -153,5 +153,8 @@
     "TimeQSO": "Datumweergave/tijd per QSO",
     "Close": "Sluiten",
     "Save": "Wijzigingen opslaan"
+  },
+  "HighCharts": {
+    "drillUpText": "Terug naar"
   }
 }

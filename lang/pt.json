@@ -18,7 +18,11 @@
 "Homebrew Hotspots" : "Hotspots não comerciais",
 "DV4minis" : "DV4minis",
 "Homebrew Repeaters": "Repetidoras não comerciais",
-"Industrial Repeaters":"Repetidoras Industrial"
+"Industrial Repeaters":"Repetidoras Industrial",
+    "Repeater models": "Repeater models",
+    "Repeater versions": "Repeater versions",
+    "PIchartDescr" : "Click the sharts of the pie to see more details",
+    "Device stats": "Device statistics"
 },
 "LH" : {
 "LastHeard" : "Último Ouvido",
@@ -152,5 +156,8 @@
 "TimeQSO": "Display data/hora por QSO",
 "Close": "Fechar",
 "Save": "Salvar alterações"
-}
+},
+  "HighCharts": {
+    "drillUpText": "Back to"
+  }
 }

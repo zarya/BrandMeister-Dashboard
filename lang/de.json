@@ -157,5 +157,8 @@
     "TimeQSO": "Zeige Datum/Zeit pro QSO",
     "Close": "Schliessen",
     "Save": "/Auml;nderungen speichern"
+  },
+  "HighCharts": {
+    "drillUpText": "Back to"
   }
 }

@@ -156,5 +156,8 @@
     "TimeQSO": "Visualizza data/tempo per QSO",
     "Close": "Chiudi",
     "Save": "Salva cambiamenti"
+  },
+  "HighCharts": {
+    "drillUpText": "Back to"
   }
 }

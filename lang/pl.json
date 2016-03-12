@@ -19,7 +19,11 @@
     "Homebrew Hotspots" : "Amatorskie Hotspoty",
     "DV4minis" : "DV4mini",
     "Homebrew Repeaters": "Przemienniki amatorskie",
-    "Industrial Repeaters":"Przemienniki fabryczne"
+    "Industrial Repeaters":"Przemienniki fabryczne",
+    "Repeater models": "Repeater models",
+    "Repeater versions": "Repeater versions",
+    "PIchartDescr" : "Click the sharts of the pie to see more details",
+    "Device stats": "Device statistics"
   },
   "LH" : {
     "LastHeard" : "Ostatnio słyszane",
@@ -153,5 +157,8 @@
     "TimeQSO": "Display date/time per QSO",
     "Close": "Close",
     "Save": "Save changes"
+  },
+  "HighCharts": {
+    "drillUpText": "Back to"
   }
 }

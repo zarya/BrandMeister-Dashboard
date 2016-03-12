@@ -157,5 +157,8 @@
     "TimeQSO": "Visa datum/tid per QSO",
     "Close": "St&auml;ng",
     "Save": "Spara &auml;ndringar"
+  },
+  "HighCharts": {
+    "drillUpText": "Back to"
   }
 }

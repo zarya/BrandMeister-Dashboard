@@ -134,5 +134,8 @@
     "TimeQSO": "Presentar fecha/hora por QSO",
     "Close": "Cerrar",
     "Save": "Guardar cambios"
+  },
+  "HighCharts": {
+    "drillUpText": "Back to"
   }
 }

@@ -18,7 +18,11 @@
     "GraphYaxis" : "Самодельные/точки доступа/репитеры",
     "Homebrew Hotspots" : "Точки доступа",
     "DV4minis" : "DV4mini",
-    "Homebrew Repeaters" : "Самодельные pепитеры"
+    "Homebrew Repeaters" : "Самодельные pепитеры",
+    "Repeater models": "Repeater models",
+    "Repeater versions": "Repeater versions",
+    "PIchartDescr" : "Click the sharts of the pie to see more details",
+    "Device stats": "Device statistics"
   },
   "LH" : {
     "LastHeard" : "Журнал вызовов",
