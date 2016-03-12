@@ -225,7 +225,7 @@ function draw_charts()
       align: 'center'
     },
     tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
@@ -268,7 +268,7 @@ function draw_charts()
       align: 'center'
     },
     tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
