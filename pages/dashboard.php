@@ -78,6 +78,20 @@
             <div class="row-fluid">
               <div class="box">            
                 <div class="box-header">
+                  <h2><i class="halflings-icon list-alt"></i><span class="break"></span>Things</h2>
+                  <div class="box-icon">
+                    <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+                    <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+                  </div>
+                </div>
+                <div class="box-content">
+                  <div id="modelChart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="box">            
+                <div class="box-header">
                   <h2><i class="halflings-icon list-alt"></i><span class="break"></span><?php echo $language['LH']['LastHeard'];?></h2>
                   <div class="box-icon">
                     <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>

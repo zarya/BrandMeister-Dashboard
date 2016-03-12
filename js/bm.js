@@ -14,7 +14,7 @@ var country_cnt = {
   'homebrew': {},
   'homebrewDgl': {}
 };
-
+var modelCount = [];
 
 function updateRepeaterCount()
 {
@@ -33,8 +33,10 @@ function updateRepeaterCount()
     'homebrew': {},
     'homebrewDgl': {}
   };
+  modelCount = [];
   for (var number in servers) {
     fetchServer(number);
+    fetchModels(number);
   }
 }
 
@@ -117,6 +119,140 @@ function fetchServer(number) {
   ).fail(newAlertPopup(php_lang['Monitoring']['Error'],php_lang['Monitoring']['Master']+' '+number+' '+php_lang['Monitoring']['not responding']));
 }
 
+function findByProperty(objects, prop, value) {
+    var index;
+    $(objects).each(function(i, e) {
+        if (e[prop] && e[prop] == value) {
+            index = i;
+            return false;
+        }
+    });
+    return index;
+}
+
+function fetchModels(number) {
+  var chart = $('#modelChart').highcharts();
+  $.getJSON('http://' + servers[number] + '/status/' + 'list.php?callback=?',
+    function(data)
+    {
+      for (key in data)
+      {
+        var value = data[key];
+        var model = getRepeaterModel(value['hardware'],value['number']);
+        var key = findByProperty(modelCount,'name', model)
+        if (model == "-") continue
+        if (key > -1)
+          modelCount[key]['y']++;
+        else
+          modelCount.push({'name':model,'y':1});
+      }
+      chart.series[0].setData(modelCount);
+    }
+  );
+}
+
+function draw_charts()
+{
+  $('#modelChart').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: 0,
+      plotShadow: false
+    },
+    title: {
+      text: 'Repeater<br>Models',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 40
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: true,
+          distance: -50,
+          style: {
+            fontWeight: 'bold',
+            color: 'white',
+            textShadow: '0px 1px 2px black'
+          }
+        },
+        startAngle: -90,
+        endAngle: 90,
+        center: ['50%', '75%']
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Repeater models',
+      innerSize: '50%',
+      data: [] 
+    }]
+  });
+  $('#country_cnt').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: php_lang['Dashboard']['Online per country'] 
+    },
+    xAxis: {
+      categories: [] 
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: php_lang['Dashboard']['GraphYaxis']
+      },
+      stackLabels: {
+        enabled: true,
+        style: {
+          fontWeight: 'bold',
+          color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+        }
+      }
+    },
+    legend: {
+      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+      borderColor: '#CCC',
+      borderWidth: 1,
+      shadow: false
+    },
+    tooltip: {
+      headerFormat: '<b>{point.x}</b><br/>',
+      pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+      column: {
+        stacking: 'normal',
+        dataLabels: {
+          enabled: false,
+          color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+          style: {
+            textShadow: '0 0 3px black'
+          }
+        }
+      },
+      bar: {
+        dataLabels: {
+          enabled: true
+        }
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [
+      {'name':php_lang['Dashboard']['Homebrew Hotspots'],'data': []},
+      {'name':php_lang['Dashboard']['DV4minis'],'data': []},
+      {'name':php_lang['Dashboard']['Homebrew Repeaters'],'data': []},
+      {'name':php_lang['Dashboard']['Industrial Repeaters'],'data': []}
+    ]
+  });
+}
+
 function country_count(data,type,country) {
   if (data[type][country])
     data[type][country]++;
@@ -170,106 +306,52 @@ function draw_country_plot(data) {
     if (_series[2][i] != undefined) homebrew[categories.length-1] = _series[2][i];
     if (_series[0][i] != undefined) homebrewDgl[categories.length-1] = _series[0][i];
   }
-  $('#country_cnt').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: php_lang['Dashboard']['Online per country'] 
-        },
-        xAxis: {
-            categories: categories 
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: php_lang['Dashboard']['GraphYaxis']
-            },
-            stackLabels: {
-                enabled: true,
-                style: {
-                    fontWeight: 'bold',
-                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-                }
-            }
-        },
-        legend: {
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
-            borderWidth: 1,
-            shadow: false
-        },
-        tooltip: {
-            headerFormat: '<b>{point.x}</b><br/>',
-            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-        },
-        plotOptions: {
-            column: {
-                stacking: 'normal',
-                dataLabels: {
-                    enabled: false,
-                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                    style: {
-                        textShadow: '0 0 3px black'
-                    }
-                }
-            },
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        credits: {
-            enabled: false
-        },
-        series: [
-          {'name':php_lang['Dashboard']['Homebrew Hotspots'],'data': homebrewDgl},
-          {'name':php_lang['Dashboard']['DV4minis'],'data': dongles},
-          {'name':php_lang['Dashboard']['Homebrew Repeaters'],'data': homebrew},
-          {'name':php_lang['Dashboard']['Industrial Repeaters'],'data': repeaters}]
-    });
+  var chart = $('#country_cnt').highcharts();
+  chart.xAxis[0].setCategories(categories, true, true);
+  chart.series[0].setData(homebrewDgl);
+  chart.series[1].setData(dongles);
+  chart.series[2].setData(homebrew);
+  chart.series[3].setData(repeaters);
 }
 
+draw_charts();
 updateRepeaterCount();
 setInterval(updateRepeaterCount, 60000);
+
 $(document).ready(function(){
+  if (retina())
+  {
+    $(".RepeaterCircle").knob({
+      'min':0,
+      'max':station_total,
+      'readOnly': true,
+      'width': 240,
+      'height': 240,
+      'bgColor': 'rgba(255,255,255,0.5)',
+      'fgColor': 'rgba(255,255,255,0.9)',
+      'dynamicDraw': true,
+      'thickness': 0.2,
+      'tickColorizeValues': true
+    });
 
-if (retina()) {
-
-        $(".RepeaterCircle").knob({
-            'min':0,
-            'max':station_total,
-            'readOnly': true,
-            'width': 240,
-            'height': 240,
-            'bgColor': 'rgba(255,255,255,0.5)',
-            'fgColor': 'rgba(255,255,255,0.9)',
-            'dynamicDraw': true,
-            'thickness': 0.2,
-            'tickColorizeValues': true
-        });
-
-        $(".circleStat").css('zoom',0.5);
-        $(".whiteCircle").css('zoom',0.999);
-
-
-    } else {
-
-        $(".RepeaterCircle").knob({
-            'min':0,
-            'max':station_total,
-            'readOnly': true,
-            'width': 120,
-            'height': 120,
-            'bgColor': 'rgba(255,255,255,0.5)',
-            'fgColor': 'rgba(255,255,255,0.9)',
-            'dynamicDraw': true,
-            'thickness': 0.2,
-            'tickColorizeValues': true
-        });
-
-    }
+    $(".circleStat").css('zoom',0.5);
+    $(".whiteCircle").css('zoom',0.999);
+  }
+  else 
+  {
+    $(".RepeaterCircle").knob({
+      'min':0,
+      'max':station_total,
+      'readOnly': true,
+      'width': 120,
+      'height': 120,
+      'bgColor': 'rgba(255,255,255,0.5)',
+      'fgColor': 'rgba(255,255,255,0.9)',
+      'dynamicDraw': true,
+      'thickness': 0.2,
+      'tickColorizeValues': true
+    });
+  }
 });
 
 var max_queue = 5;
@@ -288,8 +370,6 @@ var socket = io.connect(pathname[1],options);
 socket.on('connect', function () {
   var table = [];
   var last = [];
-  if (params['country']) params['filter'] = params['country'];
-  socket.emit('subscribe',{topic:'filter/'+params['filter']+'/'+params['repeater']});
   socket.on('mqtt', function (msg) {
     var lastraw = JSON.parse(msg.payload);
     if (params['filter']) { 
