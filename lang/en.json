@@ -21,7 +21,8 @@
     "Industrial Repeaters":"Industrial Repeaters",
     "Repeater models": "Repeater models",
     "Repeater versions": "Repeater versions",
-    "PIchartDescr" : "Click the sharts of the pie to see more details"
+    "PIchartDescr" : "Click the sharts of the pie to see more details",
+    "Device stats": "Device statistics"
   },
   "LH" : {
     "LastHeard" : "LastHeard",
