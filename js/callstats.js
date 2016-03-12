@@ -53,6 +53,8 @@ $('#group-by-ref').on('switchChange.bootstrapSwitch', function() {
 
 function RenderGraph()
 {
+  $('#container1').highcharts().showLoading();
+  $('#container2').highcharts().showLoading();
   var filters = "";
   if (params['talkgroup']) filters = filters + '&talkgroup='+params['talkgroup'];
   if (params['repeater']) filters = filters + '&repeater='+params['repeater'];
@@ -81,6 +83,7 @@ function RenderGraph()
     //Generate total
     qso = [];
     destination = {};
+    var chart = $('#container1').highcharts();
     for (index in jsondata)
     {
       if (jsondata[index]['qso'])
@@ -109,8 +112,55 @@ function RenderGraph()
       }
     } 
     else
-      data[0]['data'] = qso;
+    {
+      chart.series[0].setData(qso)
+      chart.hideLoading();
+    }
 
+  //Generate Seconds chart
+  $.getJSON(data_url_sec, function (jsondata) {
+    data = [{type: 'area', name: php_lang['Calls']['Total']}];
+
+    //Generate total
+    qso = [];
+    destination = {};
+    var chart = $('#container2').highcharts();
+    for (index in jsondata)
+    {
+      if (jsondata[index]['qso'])
+      {
+        qso.push([parseInt(index), jsondata[index]['qso']*1000]);
+      }
+      else if ($.isArray(jsondata[index]))
+      {
+        for(tgindex in jsondata[index])
+        {
+          if (destination[jsondata[index][tgindex]['destination']] == undefined) destination[jsondata[index][tgindex]['destination']] = [];
+          destination[jsondata[index][tgindex]['destination']].push([parseInt(index), jsondata[index][tgindex]['qso']*1000]);
+        }
+      }
+    }
+    if (params['destination'] || params['reflectors'])
+    {
+      data = [];
+      for(index in destination)
+      { 
+        if (params['repeater'] == undefined && params['reflectors'] == undefined && ( index == 0 || index > 999 ) ) continue
+        if (params['reflectors'] && (index < 4000 || index > 5000 || index=="null")) continue
+        talkgroup = getGroupName(index,0)
+        if (talkgroup == "") talkgroup = index;
+        data.push({type: 'area', name: talkgroup,data: destination[index]});
+      }
+    } 
+    else
+    {
+      chart.series[0].setData(qso)
+      chart.hideLoading();
+    }
+}
+
+function initCharts()
+{
     $('#container1').highcharts({
       chart: {
         zoomType: 'x',
@@ -161,47 +211,9 @@ function RenderGraph()
           threshold: null
         }
       },
-      series: data
+      series: [['data':[]]] 
     });
   });
-
-  //Generate Seconds chart
-  $.getJSON(data_url_sec, function (jsondata) {
-    data = [{type: 'area', name: php_lang['Calls']['Total']}];
-
-    //Generate total
-    qso = [];
-    destination = {};
-    for (index in jsondata)
-    {
-      if (jsondata[index]['qso'])
-      {
-        qso.push([parseInt(index), jsondata[index]['qso']*1000]);
-      }
-      else if ($.isArray(jsondata[index]))
-      {
-        for(tgindex in jsondata[index])
-        {
-          if (destination[jsondata[index][tgindex]['destination']] == undefined) destination[jsondata[index][tgindex]['destination']] = [];
-          destination[jsondata[index][tgindex]['destination']].push([parseInt(index), jsondata[index][tgindex]['qso']*1000]);
-        }
-      }
-    }
-    if (params['destination'] || params['reflectors'])
-    {
-      data = [];
-      for(index in destination)
-      { 
-        if (params['repeater'] == undefined && params['reflectors'] == undefined && ( index == 0 || index > 999 ) ) continue
-        if (params['reflectors'] && (index < 4000 || index > 5000 || index=="null")) continue
-        talkgroup = getGroupName(index,0)
-        if (talkgroup == "") talkgroup = index;
-        data.push({type: 'area', name: talkgroup,data: destination[index]});
-      }
-    } 
-    else
-      data[0]['data'] = qso;
-
     $('#container2').highcharts({
       chart: {
         zoomType: 'x',
@@ -267,7 +279,7 @@ function RenderGraph()
           threshold: null
         }
       },
-      series: data
+      series: [['data':[]]] 
     });
   });
 }
