@@ -159,6 +159,6 @@
     "Save": "Spara &auml;ndringar"
   },
   "HighCharts": {
-    "drillUpText": "\u25c1 Back to {series.name}"
+    "drillUpText": "\u25c1 Åter till {series.name}"
   }
 }
