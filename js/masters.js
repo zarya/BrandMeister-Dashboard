@@ -1,31 +1,29 @@
-var table = [];
+var dataTable; 
 
 function updateMasterListCallback(master,host) {
   return function(data) {
-    var entity = {};
-    entity[php_lang['Masters']['Country']] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
-    entity[php_lang['Masters']['Number']] = data['network'];
-    entity[php_lang['Masters']['Version']] = data['version'];
-    entity[php_lang['Masters']['Links']] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">'+php_lang['Masters']['Status']+'</a>&nbsp;<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">'+php_lang['Masters']['List']+'</a>';
+    var entity = [];
+    entity[0] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
+    entity[1] = data['network'];
+    entity[2] = data['version'];
+    entity[3] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">'+php_lang['Masters']['Status']+'</a>&nbsp;<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">'+php_lang['Masters']['List']+'</a>';
     if (data['set'] != 0)
-      table.push(entity);
-    document.getElementById("json").innerHTML = ConvertJsonToTable(table, 'jsonTable', "table table-striped table-bordered bootstrap-datatable datatable", 'Bla');
-    $('#jsonTable').dataTable({
-        "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
-        "sPaginationType": "bootstrap",
-        "language": php_lang['Table']['DataTables'],
-        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ]
-    } );
+      dataTable.row.add(entity).draw();
   }
 }
 
 function updateMasterList()
 {
-  table = [];
+  dataTable = $('#jsonTable').dataTable({
+    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
+    "sPaginationType": "bootstrap",
+    "language": php_lang['Table']['DataTables'],
+    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ]
+  });
   for (var number in servers) {
     $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateMasterListCallback(number,servers[number]));
   }
 }
-
-updateMasterList();
-
+$(document).ready(function() {
+  updateMasterList();
+});
