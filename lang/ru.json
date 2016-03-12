@@ -156,5 +156,8 @@
     "TimeQSO" : "Показывать дату и время вызовов",
     "Close" : "Закрыть",
     "Save" : "Сохранить изменения"
+  },
+  "HighCharts": {
+    "drillUpText": "\u25c1 Back to {series.name}"
   }
 }

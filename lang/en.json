@@ -158,6 +158,6 @@
     "Save": "Save changes"
   },
   "HighCharts": {
-    "drillUpText": "Back to"
+    "drillUpText": "\u25c1 Back to {series.name}"
   }
 }

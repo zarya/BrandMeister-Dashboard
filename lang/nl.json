@@ -155,6 +155,6 @@
     "Save": "Wijzigingen opslaan"
   },
   "HighCharts": {
-    "drillUpText": "Terug naar"
+    "drillUpText": "\u25c1 Terug naar {series.name}"
   }
 }
