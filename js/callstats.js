@@ -1,5 +1,4 @@
 $(function () {
-  initCharts();  
   loadGroups();
   RenderGraph();
   $("#group-by-tg").bootstrapSwitch({'size': 'mini'});
@@ -54,6 +53,7 @@ $('#group-by-ref').on('switchChange.bootstrapSwitch', function() {
 
 function RenderGraph()
 {
+  initCharts();  
   $('#container1').highcharts().showLoading();
   $('#container2').highcharts().showLoading();
   var filters = "";
@@ -79,8 +79,6 @@ function RenderGraph()
   }
   
   $.getJSON(data_url, function (jsondata) {
-    data = [{type: 'area', name: php_lang['Calls']['Total']}];
-
     //Generate total
     qso = [];
     destination = {};
@@ -102,27 +100,27 @@ function RenderGraph()
     }
     if (params['destination'] || params['reflectors'])
     {
-      data = [];
       for(index in destination)
       { 
         if (params['repeater'] == undefined && params['reflectors'] == undefined && ( index == 0 || index > 999 ) ) continue
         if (params['reflectors'] && (index < 4000 || index > 5000 || index=="null")) continue
         talkgroup = getGroupName(index,0)
         if (talkgroup == "") talkgroup = index;
-        data.push({type: 'area', name: talkgroup,data: destination[index]});
+        var sIndex = findByProperty(chart.series,'name',talkgroup);
+        if (sIndex > -1)
+          chart.series[sIndex].setData(destination[index],false);
+        else 
+          chart.addSeries({type: 'area', name: talkgroup,data: destination[index]}, false);
       }
     } 
     else
-    {
-      chart.series[0].setData(qso)
-      chart.hideLoading();
-    }
+      chart.addSeries({type: 'area', name: php_lang['Calls']['Total'],data: qso}, false);
+    chart.redraw();
+    chart.hideLoading();
   });
 
   //Generate Seconds chart
   $.getJSON(data_url_sec, function (jsondata) {
-    data = [{type: 'area', name: php_lang['Calls']['Total']}];
-
     //Generate total
     qso = [];
     destination = {};
@@ -144,21 +142,23 @@ function RenderGraph()
     }
     if (params['destination'] || params['reflectors'])
     {
-      data = [];
       for(index in destination)
       { 
         if (params['repeater'] == undefined && params['reflectors'] == undefined && ( index == 0 || index > 999 ) ) continue
         if (params['reflectors'] && (index < 4000 || index > 5000 || index=="null")) continue
         talkgroup = getGroupName(index,0)
         if (talkgroup == "") talkgroup = index;
-        data.push({type: 'area', name: talkgroup,data: destination[index]});
+        var sIndex = findByProperty(chart.series,'name',talkgroup);
+        if (sIndex > -1)
+          chart.series[sIndex].setData(destination[index],false);
+        else 
+          chart.addSeries({type: 'area', name: talkgroup,data: destination[index]}, false);
       }
     } 
     else
-    {
-      chart.series[0].setData(qso);
-      chart.hideLoading();
-    }
+      chart.addSeries({type: 'area', name: php_lang['Calls']['Total'],data: qso}, false);
+    chart.redraw();
+    chart.hideLoading();
   });
 }
 
@@ -214,7 +214,7 @@ function initCharts()
           threshold: null
         }
       },
-      series: [ { 'data': [] } ] 
+      series: [ ] 
     });
     $('#container2').highcharts({
       chart: {
@@ -281,7 +281,7 @@ function initCharts()
           threshold: null
         }
       },
-      series: [ { 'data': [] } ] 
+      series: [ ] 
     });
 }
 
@@ -293,4 +293,15 @@ function loadGroups() {
 
     grouplist.append( new Option(groups[number] + ' ('+number+')',number) )
   }
+}
+
+function findByProperty(objects, prop, value) {
+    var index;
+    $(objects).each(function(i, e) {
+        if (e[prop] && e[prop] == value) {
+            index = i;
+            return false;
+        }
+    });
+    return index;
 }
