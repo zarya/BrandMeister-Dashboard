@@ -18,7 +18,10 @@
     "Homebrew Hotspots" : "Homebrew Hotspots",
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Homebrew Repeaters",
-    "Industrial Repeaters":"Industrial Repeaters"
+    "Industrial Repeaters":"Industrial Repeaters",
+    "Repeater models": "Repeater models",
+    "Repeater versions": "Repeater versions",
+    "PIchartDescr" : "Click the sharts of the pie to see more details"
   },
   "LH" : {
     "LastHeard" : "LastHeard",

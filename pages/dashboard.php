@@ -89,6 +89,7 @@
                     <div class="span6"><div id="modelChart"></div></div>
                     <div class="span6"><div id="versionChart"></div></div>
                   </div>
+                  <?php echo $language['Dashboard']['PIchartDescr'];?>
                 </div>
               </div>
             </div>

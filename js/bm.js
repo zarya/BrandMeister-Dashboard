@@ -221,7 +221,7 @@ function draw_charts()
       }
     },
     title: {
-      text: 'Repeater models',
+      text: php_lang['Dashboard']['Repeater models'], 
       align: 'center'
     },
     tooltip: {
@@ -236,7 +236,7 @@ function draw_charts()
     },
     series: [{
       type: 'pie',
-      name: 'Repeater models',
+      name: php_lang['Dashboard']['Repeater models'], 
       drilldown: true,
       data: [] 
     }],
@@ -264,7 +264,7 @@ function draw_charts()
       }
     },
     title: {
-      text: 'Repeater versions',
+      text: php_lang['Dashboard']['Repeater versions'],
       align: 'center'
     },
     tooltip: {
@@ -279,7 +279,7 @@ function draw_charts()
     },
     series: [{
       type: 'pie',
-      name: 'Repeater versions',
+      name: php_lang['Dashboard']['Repeater versions'], 
       drilldown: true,
       data: [] 
     }],
