@@ -3,22 +3,22 @@
   "Reports": "Reports",
   "Dashboard" : {
     "Dashboard": "Dashboard",
-    "Industrial Repeaters": "Fabrieksrepeaters",
-    "Homebrew" : "Zelfbouw",
+    "Industrial Repeaters": "Fabrieks Herhalers",
+    "Homebrew" : "Selfbou",
     "Hotspot" : "Hotspots",
-    "Repeaters" : "Repeaters",
+    "Repeaters" : "Herhalers",
     "DV4mini" : "DV4mini",
-    "Full report" : "Uitgebreid rapport",
-    "Masters" : "Masters",
-    "Repeater in RX": "Repeater in RX",
-    "Repeater in TX": "Repeater in TX",
-    "External calls" : "Externe oproepen",
+    "Full report" : "Vol rapport",
+    "Masters" : "Meester",
+    "Repeater in RX": "Herhalers in RX",
+    "Repeater in TX": "Herhalers in TX",
+    "External calls" : "Externe oproepe",
     "Per country": "Per land",
     "Online per country": "Online per land",
-    "GraphYaxis" : "Zelfbouw/Hotspot/Repeaters",
-    "Homebrew Hotspots" : "Zelfbouw Hotspots",
+    "GraphYaxis" : "Selfbou/Hotspot/Herhalers",
+    "Homebrew Hotspots" : "Selfbou Hotspots",
     "DV4minis" : "DV4mini's",
-    "Homebrew Repeaters": "Zelfbouw Repeaters",
+    "Homebrew Repeaters": "Selfbou Repeaters",
     "Industrial Repeaters":"Fabrieksrepeaters",
     "Repeater models": "Repeater modellen",
     "Repeater versions": "Repeater versies",
@@ -26,22 +26,22 @@
     "Device stats": "Device statistics"
   },
   "LH" : {
-    "LastHeard" : "Recent ontvangen",
-    "Time": "Tijd",
+    "LastHeard" : "Pas ontvangen",
+    "Time": "Tyd",
     "Master": "Master",
     "SessionID": "Sessie ID",
     "Link name" : "Linknaam",
-    "My call" : "Mijn roepletters",
+    "My call" : "My roepletters",
     "Source" : "Bron",
     "Destination" : "Bestemming",
     "Reflector" : "Reflector",
     "Options" : "Opties",
-    "RSSI" : "Signaalsterkte (dBm)",
-    "Duration" : "Tijdsduur",
-    "Loss rate" : "Verliespercentage"
+    "RSSI" : "Seinsterkte (dBm)",
+    "Duration" : "Tydsduur",
+    "Loss rate" : "Verlies persent"
   },
   "Connected reflectors" : {
-    "Connected reflectors" : "Verbonden reflectors",
+    "Connected reflectors" : "Verbinde reflectors",
     "Reflectors": "Reflectors",
     "Name" : "Naam",
     "Reflector" : "Reflector"
@@ -54,12 +54,12 @@
     "Mapped group" : "Mapped group",
     "Talkgroup" : "Talkgroup",
     "OK": "OK",
-    "help" : "Raadpleeg de wiki voor hulp",
+    "help" : "Raadpleeg die wiki voor hulp",
     "not responding" : "geen reactie ontvangen",
     "Master" : "Master",
     "Error" : "Fout!",
     "missing dongle" : "Fout: Geen dongle gevonden",
-    "error reflector" : "Fout: kan niet met een reflector verbinden; Gebruik een Talkgroup"
+    "error reflector" : "Fout: kan nie met een reflector verbinden; Gebruik een Talkgroup"
   },
   "Repeaters" : {
     "Repeaters": "Repeaters",
@@ -92,11 +92,11 @@
     "Version":"Versie",
     "Links":"Verbindingen",
     "Status": "Status",
-    "List": "Lijst"
+    "List": "Lys"
   }, 
   "Alerts" : {
-    "Alerts": "Alarmen",
-    "Time":"Tijd",
+    "Alerts": "Alarms",
+    "Time":"Tyd",
     "Repeater":"Repeater",
     "Alarm": "Alarm",
     "Master": "Master"
@@ -106,28 +106,28 @@
     "Call statistics":"Oproep statistieken",
     "Filters": "Filters",
     "Talkgroup" : "Talkgroup",
-    "Display Per TG" : "Weergeven per talkgroup",
-    "Display Per reflector": "Weergeven per reflector",
+    "Display Per TG" : "Aanwysing per talkgroup",
+    "Display Per reflector": "Aanwysing per reflector",
     "Total":"Totaal",
     "QSOs per Hour":"QSOs per uur",
-    "ClickZoom": "Klik en sleep in het weergavegebied om in te zoomen",
+    "ClickZoom": "Klik en sleep in die weergavegebied om in te zoomen",
     "PinchZoom": "klik op de tabel om in te zoomen",
     "QSOs":"QSOs",
-    "Time per Hour": "Tijd per uur",
+    "Time per Hour": "Tyd per uur",
     "Seconds": "Seconden"
   },
   "Table" : {
     "All": "Alles",
     "DataTables": {
-      "processing": "Bezig...",
+      "processing": "Besig...",
       "lengthMenu": "_MENU_ resultaten weergeven",
       "zeroRecords": "Geen resultaten gevonden",
       "info": "_START_ tot _END_ van _TOTAL_ resultaten",
       "infoEmpty": "Geen resultaten om weer te geven",
       "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
       "infoPostFix": "",
-      "search": "Zoeken:",
-      "emptyTable": "Geen resultaten aanwezig in de tabel",
+      "search": "Soek:",
+      "emptyTable": "Geen resultaten aanwesig in de tabel",
       "infoThousands": ".",
       "loadingRecords": "Een moment geduld aub - bezig met laden...",
       "paginate": {
@@ -152,7 +152,7 @@
     "API Timeout Max":"Maximale timeout is 60 seconden",
     "TimeQSO": "Datumweergave/tijd per QSO",
     "Close": "Sluiten",
-    "Save": "Wijzigingen opslaan"
+    "Save": "Save opslaan"
   },
   "HighCharts": {
     "drillUpText": "\u25c1 Terug naar {series.name}"
