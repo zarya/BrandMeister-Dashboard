@@ -173,12 +173,12 @@ function getRepeaterModel(value)
     return value.replace(expression, 'Hytera $1$2');
 
   // RA-080, RA-160, RA-350, RA-450, RA-500, RA-900
-  var expression = /^RA-..0/;
+  var expression = /^[013459][8650]0RA/;
   if (expression.test(value))
     return 'Radio Activity RA-XXX';
 
   // KA-080, KA-160, KA-350, KA-450, KA-500, KA-900
-  var expression = /^KA-..0/;
+  var expression = /^[013459][8650]0KA/;
   if (expression.test(value))
     return 'Radio Activity KAIROS';
 
