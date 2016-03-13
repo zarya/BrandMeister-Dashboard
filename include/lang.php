@@ -32,6 +32,9 @@ switch ($lang){
     case "af":
         $string = file_get_contents("lang/af.json");
         break; 
+    case "it":
+        $string = file_get_contents("lang/it.json");
+        break; 
     default:
         $string = file_get_contents("lang/".$config['default language'].".json");
         break;

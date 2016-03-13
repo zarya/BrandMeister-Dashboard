@@ -11,7 +11,7 @@
     "Masters" : "Masters",
     "Repeater in RX": "Ripetitori in RX",
     "Repeater in TX": "Ripetitori in TX",
-    "External calls" : "Chiamte esterne",
+    "External calls" : "Chiamate esterne",
     "Per country": "Per paese",
     "Online per country": "In linea per paese",
     "GraphYaxis" : "Autocostruiti/Hotspot/Ripetitori",
@@ -19,10 +19,10 @@
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Ripetitori Autocostruiti",
     "Industrial Repeaters":"Ripetitori Professionali",
-    "Repeater models": "Repeater models",
-    "Repeater versions": "Repeater versions",
-    "PIchartDescr" : "Click the sharts of the pie to see more details",
-    "Device stats": "Device statistics"
+    "Repeater models": "Modelli Ripetitori",
+    "Repeater versions": "Versione ripetitori",
+    "PIchartDescr" : "Clicca sul grafico per maggiori dettagli",
+    "Device stats": "Statistiche dispositivi"
   },
   "LH" : {
     "LastHeard" : "LastHeard",
@@ -158,6 +158,6 @@
     "Save": "Salva cambiamenti"
   },
   "HighCharts": {
-    "drillUpText": "\u25c1 Back to {series.name}"
+    "drillUpText": "\u25c1 Indietro per {series.name}"
   }
 }
