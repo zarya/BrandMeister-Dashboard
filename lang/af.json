@@ -1,0 +1,160 @@
+{
+  "Home": "Home",
+  "Reports": "Reports",
+  "Dashboard" : {
+    "Dashboard": "Dashboard",
+    "Industrial Repeaters": "Fabrieks Herhalers",
+    "Homebrew" : "Selfbou",
+    "Hotspot" : "Hotspots",
+    "Repeaters" : "Herhalers",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Vol rapport",
+    "Masters" : "Meester",
+    "Repeater in RX": "Herhalers in RX",
+    "Repeater in TX": "Herhalers in TX",
+    "External calls" : "Externe oproepe",
+    "Per country": "Per land",
+    "Online per country": "Online per land",
+    "GraphYaxis" : "Selfbou/Hotspot/Herhalers",
+    "Homebrew Hotspots" : "Selfbou Hotspots",
+    "DV4minis" : "DV4mini's",
+    "Homebrew Repeaters": "Selfbou Repeaters",
+    "Industrial Repeaters":"Fabrieksrepeaters",
+    "Repeater models": "Repeater modellen",
+    "Repeater versions": "Repeater versies",
+    "PIchartDescr" : "Klik op een punt van de taard voor meer detail",
+    "Device stats": "Device statistics"
+  },
+  "LH" : {
+    "LastHeard" : "Pas ontvangen",
+    "Time": "Tyd",
+    "Master": "Master",
+    "SessionID": "Sessie ID",
+    "Link name" : "Linknaam",
+    "My call" : "My roepletters",
+    "Source" : "Bron",
+    "Destination" : "Bestemming",
+    "Reflector" : "Reflector",
+    "Options" : "Opties",
+    "RSSI" : "Seinsterkte (dBm)",
+    "Duration" : "Tydsduur",
+    "Loss rate" : "Verlies persent"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Verbinde reflectors",
+    "Reflectors": "Reflectors",
+    "Name" : "Naam",
+    "Reflector" : "Reflector"
+  },
+  "Extended routing": {
+    "Extended routing": "Uitgebreide routering",
+    "Extended Routing for DV4mini" : "Uitgebreide Routering voor DV4mini",
+    "User ID" : "Gebruikers ID",
+    "Choose dongle" : "Kies dongle",
+    "Mapped group" : "Mapped group",
+    "Talkgroup" : "Talkgroup",
+    "OK": "OK",
+    "help" : "Raadpleeg die wiki voor hulp",
+    "not responding" : "geen reactie ontvangen",
+    "Master" : "Master",
+    "Error" : "Fout!",
+    "missing dongle" : "Fout: Geen dongle gevonden",
+    "error reflector" : "Fout: kan nie met een reflector verbinden; Gebruik een Talkgroup"
+  },
+  "Repeaters" : {
+    "Repeaters": "Repeaters",
+    "Number" : "Nummers",
+    "Name":"Naam",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "Nummer",
+    "Name":"Naam",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Land",
+    "Number":"Nummer",
+    "Version":"Versie",
+    "Links":"Verbindingen",
+    "Status": "Status",
+    "List": "Lys"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alarms",
+    "Time":"Tyd",
+    "Repeater":"Repeater",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Oproepen",
+    "Call statistics":"Oproep statistieken",
+    "Filters": "Filters",
+    "Talkgroup" : "Talkgroup",
+    "Display Per TG" : "Aanwysing per talkgroup",
+    "Display Per reflector": "Aanwysing per reflector",
+    "Total":"Totaal",
+    "QSOs per Hour":"QSOs per uur",
+    "ClickZoom": "Klik en sleep in die weergavegebied om in te zoomen",
+    "PinchZoom": "klik op de tabel om in te zoomen",
+    "QSOs":"QSOs",
+    "Time per Hour": "Tyd per uur",
+    "Seconds": "Seconden"
+  },
+  "Table" : {
+    "All": "Alles",
+    "DataTables": {
+      "processing": "Besig...",
+      "lengthMenu": "_MENU_ resultaten weergeven",
+      "zeroRecords": "Geen resultaten gevonden",
+      "info": "_START_ tot _END_ van _TOTAL_ resultaten",
+      "infoEmpty": "Geen resultaten om weer te geven",
+      "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
+      "infoPostFix": "",
+      "search": "Soek:",
+      "emptyTable": "Geen resultaten aanwesig in de tabel",
+      "infoThousands": ".",
+      "loadingRecords": "Een moment geduld aub - bezig met laden...",
+      "paginate": {
+        "first": "Eerste",
+        "last": "Laatste",
+        "next": "Volgende",
+        "previous": "Vorige"
+      }
+    }
+  },
+  "Monitoring" : {
+    "Error": "Fout!",
+    "Master": "Master",
+    "not responding": "Geen reactie ontvangen"
+  },
+  "ConfigDialog" : {
+    "Settings": "Instellingen",
+    "General": "Algemeen",
+    "LastHeard": "Recent ontvangen",
+    "Display alerts":"Alarmweergave",
+    "API Timeout":"API Timeout",
+    "API Timeout Max":"Maximale timeout is 60 seconden",
+    "TimeQSO": "Datumweergave/tijd per QSO",
+    "Close": "Sluiten",
+    "Save": "Save opslaan"
+  },
+  "HighCharts": {
+    "drillUpText": "\u25c1 Terug naar {series.name}"
+  }
+}

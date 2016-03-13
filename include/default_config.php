@@ -1,11 +1,8 @@
 <?php
-
-
 $config['default language'] = "en";
-
 $config['baseurl'] = "/dashboard/";
 
-//$config['custom_menu'][] = array('Name' => 'Test', 'url' => 'http://google.com', 'icon' => 'bullhor');
+$config['custom_menu'] = array();
 
 $config['LHServers'] = array();
 
@@ -17,4 +14,5 @@ $config['LHServers'][] = array('Name' => 'Global','url' => "https://bm-lastheard
 $config['LHServers'][] = array('Name' => '204 NL','url' => "https://bm-lastheard.pi9noz.ampr.org/lh-local/");
 $config['LHServers'][] = array('Name' => '222 IT','url' => "http://www.digitalham.it:5001");
 $config['LHServers'][] = array('Name' => '235 UK','url' => "http://81.174.156.160:5001");
+
 

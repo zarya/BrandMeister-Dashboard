@@ -1,6 +1,7 @@
 <?php
-include("include/lang.php");
+include("include/default_config.php");
 include("config.php");
+include("include/lang.php");
 include("include/header.php");
 ?>
 <body>
