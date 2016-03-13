@@ -35,8 +35,8 @@ switch ($lang){
     case "it":
         $string = file_get_contents("lang/it.json");
         break; 
-    case "dk":
-        $string = file_get_contents("lang/dk.json");
+    case "da":
+        $string = file_get_contents("lang/da.json");
         break; 
     default:
         $string = file_get_contents("lang/".$config['default language'].".json");
