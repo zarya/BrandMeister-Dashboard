@@ -239,7 +239,7 @@ function draw_charts()
       align: 'center'
     },
     tooltip: {
-      pointFormat: '<b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.y}/{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
@@ -282,7 +282,7 @@ function draw_charts()
       align: 'center'
     },
     tooltip: {
-      pointFormat: '<b>{point.percentage:.1f}%</b>'
+      pointFormat: '<b>{point.y}/{point.percentage:.1f}%</b>'
     },
     plotOptions: {
       pie: {
