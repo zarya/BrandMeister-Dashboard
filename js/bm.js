@@ -192,9 +192,23 @@ function fetchModels(number) {
 function modelChartUpdate()
 {
   if (masterDoneCountList < (Object.keys(servers).length - 4)) return;
+  modelCount['modelVer'].sort();
+  modelCount['model'].sort();
+  modelCount['vendor'].sort(function(x, y){
+    var category = "name"
+    if (x[category] < y[category]) {
+        return -1;
+    }
+    if (x[category] > y[category]) {
+        return 1;
+    }
+    return 0;
+  });
   var chart = $('#modelChart').highcharts();
   chart.series[0].setData(modelCount['vendor'],true);
   chart.hideLoading();
+
+
   var chart = $('#versionChart').highcharts();
   chart.series[0].setData(modelCount['vendor'],true);
   chart.hideLoading();
