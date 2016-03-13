@@ -1,0 +1,163 @@
+{
+  "Home": "Hjem",
+  "Reports": "Rapporter",
+  "Dashboard" : {
+    "Dashboard": "Skrivebord",
+    "Homebrew" : "Hjemmebyg",
+    "Hotspot" : "Hotspots",
+    "Repeaters" : "Repeatere",
+    "DV4mini" : "DV4mini",
+    "Full report" : "Fuld Rapport",
+    "Masters" : "Mastere",
+    "Repeater in RX": "Repeatere i RX",
+    "Repeater in TX": "Repeatere i TX",
+    "External calls" : "Eksterne kaldesignaler",
+    "Per country": "Pr. land",
+    "Online per country": "Online pr. land",
+    "GraphYaxis" : "Hjemmebyg/Hotspot/Repeatere",
+    "Homebrew Hotspots" : "Hjemmebyg Hotspots",
+    "DV4minis" : "DV4minis",
+    "Homebrew Repeaters": "Hjemmebyg Repeatere",
+    "Industrial Repeaters":"Erhvervs Repeatere",
+    "Repeater models": "Repeater modeller",
+    "Repeater versions": "Repeater versioner",
+    "PIchartDescr" : "Klik på skiverne af \"kagen\" for at se flere detajler",
+    "Device stats": "Enheds statistik"
+  },
+  "LH" : {
+    "LastHeard" : "Sidst hørt",
+    "Time": "Tid",
+    "Master": "Master",
+    "SessionID": "Session ID",
+    "Link name" : "Link navn",
+    "My call" : "Mit call",
+    "Source" : "Kilde",
+    "Destination" : "Destination",
+    "Reflector" : "Reflektor",
+    "Options" : "Muligheder",
+    "RSSI" : "RSSI (dBm)",
+    "Duration" : "Varighed",
+    "Loss rate" : "Tab i %"
+  },
+  "Connected reflectors" : {
+    "Connected reflectors" : "Forbundne reflektorer",
+    "Reflectors": "Reflectorer",
+    "Name" : "Navn",
+    "Reflector" : "Reflektor"
+  },
+  "Extended routing": {
+    "Extended routing": "Udvidet routing",
+    "Extended Routing for DV4mini" : "Udvidet Routing for DV4mini",
+    "User ID" : "Bruger ID",
+    "Choose dongle" : "Vælg dongle",
+    "Mapped group" : "Kortlagt gruppe",
+    "Talkgroup" : "Talegruppe",
+    "OK": "OK",
+    "help" : "For hjælpe til dette, besøg venligst wiki",
+    "not responding" : "svarer ikke",
+    "Master" : "Master",
+    "Error" : "Fejl!",
+    "missing dongle" : "Fejl: Mangler dongle",
+    "error reflector" : "Fejl: Kan ikke forbinde til en reflektor, venligst brug en talegruppe"
+  },
+  "Repeaters" : {
+    "Repeaters": "Repeatere",
+    "Number" : "Nummer",
+    "Name":"Navn",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Hotspots" : {
+    "Hotspots": "Hotspots",
+    "Number" : "Nummer",
+    "Name":"Navn",
+    "Hardware":"Hardware",
+    "Firmware":"Firmware",
+    "TX":"TX",
+    "RX":"RX",
+    "CC":"CC",
+    "Status":"Status",
+    "Master":"Master"
+  }, 
+  "Masters" : {
+    "Masters": "Masters",
+    "Country":"Land",
+    "Number":"Nummer",
+    "Version":"Version",
+    "Links":"Links",
+    "Status": "Status",
+    "List": "List"
+  }, 
+  "Alerts" : {
+    "Alerts": "Alarmer",
+    "Time":"Tid",
+    "Repeater":"Repeater",
+    "Alarm": "Alarm",
+    "Master": "Master"
+  }, 
+  "Calls" : {
+    "Calls": "Kaldesignaler",
+    "Call statistics":"Kaldesignal statistik",
+    "Filters": "Filtere",
+    "Talkgroup" : "Talegruppe",
+    "Display Per TG" : "Vis Pr. TG",
+    "Display Per reflector": "Vis Pr. reflektor",
+    "Total":"Totalt",
+    "QSOs per Hour":"QSOs Pr. Time",
+    "ClickZoom": "Klik og træk i plotted område, for at zoome ind",
+    "PinchZoom": "klem på diagrammet, for at zoome ind",
+    "QSOs":"QSOs",
+    "Time per Hour": "Tid pr. Time",
+    "Seconds": "Sekunder"
+  },
+  "Table" : {
+    "All": "All",
+    "DataTables": {
+      "emptyTable":     "Ingen data tilgængelig i tabellen",
+      "info":           "Viser _START_ til _ENDEN_ af _TOTALE_ indgange",
+      "infoEmpty":      "Viser 0 to 0 of 0 indgange",
+      "infoFiltered":   "(filtreret fra _MAX_ totale indgange)",
+      "infoPostFix":    "",
+      "infoThousands":  ",",
+      "lengthMenu":     "Vis _MENU_ indgange",
+      "loadingRecords": "Loader...",
+      "processing":     "Forarbejder...",
+      "search":         "Søg:",
+      "zeroRecords":    "Ingen tilsvarende data fundet",
+      "paginate": {
+          "first":    "Først",
+          "last":     "Sidst",
+          "next":     "Næste",
+          "previous": "Tidligere"
+      },
+      "aria": {
+          "sortAscending":  ": Aktivér for at sortere kolonnen stigende",
+          "sortDescending": ": Aktivér for at sortere kolonnen faldende"
+      }
+    }
+  },
+  "Monitoring" : {
+    "Error": "Fejl!",
+    "Master": "Master",
+    "not responding": "svarer ikke"
+  },
+  "ConfigDialog" : {
+    "Settings": "Indstillinger",
+    "General": "Generalt",
+    "LastHeard": "Sidst hørt",
+    "Display alerts":"Via alarmer",
+    "API Timeout":"API timeout",
+    "API Timeout Max":"Maksimum timeout er 60 sekunder",
+    "TimeQSO": "Vis dato/tid pr. QSO",
+    "Close": "Luk",
+    "Save": "Gem ændringer"
+  },
+  "HighCharts": {
+    "drillUpText": "\u25c1 Tilbage til {series.name}"
+  }
+}

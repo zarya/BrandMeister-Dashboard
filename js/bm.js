@@ -153,7 +153,12 @@ function fetchModels(number) {
         if (value['hardware'] == "" && value['frequency1'] == 0 && value['frequency2'] == 0) model = "DV4mini";
 
         if (model == "-") continue
-        var vendor = model.split(" ")[0];
+
+        var expression = /^Radio Activity/;
+        if (expression.test(value))
+          var vendor = "Radio Activity";
+        else
+          var vendor = model.split(" ")[0];
 
         //Build vendor/model table
         if (modelCount['model'][vendor] == undefined)
