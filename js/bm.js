@@ -40,6 +40,8 @@ function updateRepeaterCount()
   modelCount = {'vendor':[],'model':[],'modelVer':[]};
   $('#modelChart').highcharts().showLoading();
   $('#versionChart').highcharts().showLoading();
+  $('#modelChart').highcharts().showLoading();
+  $('#versionChart').highcharts().showLoading();
   $('#country_cnt').highcharts().showLoading();
   for (var number in servers) {
     fetchServer(number);
