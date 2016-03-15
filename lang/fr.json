@@ -20,10 +20,10 @@
     "DV4minis" : "DV4minis",
     "Homebrew Repeaters": "Homebrews Répéteurs",
     "Industrial Repeaters":"Répéteurs commerciaux",
-    "Repeater models": "Repeater models",
-    "Repeater versions": "Repeater versions",
-    "PIchartDescr" : "Click the sharts of the pie to see more details",
-    "Device stats": "Device statistics"
+    "Repeater models": "Modèle du relais",
+    "Repeater versions": "Version de Firmware",
+    "PIchartDescr" : "Cliquez sur une pour plus de détails",
+    "Device stats": "Statistiques de l'émetteur"
   },
   "LH" : {
     "LastHeard" : "Stations Entendues",
@@ -159,6 +159,6 @@
     "Save": "Sauvegarde changements"
   },
   "HighCharts": {
-    "drillUpText": "\u25c1 Back to {series.name}"
+    "drillUpText": "\u25c1 Retour à {series.name}" 
   }
 }
