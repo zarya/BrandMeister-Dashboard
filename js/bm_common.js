@@ -189,9 +189,11 @@ function getRepeaterModel(value)
     return value.replace(expression, '$2 ($1)');
 
   // MMDVM_DVMega
-  var expression = /^MMDVM[-_](.+)$/;
+  // MMDVM_DVMega-Windows
+  // DV4MF2_DVMega
+  var expression = /^(MMDVM|DV4MF2)[-_]([^-]+)$/;
   if (expression.test(value))
-    return value.replace(expression, '$1 (MMDVM)');
+    return value.replace(expression, '$2 ($1)');
 
   if ((value == '') ||
       (value == null) ||
