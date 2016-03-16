@@ -227,9 +227,11 @@ var groups =
   "31254" : "XRF054 C",
   "31268" : "SNARS 6968",
   "31274" : "AARG",
+  "31361" : "Upstate NY",
   "310997" : "Parrot",
   "5150"  : "NorCal 5150*",
   "621"   : "NorCal 1*",
+  "8951"  : "TAC 1",
   "9990"  : "Parrot",
   "9999"  : "NorCal Meter",
 
