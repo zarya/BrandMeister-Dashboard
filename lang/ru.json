@@ -19,10 +19,10 @@
     "Homebrew Hotspots" : "Точки доступа",
     "DV4minis" : "DV4mini",
     "Homebrew Repeaters" : "Самодельные pепитеры",
-    "Repeater models": "Repeater models",
-    "Repeater versions": "Repeater versions",
-    "PIchartDescr" : "Click the sharts of the pie to see more details",
-    "Device stats": "Device statistics"
+    "Repeater models": "Модели",
+    "Repeater versions": "Версии ПО",
+    "PIchartDescr" : "Нажмите на сектор диаграммы чтобы увидеть детали",
+    "Device stats": "Статистика по устройствам"
   },
   "LH" : {
     "LastHeard" : "Журнал вызовов",
@@ -158,6 +158,6 @@
     "Save" : "Сохранить изменения"
   },
   "HighCharts": {
-    "drillUpText": "\u25c1 Back to {series.name}"
+    "drillUpText": "\u25c1 Вернуться"
   }
 }
