@@ -35,7 +35,7 @@
     "Destination" : "Destination",
     "Reflector" : "Reflector",
     "Options" : "Options",
-    "RSSI" : "RSSI (dBm)",
+    "RSSI" : "RSSI",
     "Duration" : "Duration",
     "Loss rate" : "Loss rate"
   },

@@ -19,7 +19,6 @@ function saveSettings(){
 }
 
 function loadSettings() {
-    console.log(localStorage.getItem('datetime'));
     if (localStorage.getItem('datetime') != undefined)
         config['datetime'] = localStorage.getItem('datetime');
     else
