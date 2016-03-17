@@ -290,6 +290,8 @@ var groups =
   "3026" : "Canada English (4326)",
   "4327" : "Canada Francais",
   "3027" : "Canada Francais (4327)",
+  "30271": "Canada BC 1",
+  "30272": "Canada BC 2",
 
   "268940" : "XRF040 A",
   "268941" : "XRF040 B",
