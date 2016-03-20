@@ -46,6 +46,7 @@ var groups =
 
 
   "228" : "Switzerland",
+  "2286": "Regional Swiss",
   "734" : "Venezuela", 
   "88" : "XRF088 B",
   "881": "XRF088 A",
