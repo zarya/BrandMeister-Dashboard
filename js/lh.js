@@ -10,6 +10,16 @@ function getGroupFormatting(number,master)
   return number;
 }
 
+function isGroupMapped(number,master)
+{
+  if (group_mappings.hasOwnProperty(master)) {
+    if (group_mappings[master].hasOwnProperty(number)) {
+      return true; 
+    }
+  }
+  return false;
+}
+
 function getGroupName(number,master)
 {
   if (group_mappings.hasOwnProperty(master)) {

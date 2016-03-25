@@ -19,6 +19,9 @@
     <link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <!--<link href="css/query-builder.default.min.css" rel="stylesheet">-->
+    <link href="css/query-builder.dark.min.css" rel="stylesheet">
+
     <!-- end: CSS -->
 
     <link rel="icon" 
@@ -107,6 +110,8 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/highcharts/modules/exporting.js"></script>
     <script src="js/highcharts/modules/drilldown.js"></script>
     <script src="js/bootstrap-switch.js"></script>
+    <script src="js/libs/query-builder.standalone.min.js"></script>
+    <script src="js/libs/sql-parser.js"></script>
     <script src="js/config.js"></script>
     <script src="js/bm_common.js"></script>
     <script src="js/lh.js"></script>
