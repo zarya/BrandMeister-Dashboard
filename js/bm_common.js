@@ -178,20 +178,28 @@ function getRepeaterModel(value)
     return 'Radio Activity RA-XXX';
 
   // KA-080, KA-160, KA-350, KA-450, KA-500, KA-900
-  var expression = /^[013459][8650]0KA/;
+  var expression = /^(080|160|350|450|500|900)RA/;
   if (expression.test(value))
-    return 'Radio Activity KAIROS';
+    return 'RadioActivity RA-XXX';
 
-  // linux:mmdvm-20151222
-  // Android:BlueSpot-v1.0.0-PA7LIM
-  var expression = /([A-Za-z]+)\:([A-Za-z_]+).*$/;
+  var expression = /^(080|160|350|450|500|900)KA/;
   if (expression.test(value))
-    return value.replace(expression, '$2 ($1)');
+    return 'RadioActivity KAIROS';
 
   // MMDVM_DVMega
   // MMDVM_DVMega-Windows
   // DV4MF2_DVMega
-  var expression = /^(MMDVM|DV4MF2)[-_]([^-]+).*$/; 
+  var expression = /^(MMDVM|DV4MF2)[-_]([^-]+).*$/;
+  if (expression.test(value))
+    return value.replace(expression, '$2 ($1)');
+
+  // Android:BlueSpot-v1.0.0-PA7LIM
+  var expression = /([A-Za-z]+)\:(BlueSpot).*$/;
+  if (expression.test(value))
+    return value.replace(expression, 'DVMega ($2)');
+
+  // linux:mmdvm-20151222
+  var expression = /([A-Za-z]+)\:([A-Za-z_]+).*$/;
   if (expression.test(value))
     return value.replace(expression, '$2 ($1)');
 
