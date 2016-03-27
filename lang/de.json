@@ -38,7 +38,20 @@
     "Options" : "Optionen",
     "RSSI" : "RSSI (dBm)",
     "Duration" : "Dauer",
-    "Loss rate" : "Fehlerrate"
+    "Loss rate" : "Fehlerrate",
+    "Master ID": "Master ID",
+    "My ID" : "Meine ID",
+    "Source ID":"Ursprungs ID",
+    "Source Call":"Ursprungs Rufz.",
+    "Destination ID" : "Ziel ID",
+    "Loss rate" : "Verlustrate",
+    "Save" : "Speichern",
+    "Load SQL":"Lade SQL",
+    "Columns": "Spalten",
+    "Unique":"Eindeutig",
+    "Yes":"Ja",
+    "No":"Nein",
+    "Search":"Suche"
   },
   "Connected reflectors" : {
     "Connected reflectors" : "Verbundene Reflektoren",
@@ -99,7 +112,8 @@
     "Time":"Zeit",
     "Repeater":"Repeater",
     "Alarm": "Alarm",
-    "Master": "Master"
+    "Master": "Master",
+    "Data": "Daten"
   }, 
   "Calls" : {
     "Calls": "Rufe",
