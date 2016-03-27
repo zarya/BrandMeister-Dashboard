@@ -9,7 +9,7 @@
   <div class="row-fluid"> 
     <div class="box">
       <div class="box-header">
-        <h2>Search</h2>
+        <h2><a href="#" class="btn-minimize">Search<a></h2>
         <div class="box-icon">
           <a href="#" class="btn-minimize"><i class="halflings-icon chevron-down"></i></a>
         </div>
@@ -21,7 +21,6 @@
             <button type="button" class="btn btn-default" id="query-builder-sqlImport">Load SQL</button>
           </div>
           <div style="float:right">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" id="query-builder-search">Search</button>
           </div>
         </div>
@@ -30,9 +29,7 @@
   </div> <!-- /row-fluid -->
   <div class="row-fluid">
     <div>
-      <button onclick="javascript:simpleMode()">Simplemode</button>
-      <button onclick="javascript:fullMode()">Uber advanced mode</button>
-      <button onclick="javascript:activeOnly()">Active only</button>
+      <a href="#" id="columnSelect" class="btn">Columns</a>
     </div>
   </div>
   <div class="row-fluid">
@@ -61,14 +58,60 @@
       </table>
     </div>
   </div>
-  <!--</div>-->
-<Select id="source_url" name="source_url" onchange="javascript:SourceChange()">
-<?php
-while (list($key, $value) = each($config['LHServers'])) {
-?>
-<option value="<?php echo $value['url']; ?>"><?php echo $value['Name']; ?></option>
-<?php } ?>
-</select>
+  <Select id="source_url" name="source_url" onchange="javascript:SourceChange()">
+  <?php
+    while (list($key, $value) = each($config['LHServers'])) {
+  ?>
+  <option value="<?php echo $value['url']; ?>"><?php echo $value['Name']; ?></option>
+  <?php } ?>
+  </select>
+  <div class="hidden">
+    <div id="columnSelector-target">
+      <form id="columSelector-form" class="form-horizontal">
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c0" type="checkbox"> <?php echo $language['LH']['SessionID'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c1" type="checkbox"> <?php echo $language['LH']['Time'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c2" type="checkbox"> <?php echo $language['LH']['Master'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c3" type="checkbox"> <?php echo $language['LH']['Link name'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c4" type="checkbox"> <?php echo $language['LH']['My call'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c5" type="checkbox"> <?php echo $language['LH']['Source'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c6" type="checkbox"> <?php echo $language['LH']['Destination'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c7" type="checkbox"> <?php echo $language['LH']['Reflector'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c8" type="checkbox"> <?php echo $language['LH']['Options'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c9" type="checkbox"> <?php echo $language['LH']['RSSI'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c10" type="checkbox"> dBm</label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c11" type="checkbox"> <?php echo $language['LH']['Duration'];?></label>
+        </div></div></div>
+        <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
+          <label><input id="c12" type="checkbox"> <?php echo $language['LH']['Loss rate'];?></label>
+        </div></div></div>
+        <button type="button" onclick="javascript:saveColumn()" class="btn btn-default">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
 <script>
 var max_queue = 30;
 if (params['amount'] != undefined) max_queue = params['amount'];
@@ -112,8 +155,31 @@ $(document).ready(function() {
   setInterval(tableUpdater, 1000)
   initQueryBuilder();
   LHloadConfig();
+
+  $('#columnSelect').popover({
+    placement: 'bottom',
+    html: true,
+    content: $('#columnSelector-target')
+  });
 });
 
+function saveColumn()
+{
+  var columns = []
+  for (i = 0; i < 13; i++) {
+    if ($('#c'+i).is(':checked'))
+      columns[i] = 1;
+    else
+      columns[i] = 0;
+  }
+  columns[13]=0
+  columns[14]=0
+  config['lh-table'] = JSON.stringify(columns);
+  localStorage.setItem('lh-table', config['lh-table']);
+  LHloadConfig();
+  FilterChange(buildQuery());
+  $('#columnSelect').popover('hide');
+}
 
 function initQueryBuilder()
 {
@@ -134,6 +200,7 @@ function initQueryBuilder()
     delete params['LinkCall']; 
     delete params['aggr']; 
     delete params['ReflectorID']; 
+    delete params['LinkName']; 
     if (!$.isEmptyObject(result)) {
       for (index in result['rules'])
       {
@@ -164,6 +231,25 @@ function initQueryBuilder()
         label: 'Master ID',
         type: 'string',
         operators: ['equal']
+      },
+      {
+        id: 'LinkName',
+        label: 'Link Name',
+        type: 'string',
+        operators: ['equal'],
+        input: 'select',
+        values: {
+          'AutoPatch': 'AutoPatch',
+          'CBridge CC-CC Link':'CBridge CC-CC Link',
+          'D-Extra Link':'D-Extra Link',
+          'DCS Link':'DCS Link',
+          'DV4mini': 'DV4mini',
+          'Homebrew Repeater':'Homebrew Repeater',
+          'Hytera Multi-Site Connect':'Hytera Multi-Site Connect',
+          'MMDVM Host':'MMDVM Host',
+          'Motorola IP Site Connect':'Motorola IP Site Connect',
+          'Parrot':'Parrot'
+        },
       },
       {
         id: 'SourceCall',
@@ -224,12 +310,14 @@ function simpleMode() {
   //                     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
   config['lh-table'] = "[0,1,0,0,1,1,1,1,0,1,0,1,0,0,0]"
   LHloadConfig();
+  FilterChange(buildQuery());
 }
 
 function fullMode() {
   //                     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
   config['lh-table'] = "[1,1,1,1,1,1,1,1,1,1,0,1,1,0,0]"
   LHloadConfig();
+  FilterChange(buildQuery());
 }
 
 function activeOnly()
@@ -243,7 +331,9 @@ function LHloadConfig() {
   lhConfig = JSON.parse(config['lh-table']);
   for (i = 0; i < 15; i++) {
     lhTable.column(i).visible(lhConfig[i]);
+    $('#c'+i).prop('checked', lhConfig[i]);
   }
+  lhTable.draw();
 }
 function SourceChange() {
   table = [];
@@ -311,7 +401,7 @@ function startSocket(url) {
       dataTablesEntry.push(formatLHGroup(lastraw));    //6
       dataTablesEntry.push(formatLHReflector(lastraw));//7
       dataTablesEntry.push(formatLHOptions(lastraw));  //8
-      dataTablesEntry.push(lastraw['RSSI']!=0?sMeter(lastraw['RSSI']):' '); //9
+      dataTablesEntry.push(sMeter(lastraw['RSSI'],lastraw['BER'])); //9
       dataTablesEntry.push(lastraw['RSSI']!=0?lastraw['RSSI']:' ');         //10
       dataTablesEntry.push(lastraw['Stop']!=0?getCellDuration(lastraw['Stop'] - lastraw['Start']):' '); //11
       dataTablesEntry.push(formatLHLoss(lastraw));     //12
@@ -415,6 +505,12 @@ function processFilter(data)
     if (re.test(data['LinkCall']) == false)
       return true;
   }
+  if (params['LinkName'])
+  {
+    var re = new RegExp(params['LinkName']);
+    if (re.test(data['LinkName']) == false)
+      return true;
+  }
   if (params['ReflectorID'])
   {
     if (data['ReflectorID'] != params['ReflectorID'])
@@ -442,6 +538,8 @@ function buildQuery()
     query['aggr'] = 1;
   if (params['ReflectorID'])
     query['ReflectorID'] = params['ReflectorID'];
+  if (params['LinkName'])
+    query['LinkName'] = params['ReflectorID'];
   return query;
 }
 

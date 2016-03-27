@@ -77,18 +77,28 @@ function CountryImage(country){
     return '';
 }
 
-function sMeter(rssi) {
-    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB';
-    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9';
-    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8';
-    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7';
-    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6';
-    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5';
-    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4';
-    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3';
-    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2';
-    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1';
-    return '<img src="images/indicator/0.png" \> S0';
+function sMeter(rssi,ber) {
+  var value
+  var value2
+  if (ber == -1 || ber == "-1" || ber == undefined || ber == "undefined") value2 = "";
+  else if (ber > -1) value2 = "<span title=\"BER\" class=\"icon-star\" style=\"color: green\"> </span>"; 
+  else if (ber > 0.33) value2 = "<span title=\"BER\" class=\"icon-star-empty\" style=\"color: yellow\"> </span>";
+  else value2 = "<span title=\"BER\" class=\"icon-star-half\" style=\"color: red\"> </span>";
+  
+  if (rssi == 0 || rssi == "0" || rssi == undefined) value = "";
+  else if (rssi > -63) value = '<img src="images/indicator/4.png" \> S9+10dB';
+  else if (rssi > -73) value = '<img src="images/indicator/4.png" \> S9';
+  else if (rssi > -79) value = '<img src="images/indicator/3.png" \> S8';
+  else if (rssi > -85) value = '<img src="images/indicator/3.png" \> S7';
+  else if (rssi > -91) value = '<img src="images/indicator/2.png" \> S6';
+  else if (rssi > -97) value = '<img src="images/indicator/2.png" \> S5';
+  else if (rssi > -103) value = '<img src="images/indicator/1.png" \> S4';
+  else if (rssi > -109) value = '<img src="images/indicator/1.png" \> S3';
+  else if (rssi > -115) value = '<img src="images/indicator/0.png" \> S2';
+  else if (rssi > -121) value = '<img src="images/indicator/0.png" \> S1';
+  else value =  '<img src="images/indicator/0.png" \> S0';
+
+  return value2 + " " + value
 }
 
 function TSimage(ts) {

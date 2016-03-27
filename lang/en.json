@@ -98,7 +98,8 @@
     "Time":"Time",
     "Repeater":"Repeater",
     "Alarm": "Alarm",
-    "Master": "Master"
+    "Master": "Master",
+    "Data": "Data"
   }, 
   "Calls" : {
     "Calls": "Calls",
