@@ -119,5 +119,6 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/lh.js"></script>
     <script src="js/alert.js"></script>
     <script>Highcharts.setOptions({ lang: php_lang['HighCharts']});</script>
+    <script src="lang/querybuilder/query-builder.<?php echo $config['lang'];?>.js"></script>
     <!-- end Javascript -->    
 </head>

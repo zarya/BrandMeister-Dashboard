@@ -9,7 +9,7 @@
   <div class="row-fluid"> 
     <div class="box">
       <div class="box-header">
-        <h2><a href="#" class="btn-minimize">Search<a></h2>
+        <h2><a href="#" class="btn-minimize"><?php echo $language['LH']['Search'];?><a></h2>
         <div class="box-icon">
           <a href="#" class="btn-minimize"><i class="halflings-icon chevron-down"></i></a>
         </div>
@@ -18,10 +18,10 @@
         <div id="query-builder"></div>
         <div style="height:40px">
           <div style="float:left">
-            <button type="button" class="btn btn-default" id="query-builder-sqlImport">Load SQL</button>
+            <button type="button" class="btn btn-default" id="query-builder-sqlImport"><?php echo $language['LH']['Load SQL'];?></button>
           </div>
           <div style="float:right">
-            <button type="button" class="btn btn-primary" id="query-builder-search">Search</button>
+            <button type="button" class="btn btn-primary btn-default" id="query-builder-search"><?php echo $language['LH']['Search'];?></button>
           </div>
         </div>
       </div> <!-- /box-content --> 
@@ -29,7 +29,7 @@
   </div> <!-- /row-fluid -->
   <div class="row-fluid">
     <div>
-      <a href="#" id="columnSelect" class="btn">Columns</a>
+      <a href="#" id="columnSelect" class="btn"><?php echo $language['LH']['Columns'];?></a>
     </div>
   </div>
   <div class="row-fluid">
@@ -107,7 +107,7 @@
         <div class="form-group"><div class="col-sm-offset-2 col-sm-10"><div class="checkbox">
           <label><input id="c12" type="checkbox"> <?php echo $language['LH']['Loss rate'];?></label>
         </div></div></div>
-        <button type="button" onclick="javascript:saveColumn()" class="btn btn-default">Save</button>
+        <button type="button" onclick="javascript:saveColumn()" class="btn btn-default"><?php echo $language['LH']['Save'];?></button>
       </form>
     </div>
   </div>
@@ -134,6 +134,7 @@ $(document).ready(function() {
   var lhTable = $('#lhTable').DataTable({
     "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
     "sPaginationType": "bootstrap",
+    "responsive" : true,
     "language": php_lang['Table']['DataTables'],
     "lengthMenu": [ [50, -1], [50, php_lang['Table']['All']] ],
     "createdRow" : function( row, data, index ) {
@@ -228,7 +229,7 @@ function initQueryBuilder()
     filters: [
       {
         id: 'Master',
-        label: 'Master ID',
+        label: php_lang['LH']['Master ID'],
         type: 'string',
         operators: ['equal']
       },
@@ -253,48 +254,48 @@ function initQueryBuilder()
       },
       {
         id: 'SourceCall',
-        label: 'My Call',
+        label: php_lang['LH']['My call'],
         type: 'string',
         operators: ['equal']
       },
       {
         id: 'SourceID',
-        label: 'My ID',
+        label: php_lang['LH']['My ID'], 
         type: 'integer',
         operators: ['equal']
       },
       {
         id: 'ContextID',
-        label: 'Source ID',
+        label: php_lang['LH']['Source ID'],
         type: 'string',
         operators: ['equal']
       },
       {
         id: 'LinkCall',
-        label: 'Source Call',
+        label: php_lang['LH']['Source Call'],
         type: 'string',
         operators: ['equal']
       },
       {
         id: 'DestinationID',
-        label: 'Destination ID',
+        label: php_lang['LH']['Destination ID'],
         type: 'integer',
         operators: ['equal']
       },
       {
         id: 'ReflectorID',
-        label: 'Reflector',
+        label: php_lang['LH']['Reflector'],
         type: 'integer',
         operators: ['equal']
       },
       {
         id: 'aggr',
-        label: 'Unique',
+        label: php_lang['LH']['Unique'],
         type: 'integer',
         input: 'radio',
         values: {
-          1: 'Yes',
-          0: 'No'
+          1: php_lang['LH']['Yes'],
+          0: php_lang['LH']['No']
         },
         operators: ['equal']
       }
@@ -304,20 +305,6 @@ function initQueryBuilder()
       rules: rules
     } 
   });
-}
-
-function simpleMode() {
-  //                     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
-  config['lh-table'] = "[0,1,0,0,1,1,1,1,0,1,0,1,0,0,0]"
-  LHloadConfig();
-  FilterChange(buildQuery());
-}
-
-function fullMode() {
-  //                     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4
-  config['lh-table'] = "[1,1,1,1,1,1,1,1,1,1,0,1,1,0,0]"
-  LHloadConfig();
-  FilterChange(buildQuery());
 }
 
 function activeOnly()
@@ -335,6 +322,7 @@ function LHloadConfig() {
   }
   lhTable.draw();
 }
+
 function SourceChange() {
   table = [];
   last = [];
