@@ -19,7 +19,6 @@ function saveSettings(){
 }
 
 function loadSettings() {
-    console.log(localStorage.getItem('datetime'));
     if (localStorage.getItem('datetime') != undefined)
         config['datetime'] = localStorage.getItem('datetime');
     else
@@ -37,6 +36,15 @@ function loadSettings() {
     else
         config['timeout'] = 15;
     $("#json_timeout").val(config['timeout']);
+
+  if (localStorage.getItem('lh-table') != undefined)
+  {
+    config['lh-table'] = localStorage.getItem('lh-table');
+  }
+  else
+  {
+    config['lh-table'] = php_config['LH-table']; 
+  }
 }
 
 $( document ).ready(function() { 

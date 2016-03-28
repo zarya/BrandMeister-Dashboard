@@ -19,6 +19,9 @@
     <link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <!--<link href="css/query-builder.default.min.css" rel="stylesheet">-->
+    <link href="css/query-builder.dark.min.css" rel="stylesheet">
+
     <!-- end: CSS -->
 
     <link rel="icon" 
@@ -72,6 +75,8 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/jquery.ui.touch-punch.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap-tooltip.js"></script>
+    <script src="js/libs/bootstrap-popover.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src='js/fullcalendar.min.js'></script>
     <script src='js/jquery.dataTables.min.js'></script>
@@ -107,10 +112,13 @@ echo "var php_lang = ".json_encode($language).";\n";
     <script src="js/highcharts/modules/exporting.js"></script>
     <script src="js/highcharts/modules/drilldown.js"></script>
     <script src="js/bootstrap-switch.js"></script>
+    <script src="js/libs/query-builder.standalone.min.js"></script>
+    <script src="js/libs/sql-parser.js"></script>
     <script src="js/config.js"></script>
     <script src="js/bm_common.js"></script>
     <script src="js/lh.js"></script>
     <script src="js/alert.js"></script>
     <script>Highcharts.setOptions({ lang: php_lang['HighCharts']});</script>
+    <script src="lang/querybuilder/query-builder.<?php echo $config['lang'];?>.js"></script>
     <!-- end Javascript -->    
 </head>

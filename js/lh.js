@@ -10,6 +10,16 @@ function getGroupFormatting(number,master)
   return number;
 }
 
+function isGroupMapped(number,master)
+{
+  if (group_mappings.hasOwnProperty(master)) {
+    if (group_mappings[master].hasOwnProperty(number)) {
+      return true; 
+    }
+  }
+  return false;
+}
+
 function getGroupName(number,master)
 {
   if (group_mappings.hasOwnProperty(master)) {
@@ -67,18 +77,28 @@ function CountryImage(country){
     return '';
 }
 
-function sMeter(rssi) {
-    if (rssi > -63) return '<img src="images/indicator/4.png" \> S9+10dB (' + rssi + ')';
-    if (rssi > -73) return '<img src="images/indicator/4.png" \> S9 (' + rssi + ')';
-    if (rssi > -79) return '<img src="images/indicator/3.png" \> S8 ('+ rssi + ')';
-    if (rssi > -85) return '<img src="images/indicator/3.png" \> S7 ('+ rssi + ')';
-    if (rssi > -91) return '<img src="images/indicator/2.png" \> S6 ('+ rssi + ')';
-    if (rssi > -97) return '<img src="images/indicator/2.png" \> S5 ('+ rssi + ')';
-    if (rssi > -103) return '<img src="images/indicator/1.png" \> S4 ('+ rssi + ')';
-    if (rssi > -109) return '<img src="images/indicator/1.png" \> S3 ('+ rssi + ')';
-    if (rssi > -115) return '<img src="images/indicator/0.png" \> S2 ('+ rssi + ')';
-    if (rssi > -121) return '<img src="images/indicator/0.png" \> S1 ('+ rssi + ')';
-    return '<img src="images/indicator/0.png" \> S0 ('+ rssi + ')';
+function sMeter(rssi,ber) {
+  var value
+  var value2
+  if (ber == -1 || ber == "-1" || ber == undefined || ber == "undefined") value2 = "";
+  else if (ber > -1) value2 = "<span title=\"BER\" class=\"icon-star\" style=\"color: green\"> </span>"; 
+  else if (ber > 0.33) value2 = "<span title=\"BER\" class=\"icon-star-empty\" style=\"color: yellow\"> </span>";
+  else value2 = "<span title=\"BER\" class=\"icon-star-half\" style=\"color: red\"> </span>";
+  
+  if (rssi == 0 || rssi == "0" || rssi == undefined) value = "";
+  else if (rssi > -63) value = '<img src="images/indicator/4.png" \> S9+10dB';
+  else if (rssi > -73) value = '<img src="images/indicator/4.png" \> S9';
+  else if (rssi > -79) value = '<img src="images/indicator/3.png" \> S8';
+  else if (rssi > -85) value = '<img src="images/indicator/3.png" \> S7';
+  else if (rssi > -91) value = '<img src="images/indicator/2.png" \> S6';
+  else if (rssi > -97) value = '<img src="images/indicator/2.png" \> S5';
+  else if (rssi > -103) value = '<img src="images/indicator/1.png" \> S4';
+  else if (rssi > -109) value = '<img src="images/indicator/1.png" \> S3';
+  else if (rssi > -115) value = '<img src="images/indicator/0.png" \> S2';
+  else if (rssi > -121) value = '<img src="images/indicator/0.png" \> S1';
+  else value =  '<img src="images/indicator/0.png" \> S0';
+
+  return value2 + " " + value
 }
 
 function TSimage(ts) {

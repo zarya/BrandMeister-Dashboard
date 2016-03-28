@@ -33,7 +33,7 @@ function updateRepeaterListCallback(master) {
 function updateRepeaterList()
 {
   for (var number in servers) {
-    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateRepeaterListCallback(number)).fail(newAlertPopup('Error!','Master '+number+' not responding'));
+    $.getJSON('http://' + servers[number] + '/status/list.php?callback=?', updateRepeaterListCallback(number));
   }
 }
 function initTable () {

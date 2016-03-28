@@ -28,16 +28,28 @@
     "LastHeard" : "LastHeard",
     "Time": "Time",
     "Master": "Master",
+    "Master ID": "Master ID",
     "SessionID": "Session ID",
     "Link name" : "Link name",
     "My call" : "My call",
+    "My ID" : "My ID",
     "Source" : "Source",
+    "Source ID":"Source ID",
+    "Source Call":"Source Call",
     "Destination" : "Destination",
+    "Destination ID" : "Destination ID",
     "Reflector" : "Reflector",
     "Options" : "Options",
-    "RSSI" : "RSSI (dBm)",
+    "RSSI" : "RSSI",
     "Duration" : "Duration",
-    "Loss rate" : "Loss rate"
+    "Loss rate" : "Loss rate",
+    "Save" : "Save",
+    "Load SQL":"Load SQL",
+    "Columns": "Columns",
+    "Unique":"Unique",
+    "Yes":"Yes",
+    "No":"No",
+    "Search":"Search"
   },
   "Connected reflectors" : {
     "Connected reflectors" : "Connected reflectors",
@@ -98,7 +110,8 @@
     "Time":"Time",
     "Repeater":"Repeater",
     "Alarm": "Alarm",
-    "Master": "Master"
+    "Master": "Master",
+    "Data": "Data"
   }, 
   "Calls" : {
     "Calls": "Calls",

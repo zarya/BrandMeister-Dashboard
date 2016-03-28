@@ -22,8 +22,8 @@
     "Industrial Repeaters":"Kommerzielle Repeater",
     "Repeater models": "Repeater models",
     "Repeater versions": "Repeater versions",
-    "PIchartDescr" : "Click the sharts of the pie to see more details",
-    "Device stats": "Device statistics"
+    "PIchartDescr" : "Klicke auf die Grafik f&uuml;r mehr Details",
+    "Device stats": "Gerätestatistiken"
   },
   "LH" : {
     "LastHeard" : "Zuletzt geh&ouml;rt",
@@ -31,14 +31,27 @@
     "Master": "Master",
     "SessionID": "Sitzungs-ID",
     "Link name" : "Link Name",
-    "My call" : "Mein Rufzeichen",
+    "My call" : "Rufzeichen",
     "Source" : "Quelle",
     "Destination" : "Ziel",
     "Reflector" : "Reflektor",
     "Options" : "Optionen",
     "RSSI" : "RSSI (dBm)",
     "Duration" : "Dauer",
-    "Loss rate" : "Fehlerrate"
+    "Loss rate" : "Fehlerrate",
+    "Master ID": "Master ID",
+    "My ID" : "Meine ID",
+    "Source ID":"Ursprungs ID",
+    "Source Call":"Ursprungs Rufz.",
+    "Destination ID" : "Ziel ID",
+    "Loss rate" : "Verlustrate",
+    "Save" : "Speichern",
+    "Load SQL":"Lade SQL",
+    "Columns": "Spalten",
+    "Unique":"Eindeutig",
+    "Yes":"Ja",
+    "No":"Nein",
+    "Search":"Suche"
   },
   "Connected reflectors" : {
     "Connected reflectors" : "Verbundene Reflektoren",
@@ -99,13 +112,14 @@
     "Time":"Zeit",
     "Repeater":"Repeater",
     "Alarm": "Alarm",
-    "Master": "Master"
+    "Master": "Master",
+    "Data": "Daten"
   }, 
   "Calls" : {
     "Calls": "Rufe",
     "Call statistics":"Rufstatistik",
     "Filters": "Filter",
-    "Talkgroup" : "Sprechgruppe",
+    "Talkgroup" : "Talkgroup",
     "Display Per TG" : "Anzeige pro TG",
     "Display Per reflector": "Anzeige pro Reflektor",
     "Total":"Gesamt",
@@ -114,7 +128,7 @@
     "PinchZoom": "Grafik anklicken um hinein zu zoomen",
     "QSOs":"QSOs",
     "Time per Hour": "Zeit pro Stunde",
-    "Seconds": "Seconds"
+    "Seconds": "Sekunden"
   },
   "Table" : {
     "All": "Alle",
@@ -159,6 +173,6 @@
     "Save": "/Auml;nderungen speichern"
   },
   "HighCharts": {
-    "drillUpText": "\u25c1 Back to {series.name}"
+    "drillUpText": "\u25c1 Zurück zu {series.name}"
   }
 }

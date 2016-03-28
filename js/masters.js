@@ -21,7 +21,7 @@ function updateMasterList()
     "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ]
   });
   for (var number in servers) {
-    $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateMasterListCallback(number,servers[number]));
+    $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateMasterListCallback(number,servers[number])).fail(newAlertPopup('Error!','Master '+number+' not responding'));
   }
 }
 $(document).ready(function() {
