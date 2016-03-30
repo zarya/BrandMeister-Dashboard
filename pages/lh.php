@@ -58,13 +58,13 @@
       </table>
     </div>
   </div>
-  <Select id="source_url" name="source_url" onchange="javascript:SourceChange()">
+  <div style="display: none"><Select id="source_url" name="source_url" onchange="javascript:SourceChange()">
   <?php
     while (list($key, $value) = each($config['LHServers'])) {
   ?>
   <option value="<?php echo $value['url']; ?>"><?php echo $value['Name']; ?></option>
   <?php } ?>
-  </select>
+  </select></div>
   <div class="hidden">
     <div id="columnSelector-target">
       <form id="columSelector-form" class="form-horizontal">
