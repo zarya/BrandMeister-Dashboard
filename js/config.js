@@ -19,6 +19,7 @@ function saveSettings(){
 }
 
 function loadSettings() {
+    if (lsTest() == false) return
     if (localStorage.getItem('datetime') != undefined)
         config['datetime'] = localStorage.getItem('datetime');
     else
@@ -71,3 +72,14 @@ var params = function() {
     var prmstr = window.location.search.substr(1);
     return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
 }();
+
+function lsTest(){
+    var test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}

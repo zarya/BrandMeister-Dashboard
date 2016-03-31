@@ -23,6 +23,10 @@ if ($_GET['page']) {
     <!-- start: JavaScript-->
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://cdn.ravenjs.com/2.2.1/raven.min.js"></script>
+    <script>
+    Raven.config('http://324f178d24d645cca440c1f936dae6b6@error.maze.io/5').install();
+    </script>
     <!-- end: JavaScript-->
 </body>
 </html>
