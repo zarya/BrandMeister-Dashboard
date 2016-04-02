@@ -9,7 +9,7 @@ $('#dongle-list').live('change', function(e) {
   $.getJSON('http://' + servers[master] + '/status/link.php?user='+dongle+'&callback=?',function(data)
   {
     $('#group').val(data['group']);
-  }).fail(newAlertPopup(php_lang['Extended routing']['Error'],php_lang['Extended routing']['Master']+' '+number+' '+php_lang['Extended routing']['not responding']));
+  });
 
 });
 
