@@ -232,7 +232,8 @@ var groups =
   "31361" : "Upstate NY",
   "310997" : "Parrot",
   "5150"  : "NorCal 5150*",
-  "621"   : "NorCal 1*",
+  "621"   : "NorCal 1",
+  "76225" : "SoCal Test*",
   "8951"  : "TAC 1",
   "9990"  : "Parrot",
   "9999"  : "NorCal Meter",
@@ -324,7 +325,8 @@ var groups =
   "4638" : "Mi5-EVENT (31263)",
   "31261" : "Mi5-STATEWIDE1",
   "31262" : "Mi5-STATEWIDE2",
-  "31263" : "Mi5-EVENT",
+  "31263" : "Mi5-EVENT1",
+  "31265" : "Mi5-EVENT3",
 
   "244" : "Finland",
 
