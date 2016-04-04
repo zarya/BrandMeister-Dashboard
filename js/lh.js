@@ -81,9 +81,9 @@ function sMeter(rssi,ber) {
   var value
   var value2
   if (ber == -1 || ber == "-1" || ber == undefined || ber == "undefined") value2 = "";
-  else if (ber > -1) value2 = "<span title=\"BER\" class=\"icon-star\" style=\"color: green\"> </span>"; 
-  else if (ber > 0.33) value2 = "<span title=\"BER\" class=\"icon-star-empty\" style=\"color: yellow\"> </span>";
-  else value2 = "<span title=\"BER\" class=\"icon-star-half\" style=\"color: red\"> </span>";
+  else if (ber > -1) value2 = "<span title=\"BER 100%\" class=\"icon-star\" style=\"color: green\"> </span>"; 
+  else if (ber > 0.33) value2 = "<span title=\"BER 33% - 99%\" class=\"icon-star-empty\" style=\"color: yellow\"> </span>";
+  else value2 = "<span title=\"BER 0% - 33%\" class=\"icon-star-half\" style=\"color: red\"> </span>";
   
   if (rssi == 0 || rssi == "0" || rssi == undefined) value = "";
   else if (rssi > -63) value = '<img src="images/indicator/4.png" \> S9+10dB';
