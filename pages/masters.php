@@ -14,6 +14,7 @@
     <tr>
       <th><?php echo $language['Masters']['Country'];?></th>
       <th><?php echo $language['Masters']['Number'];?></th>
+      <th>Response time</th>
       <th><?php echo $language['Masters']['Version'];?></th>
       <th><?php echo $language['Masters']['Links'];?></th>
     </tr>

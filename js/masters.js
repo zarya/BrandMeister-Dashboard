@@ -1,12 +1,16 @@
 var dataTable; 
+var masterResponse = {}
 
 function updateMasterListCallback(master,host) {
   return function(data) {
     var entity = [];
+    var responseTime = new Date().getTime() - masterResponse[master];
+    console.log(responseTime);
     entity[0] = CountryImage(getCountry(data['network']))+" "+getCountry(data['network']).toUpperCase();
     entity[1] = data['network'];
-    entity[2] = data['version'];
-    entity[3] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">'+php_lang['Masters']['Status']+'</a>&nbsp;<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">'+php_lang['Masters']['List']+'</a>';
+    entity[2] = responseTime + " ms";
+    entity[3] = data['version'];
+    entity[4] = '<a role="button" class="btn btn-xs btn-primary" target="_blank" href="http://' + host + '/status/status.htm">'+php_lang['Masters']['Status']+'</a>&nbsp;<a role="button" class="btn btn-xs btn-info" target="_blank" href="http://' + host + '/status/list.htm">'+php_lang['Masters']['List']+'</a>';
     if (data['set'] != 0)
       dataTable.row.add(entity).draw();
   }
@@ -21,6 +25,7 @@ function updateMasterList()
     "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, php_lang['Table']['All']] ]
   });
   for (var number in servers) {
+    masterResponse[number] = new Date().getTime();
     $.getJSON('http://' + servers[number] + '/status/system.php?callback=?', updateMasterListCallback(number,servers[number])).fail(updateMasterError(number));
   }
 }
