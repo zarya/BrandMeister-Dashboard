@@ -3,7 +3,7 @@ var groups =
   "250"  : "Russia",
   "2501" : "Russia Global",
   "2502" : "XRF250 Bridge",
-  "2505" : "bridge to Radiocult",
+  "2505" : "Bridge to Radiocult",
   "9504" : "*RUSSIA* (EchoLink)",
   "9" : "DMR Reflector",
 
