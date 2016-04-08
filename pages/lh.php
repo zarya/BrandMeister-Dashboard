@@ -572,6 +572,9 @@ function formatLHGroup(lastraw)
     group = '<img src="images/batch/user.png" \>';
   if (lastraw['DestinationID'] != 2 && lastraw['DestinationID'] != 9 && lastraw['CallTypes'].indexOf("Group") > -1 && !isGroupMapped(lastraw['DestinationID'],lastraw['Master']))
     hoseline = " <a target=\"_blank\" href=\"http://hose.brandmeister.network/"+lastraw['DestinationID']+"/\"><i class=\"icon-volume-up\">&nbsp;</i></a>";
+  if (lastraw['CallTypes'].indexOf("Group") > -1)
+  group = group + hoseline + ' ' + CountryImage(dCountry) + ' ' + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
+  else
   group = group + hoseline + ' ' + CountryImage(dCountry) + ' ' + lastraw['DestinationCall'] + getGroupName(lastraw['DestinationID'],lastraw['Master']) +' (' + getGroupFormatting(lastraw['DestinationID'],lastraw['Master']) + ')';
   return group;
 }
