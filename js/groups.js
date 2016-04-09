@@ -237,7 +237,7 @@ var groups =
   "9990"  : "Parrot",
   "9999"  : "NorCal Meter",
   "95150"  : "NorCal 5150*",
-  "96225"  : "Mountain West*",
+  "96225"  : "Mountain West",
   "97272"  : "PAPA*",
 
   "206"  : "Belgium",
