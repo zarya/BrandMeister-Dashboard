@@ -395,7 +395,7 @@ function startSocket(url) {
       dataTablesEntry.push(formatLHLoss(lastraw));     //12
 
       //Dont show old partialy missed calls as active calls
-      if (lastraw['Stop']==0 && lastraw['Start']*1000 > (Date.now() - 5*60*1000))
+      if (lastraw['Stop']==0 && lastraw['Start']*1000 > (Date.now() - 5*60*1000) && lastraw['TotalCount']==0)
         dataTablesEntry.push('0')                      //13
       else
         dataTablesEntry.push('1')                      //13
