@@ -32,6 +32,8 @@ var groups =
   "9107" : "XRF007 B",
   "214" : "Spain",
 
+  "226" : "Romania",
+
   "235" : "United Kingdom",
   "262" : "Deutschland",
   "240" : "Sweden",
