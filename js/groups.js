@@ -53,6 +53,10 @@ var groups =
   "2284": "Basel",
   "2286": "Regional Swiss",
 
+  "4060": "Switzerland German",
+  "4061": "Switzerland French",
+  "4062": "Switzerland Italian",
+
   "734" : "Venezuela", 
 
   "88" : "XRF088 B",
