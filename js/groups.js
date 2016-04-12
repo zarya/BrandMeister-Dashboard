@@ -48,8 +48,13 @@ var groups =
 
 
   "228" : "Switzerland",
+  "2280": "Switzerland German",
+  "2283": "Bern / Solothurn",
+  "2284": "Basel",
   "2286": "Regional Swiss",
+
   "734" : "Venezuela", 
+
   "88" : "XRF088 B",
   "881": "XRF088 A",
 
