@@ -46,12 +46,18 @@ var groups =
   "2406" : "Regional SM6",
   "2407" : "Regional SM7",
 
-
   "228" : "Switzerland",
   "2280": "Switzerland German",
+  "2281": "Genève / Vaud",
+  "2282": "Fribourg / Neuchâtel / Jura",
   "2283": "Bern / Solothurn",
   "2284": "Basel",
-  "2286": "Regional Swiss",
+  "2285": "Aargau / Zentralschweiz",
+  "2286": "Ticino",
+  "2287": "Graubünden",
+  "2288": "Zürich",
+  "2289": "Ostschweiz",
+  "22801": "XRF490 B",
 
   "4060": "Switzerland German",
   "4061": "Switzerland French",
