@@ -339,6 +339,16 @@ var groups =
 
   "505"  : "Australia",
   "4805" : "Australia (505)",
+  "5051" : "Australian capital territory",
+  "5052" : "Australia NSW",
+  "5053" : "Australia Victoria",
+  "5054" : "Australia QLD",
+  "5055" : "VK5 XRF500D",
+  "4805" : "VK5 XRF500D (5055)",
+  "5056" : "Western Australia",
+  "5057" : "Australia Tasmania",
+  "5058" : "Australia Northern territory",
+
   "714" : "Panama",
   "7141" : "Panama City",
   "7142" : "Colon",
