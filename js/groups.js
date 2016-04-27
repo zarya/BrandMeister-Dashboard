@@ -339,6 +339,7 @@ var groups =
 
   "505"  : "Australia",
   "4805" : "Australia (505)",
+  "5050" : "Australia Antartic",
   "5051" : "Australian capital territory",
   "5052" : "Australia New South Wales",
   "5053" : "Australia Victoria",
