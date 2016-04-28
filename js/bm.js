@@ -111,6 +111,10 @@ function fetchServer(number) {
           if ((value['state'] & 0x03) != 0)
             external_count++;
         }
+        if (value['name'] == 'WIRES-X Link') {
+          if ((value['state'] & 0x03) != 0)
+            external_count++;
+        }
       }
       if (status_link_count > 0)
         masters_count++;
