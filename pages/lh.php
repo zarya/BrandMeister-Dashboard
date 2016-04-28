@@ -538,7 +538,7 @@ function formatLHOptions(lastraw)
   if (lastraw['LinkName'] == "D-Extra Link" || lastraw['LinkName'] == "DCS Link")
     options = "<img src=images/avc/icon_D-STAR.png \>"
   else if (lastraw['LinkName'] == "WIRES-X Link")
-    options = "<img src=images/avc/con_C4FM.png\>"
+    options = "<img src=images/avc/icon_C4FM.png\>"
   else
     options = "<img src=images/avc/icon_DMR_w.png \>";
   return "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options+"</nobr>"; 
