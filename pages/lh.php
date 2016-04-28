@@ -244,6 +244,7 @@ function initQueryBuilder()
           'CBridge CC-CC Link':'CBridge CC-CC Link',
           'D-Extra Link':'D-Extra Link',
           'DCS Link':'DCS Link',
+          'WIRES-X Link':'WIRES-X Link',
           'DV4mini': 'DV4mini',
           'Homebrew Repeater':'Homebrew Repeater',
           'Hytera Multi-Site Connect':'Hytera Multi-Site Connect',
@@ -535,7 +536,9 @@ function formatLHOptions(lastraw)
 {
   options = "";
   if (lastraw['LinkName'] == "D-Extra Link" || lastraw['LinkName'] == "DCS Link")
-    options = "<img src=images/avc/icon_D-STAR.png \>";
+    options = "<img src=images/avc/icon_D-STAR.png \>"
+  else if (lastraw['LinkName'] == "WIRES-X Link";
+    options = "<img src=images/avc/con_C4FM.png\>"
   else
     options = "<img src=images/avc/icon_DMR_w.png \>";
   return "<nobr>"+TSimage(lastraw['Slot']) + ' ' + options+"</nobr>"; 
