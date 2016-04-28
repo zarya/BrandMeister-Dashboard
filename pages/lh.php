@@ -244,13 +244,13 @@ function initQueryBuilder()
           'CBridge CC-CC Link':'CBridge CC-CC Link',
           'D-Extra Link':'D-Extra Link',
           'DCS Link':'DCS Link',
-          'WIRES-X Link':'WIRES-X Link',
           'DV4mini': 'DV4mini',
           'Homebrew Repeater':'Homebrew Repeater',
           'Hytera Multi-Site Connect':'Hytera Multi-Site Connect',
           'MMDVM Host':'MMDVM Host',
           'Motorola IP Site Connect':'Motorola IP Site Connect',
-          'Parrot':'Parrot'
+          'Parrot':'Parrot',
+          'WIRES-X Link':'WIRES-X Link'
         },
       },
       {
