@@ -34,8 +34,22 @@ var groups =
 
   "226" : "Romania",
 
+  "230" : "Czech Republic",
+
   "235" : "United Kingdom",
+  
   "262" : "Deutschland",
+  "2620": "Sachsen-Anhalt/Mecklenburg-Vorpommern",
+  "2621": "Berlin/Brandenburg",
+  "2622": "Hamburg/Schleswig-Holstein",
+  "2623": "Niedersachsen/Bremen",
+  "2624": "Nordrhein-Westfalen",
+  "2625": "Rheinland-Pfalz/Saarland",
+  "2626": "Hessen",
+  "2627": "Baden-Württemberg",
+  "2628": "Bayern",
+  "2629": "Sachsen/Thüringen",
+  
   "240" : "Sweden",
   "2400" : "Regional SM0",
   "2401" : "Regional SM1",
