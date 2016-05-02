@@ -345,7 +345,6 @@ var groups =
   "5053" : "Australia Victoria",
   "5054" : "Australia Queensland",
   "5055" : "VK5 XRF500D",
-  "4805" : "VK5 XRF500D (5055)",
   "5056" : "Western Australia",
   "5057" : "Australia Tasmania",
   "5058" : "Australia Northern territory",
