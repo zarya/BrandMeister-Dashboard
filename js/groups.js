@@ -361,16 +361,18 @@ var groups =
   "268"  : "Portugal",
 
   "505"  : "Australia",
-  "4805" : "Australia (505)",
-  "5050" : "Australia Antartic",
+  "5050" : "XRF5000D (4806)",
   "5051" : "Australian capital territory",
   "5052" : "Australia New South Wales",
   "5053" : "Australia Victoria",
   "5054" : "Australia Queensland",
-  "5055" : "VK5 XRF500D",
+  "5055" : "South Australia",
   "5056" : "Western Australia",
   "5057" : "Australia Tasmania",
   "5058" : "Australia Northern territory",
+
+  "4805" : "Australia (505)"
+  "4806" : "Australia (5050)"
 
   "714" : "Panama",
   "7141" : "Panama City",
