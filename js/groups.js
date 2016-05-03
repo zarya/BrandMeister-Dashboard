@@ -371,8 +371,8 @@ var groups =
   "5057" : "Australia Tasmania",
   "5058" : "Australia Northern territory",
 
-  "4805" : "Australia (505)"
-  "4806" : "Australia (5050)"
+  "4805" : "Australia (505)",
+  "4806" : "Australia (5050)",
 
   "714" : "Panama",
   "7141" : "Panama City",
