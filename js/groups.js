@@ -61,9 +61,9 @@ var groups =
   "2407" : "Regional SM7",
 
   "228" : "Switzerland",
-  "2280": "Switzerland German",
-  "2281": "Genève / Vaud",
-  "2282": "Fribourg / Neuchâtel / Jura",
+  "2280": "Schweiz Deutsch",
+  "2281": "Suisse Romande 1",
+  "2282": "Suisse Romande 2",
   "2283": "Bern / Solothurn",
   "2284": "Basel",
   "2285": "Aargau / Zentralschweiz",
@@ -71,11 +71,17 @@ var groups =
   "2287": "Graubünden",
   "2288": "Zürich",
   "2289": "Ostschweiz",
-  "22801": "XRF490 B",
+  "22801": "UA Deutsch",
+  "22802": "UA Français",
+  "22803": "UA Italiano",
+  "22804": "UA Rumantsch",
+  "22810": "XRF490 B",
 
   "4060": "Switzerland German",
   "4061": "Switzerland French",
   "4062": "Switzerland Italian",
+  "4063": "Bern / Solothurn",
+  "4064": "Basel",
 
   "734" : "Venezuela", 
 
