@@ -376,6 +376,7 @@ var groups =
   "5056" : "Western Australia",
   "5057" : "Australia Tasmania",
   "5058" : "Australia Northern territory",
+  "5058" : "VK-DMR-ROOM  wires-x",
 
   "4805" : "Australia (505)",
   "4806" : "Australia (5050)",
