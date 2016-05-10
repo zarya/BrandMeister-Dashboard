@@ -546,6 +546,8 @@ function formatLHOptions(lastraw)
 
 function formatLHSource(lastraw)
 {
+  if (lastraw['SourceCall'] == '')
+    return getGroupName(lastraw['SourceID'],lastraw['Master']);
   var sCountry = getCountry(lastraw['SourceID']);
   if (lastraw['SourceName'] == undefined || lastraw['SourceName'] == null || lastraw['SourceName'] == "")
     return CountryImage(sCountry) +' ' + lastraw['SourceCall'] + ' (' + lastraw['SourceID'] + ')';
