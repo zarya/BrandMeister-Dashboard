@@ -559,8 +559,7 @@ function formatLHLink(lastraw)
 {
   var rCountry = getCountry(lastraw['ContextID']);
   if (lastraw['LinkName'] == "FastForward") {
-    var Link = CountryImage(rCountry) + " " + rCountry.toUpperCase();
-    lastraw['LinkName'] = "Inter country";
+    return CountryImage(rCountry) + " " + rCountry.toUpperCase();
   } else {
     return CountryImage(rCountry) + ' ' + lastraw['LinkCall'] + ' (' + lastraw['ContextID'] + ')';
   }
