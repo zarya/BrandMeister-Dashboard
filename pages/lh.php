@@ -373,6 +373,8 @@ function startSocket(url) {
     //Handle incomming message
     socket.on('mqtt', function (msg) {
       var lastraw = JSON.parse(msg.payload);
+      if (lastraw['Master'] == "" || lastraw['Master'] == undefined) return;
+
       //Check incomming message agains active filters
       if (processFilter(lastraw)) return;
 
