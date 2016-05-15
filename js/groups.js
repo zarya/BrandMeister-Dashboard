@@ -392,7 +392,7 @@ var groups =
   "5058" : "Australia Northern territory",
   "5059" : "VK-DMR-ROOM  wires-x",
   "50591": "VK2GP-ND wires-x",
-  "50592": "VK3KAY-ROOM";
+  "50592": "VK3KAY-ROOM",
 
   "4805" : "Australia (505)",
   "4806" : "Australia (5050)",
