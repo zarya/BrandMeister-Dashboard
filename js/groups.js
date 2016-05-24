@@ -357,6 +357,7 @@ var groups =
 
   "8710" : "Crossroads Statewide",
 
+  "302"  : "Canada",
   "4326" : "Canada English",
   "3026" : "Canada English (4326)",
   "4327" : "Canada Francais",
@@ -392,7 +393,7 @@ var groups =
   "5058" : "Australia Northern territory",
   "5059" : "VK-DMR-ROOM  wires-x",
   "50591": "VK2GP-ND wires-x",
-  "50592": "VK3KAY-ROOM",
+  "50592": "VK3KAY-ROOM wires-x",
 
   "4805" : "Australia (505)",
   "4806" : "Australia (5050)",
