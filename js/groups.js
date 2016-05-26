@@ -7,6 +7,8 @@ var groups =
   "9504" : "*RUSSIA* (EchoLink)",
   "9" : "DMR Reflector",
 
+  "937" : "Francophone",
+
   "255" : "Ukraine",
 
   "655" : "South Africa",
