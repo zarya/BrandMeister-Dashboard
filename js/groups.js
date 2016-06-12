@@ -84,6 +84,10 @@ var groups =
   "4062": "Switzerland Italian",
   "4063": "Bern / Solothurn",
   "4064": "Basel",
+  "4065": "Aargau / Zentralschweiz",
+  "4067": "Graubünden",
+  "4068": "Zürich",
+  "4069": "Ostschweiz",
 
   "734" : "Venezuela", 
 
