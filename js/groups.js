@@ -233,6 +233,7 @@ var groups =
   "3106" : "California",
   "3108" : "Colorado",
   "3109" : "Connecticut",
+  "310991" : "Connecticut PVRA",
   "3110" : "Deleware",
   "3111" : "D.C.",
   "3112" : "Florida",
