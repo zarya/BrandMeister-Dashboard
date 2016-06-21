@@ -13,6 +13,8 @@ var groups =
 
   "655" : "South Africa",
 
+  "238" : "Denmark",
+
   "1" : "Local",
   "2" : "Local",
   "91" : "World-wide",
