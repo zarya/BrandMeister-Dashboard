@@ -408,6 +408,7 @@ var groups =
   "5054" : "Australia Queensland",
   "5055" : "South Australia",
   "5056" : "Western Australia",
+  "50566": "WICEN",
   "5057" : "Australia Tasmania",
   "5058" : "Australia Northern territory",
   "5059" : "VK-DMR-ROOM  wires-x",
