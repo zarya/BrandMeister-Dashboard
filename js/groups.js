@@ -463,7 +463,7 @@ var groups =
   "74819" : "Tacuarembó",
   "74820" : "Treinta y Tres",
   "74830" : "CX TAC 1",
-  "74840" : "CX TAC 2,
+  "74840" : "CX TAC 2",
 
   "899" : "Repeater Testing"
 
