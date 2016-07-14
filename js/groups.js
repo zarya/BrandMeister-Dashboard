@@ -439,7 +439,7 @@ var groups =
   "26040" : "Poland Tech",
   "4281": "Poland Tech (26040)",
 
-  "899" : "Repeater Testing".
+  "899" : "Repeater Testing",
 
    "748" : "Uruguay",
    "74801" : "Montevideo",
