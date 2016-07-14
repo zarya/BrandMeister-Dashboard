@@ -178,8 +178,6 @@ var groups =
   "23590": "East Midlands",
   "23562": "M62 Corridor",
   
-
-
   "7551" : "Belgium Vlaams",
   "4770" : "Hungary",
 
@@ -441,31 +439,30 @@ var groups =
   "26040" : "Poland Tech",
   "4281": "Poland Tech (26040)",
 
-  "748" : "Uruguay",
-  "74801" : "Montevideo",
-  "74802" : "Montevideo",
-  "74803" : "Artigas",
-  "74804" : "Canelones",
-  "74805" : "Cerro Largo",
-  "74806" : "Colonia",
-  "74807" : "Durazno",
-  "74808" : "Flores",
-  "74809" : "Florida",
-  "74810" : "Lavalleja",
-  "74811" : "Maldonado",
-  "74812" : "Paysandú",
-  "74813" : "Río Negro",
-  "74814" : "Rivera",
-  "74815" : "Rocha",
-  "74816" : "Salto",
-  "74817" : "San José",
-  "74818" : "Soriano",
-  "74819" : "Tacuarembó",
-  "74820" : "Treinta y Tres",
-  "74830" : "CX TAC 1",
-  "74840" : "CX TAC 2",
+  "899" : "Repeater Testing".
 
-  "899" : "Repeater Testing"
-
+   "748" : "Uruguay",
+   "74801" : "Montevideo",
+   "74802" : "Montevideo",
+   "74803" : "Artigas",
+   "74804" : "Canelones",
+   "74805" : "Cerro Largo",
+   "74806" : "Colonia",
+   "74807" : "Durazno",
+   "74808" : "Flores",
+   "74809" : "Florida",
+   "74810" : "Lavalleja",
+   "74811" : "Maldonado",
+   "74812" : "Paysandú",
+   "74813" : "Río Negro",
+   "74814" : "Rivera",
+   "74815" : "Rocha",
+   "74816" : "Salto",
+   "74817" : "San José",
+   "74818" : "Soriano",
+   "74819" : "Tacuarembó",
+   "74820" : "Treinta y Tres",
+   "74830" : "CX TAC 1",
+   "74840" : "CX TAC 2"
 
 };
