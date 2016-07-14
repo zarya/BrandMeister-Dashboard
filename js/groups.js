@@ -5,7 +5,7 @@ var groups =
   "2502" : "XRF250 Bridge",
   "2505" : "Bridge to Radiocult",
   "9504" : "*RUSSIA* (EchoLink)",
-  "9" : "DMR Reflector",
+  "9" : "Local or Reflector",
 
   "937" : "Francophone",
 
