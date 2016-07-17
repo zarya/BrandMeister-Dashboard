@@ -295,6 +295,7 @@ var groups =
   "31061" : "Cal 1",
   "31066" : "SoCal",
   "31067" : "SoCal 1",
+  "31068" : "NorCal",
   "31069" : "NorCal 1",
   "31089" : "Hytera USA",
   "31210" : "XRF210 D",
