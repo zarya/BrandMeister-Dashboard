@@ -6,7 +6,7 @@ var groups =
   "2505" : "Bridge to Radiocult",
   "9504" : "*RUSSIA* (EchoLink)",
   "9" : "Local or Reflector",
-
+  "8" : "Regional",
   "937" : "Francophone",
 
   "255" : "Ukraine",
@@ -127,11 +127,20 @@ var groups =
   "4258" : "Ref-ITA-Zona8",
   "4259" : "Ref-ITA-Zona9",
   "4260" : "Ref-ITA-Zona0",
-  "8500" : "XRF390 A",
-  "8505" : "XRF077 D",
-  "8506" : "XRF055 C",
-  "8507" : "XRF036 B",
-  "8510" : "XRF003 D",
+  "2229192" : "WIRESX-Room-ITA",
+  "2229193" : "YSF-BM2221",
+
+  "8500" : "XLX177-Regione0",
+  "8501" : "XLX177-Regione1",
+  "8502" : "XLX177-Regione2",
+  "8503" : "XLX177-Regione3",
+  "8504" : "XLX177-Regione4",
+  "8505" : "XLX177-Regione5",
+  "8506" : "XLX177-Regione6",
+  "8507" : "XLX177-Regione7",
+  "8508" : "XLX177-Regione8",
+  "8509" : "XLX177-Regione9",
+  "8515" : "XLX177-Italia",
 
   "9107" : "XRF007 B",
 
