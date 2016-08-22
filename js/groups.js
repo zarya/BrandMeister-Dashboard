@@ -234,6 +234,7 @@ var groups =
   "4647" : "USA - Area 7",
   "4648" : "USA - Area 8",
   "4649" : "USA - Area 9",
+  "31040" : "QuadNet-BM",
   "31090" : "USA - Area 0 4640",
   "31091" : "USA - Area 1 4641",
   "31092" : "USA - Area 2 4642",
