@@ -235,7 +235,6 @@ var groups =
   "4648" : "USA - Area 8",
   "4649" : "USA - Area 9",
   "31012" : "QuadNet-BM",
-  "31040" : "NJPAASTERISK",
   "31079" : "Alert Radio",
   "31090" : "USA - Area 0 4640",
   "31091" : "USA - Area 1 4641",
@@ -324,7 +323,6 @@ var groups =
   "316272" : "NASA",
   "316273" : "JSC",
   "310997" : "Parrot",
-  "5150"  : "NorCal 5150*",
   "8951"  : "TAC 1",
   "8952"  : "TAC 2",
   "8953"  : "TAC 3",
@@ -336,7 +334,6 @@ var groups =
   "8959"  : "TAC 9",
   "9990"  : "Parrot",
   "9999"  : "NorCal Meter",
-  "95150"  : "NorCal 5150*",
   "96225"  : "Mountain West",
   "97272"  : "PAPA*",
 
