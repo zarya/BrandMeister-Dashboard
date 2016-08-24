@@ -1,6 +1,6 @@
 var groups =
 {
-  "907"  : "YOTA",
+  "907"  : "JOTA",
   "250"  : "Russia",
   "2501" : "Russia Global",
   "2502" : "XRF250 Bridge",
