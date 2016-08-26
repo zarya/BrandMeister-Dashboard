@@ -9,6 +9,8 @@ var groups =
   "9" : "Local or Reflector",
   "8" : "Regional",
   "937" : "Francophone",
+  "9911" : "Emcom US",
+  "9112" : "Emcom EU",
 
   "255" : "Ukraine",
 
@@ -34,7 +36,6 @@ var groups =
 
   "927" : "Nordic",
 
-  "9107" : "XRF007 B",
   "214" : "Spain",
   "2141" : "EA1",
   "2142" : "EA2",
@@ -352,6 +353,7 @@ var groups =
   "2067" : "Belgium OnDemand 7",
   "2068" : "Belgium OnDemand 8",
   "2069" : "Belgium OnDemand 9",
+  "20601" : "Belgian YSF Bridge ON4TOP",
 
   "4000" : "Disconnect",
   "5000" : "Ref info",
@@ -382,6 +384,22 @@ var groups =
   "4316" : "France/DCS033C 16", 
   "2080673" : "France/XRF067C 17", 
   "4317" : "France/XRF067C 17",
+  "20801" : "Room Fontenay",
+  "20803" : "Room Villebon",
+  "20871" : "Room Auneuil",
+  "20872" : "Room Boulogne",
+  "20861" : "Room La Rochelle",
+  "20841" : "Room Nancy",
+  "20888" : "Room Verbier",
+  "20865" : "Room Perpignan",
+  "20801" : "Room Fontenay",
+  "20803" : "Room Villebon",
+  "20871" : "Room Auneuil",
+  "20872" : "Room Boulogne",
+  "20861" : "Room La Rochelle",
+  "20841" : "Room Nancy",
+  "20888" : "Room Verbier",
+  "20865" : "Room Perpignan",
 
   "4370" : "XRF007 B",
   
